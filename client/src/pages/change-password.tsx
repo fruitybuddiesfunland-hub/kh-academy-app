@@ -3,9 +3,10 @@ import { Link, useLocation } from "wouter";
 import { useAuth } from "@/lib/auth";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { PasswordInput } from "@/components/password-input";
 import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
-import { Sparkles } from "lucide-react";
+import { KHLogo } from "@/components/kh-logo";
 
 export default function ChangePassword() {
   const [currentPassword, setCurrentPassword] = useState("");
@@ -59,11 +60,8 @@ export default function ChangePassword() {
     <div className="min-h-screen bg-background flex items-center justify-center px-4">
       <div className="w-full max-w-sm">
         <div className="text-center mb-8">
-          <div className="inline-flex items-center gap-2 mb-6">
-            <div className="w-7 h-7 rounded-lg bg-gradient-to-br from-[hsl(271,91%,65%)] to-[hsl(330,81%,60%)] flex items-center justify-center">
-              <Sparkles className="w-3.5 h-3.5 text-white" />
-            </div>
-            <span className="font-bold text-sm">KH Academy</span>
+          <div className="mb-6">
+            <KHLogo />
           </div>
           <h1 className="text-2xl font-bold" data-testid="change-pw-title">
             Change your password
@@ -76,9 +74,8 @@ export default function ChangePassword() {
         <form onSubmit={handleSubmit} className="space-y-4" data-testid="change-pw-form">
           <div className="space-y-2">
             <Label htmlFor="currentPassword">Current password</Label>
-            <Input
+            <PasswordInput
               id="currentPassword"
-              type="password"
               placeholder="••••••••"
               value={currentPassword}
               onChange={(e) => setCurrentPassword(e.target.value)}
@@ -88,9 +85,8 @@ export default function ChangePassword() {
           </div>
           <div className="space-y-2">
             <Label htmlFor="newPassword">New password</Label>
-            <Input
+            <PasswordInput
               id="newPassword"
-              type="password"
               placeholder="••••••••"
               value={newPassword}
               onChange={(e) => setNewPassword(e.target.value)}
@@ -101,9 +97,8 @@ export default function ChangePassword() {
           </div>
           <div className="space-y-2">
             <Label htmlFor="confirmPassword">Confirm new password</Label>
-            <Input
+            <PasswordInput
               id="confirmPassword"
-              type="password"
               placeholder="••••••••"
               value={confirmPassword}
               onChange={(e) => setConfirmPassword(e.target.value)}

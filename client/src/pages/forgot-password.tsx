@@ -4,7 +4,8 @@ import { apiRequest } from "@/lib/queryClient";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { Sparkles, ArrowLeft, Mail } from "lucide-react";
+import { ArrowLeft, Mail } from "lucide-react";
+import { KHLogo } from "@/components/kh-logo";
 
 export default function ForgotPassword() {
   const [email, setEmail] = useState("");
@@ -41,11 +42,8 @@ export default function ForgotPassword() {
     <div className="min-h-screen bg-background flex items-center justify-center px-4">
       <div className="w-full max-w-sm">
         <div className="text-center mb-8">
-          <div className="inline-flex items-center gap-2 mb-6">
-            <div className="w-7 h-7 rounded-lg bg-gradient-to-br from-[hsl(271,91%,65%)] to-[hsl(330,81%,60%)] flex items-center justify-center">
-              <Sparkles className="w-3.5 h-3.5 text-white" />
-            </div>
-            <span className="font-bold text-sm">KH Academy</span>
+          <div className="mb-6">
+            <KHLogo />
           </div>
 
           {sent ? (

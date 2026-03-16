@@ -5,11 +5,12 @@ import { useQuery } from "@tanstack/react-query";
 import { getQueryFn } from "@/lib/queryClient";
 import { PRODUCTS } from "@/lib/products";
 import {
-  Sparkles, BookOpen, ChevronLeft, ChevronRight,
+  BookOpen, ChevronLeft, ChevronRight,
   Menu, X, LogOut, BookMarked,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import { KHLogo } from "@/components/kh-logo";
 
 import { IntroSection } from "@/components/course/IntroSection";
 import { InstructionsSection } from "@/components/course/InstructionsSection";
@@ -142,11 +143,8 @@ export default function CourseViewer() {
         }`}
       >
         <div className="p-4 border-b border-border flex items-center justify-between">
-          <a onClick={() => navigate("/dashboard")} className="flex items-center gap-2 cursor-pointer">
-            <div className="w-7 h-7 rounded-lg bg-gradient-to-br from-[hsl(271,91%,65%)] to-[hsl(330,81%,60%)] flex items-center justify-center">
-              <Sparkles className="w-3.5 h-3.5 text-white" />
-            </div>
-            <span className="font-bold text-sm">KH Academy</span>
+          <a onClick={() => navigate("/dashboard")} className="cursor-pointer">
+            <KHLogo />
           </a>
           <Button variant="ghost" size="sm" className="lg:hidden" onClick={() => setSidebarOpen(false)}>
             <X className="w-4 h-4" />

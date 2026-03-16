@@ -6,7 +6,6 @@ import { PRODUCTS, PURCHASABLE_PRODUCTS, FREE_PRODUCTS } from "@/lib/products";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import {
-  Sparkles,
   ArrowRight,
   LogOut,
   KeyRound,
@@ -14,6 +13,7 @@ import {
   ShoppingBag,
   Gift,
 } from "lucide-react";
+import { KHLogo } from "@/components/kh-logo";
 
 type Purchase = {
   id: string;
@@ -51,12 +51,7 @@ export default function Dashboard() {
       {/* Header */}
       <header className="border-b border-border/50 backdrop-blur-sm sticky top-0 z-50 bg-background/80">
         <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-          <div className="flex items-center gap-2">
-            <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-[hsl(271,91%,65%)] to-[hsl(330,81%,60%)] flex items-center justify-center">
-              <Sparkles className="w-4 h-4 text-white" />
-            </div>
-            <span className="font-bold text-lg">KH Academy</span>
-          </div>
+          <KHLogo size="md" />
           <div className="flex items-center gap-4">
             <span className="text-sm text-muted-foreground hidden sm:inline">{user.email}</span>
             <Button

@@ -3,8 +3,10 @@ import { Link, useLocation, useSearch } from "wouter";
 import { apiRequest } from "@/lib/queryClient";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { PasswordInput } from "@/components/password-input";
 import { Label } from "@/components/ui/label";
-import { Sparkles, ArrowLeft, CheckCircle2 } from "lucide-react";
+import { ArrowLeft, CheckCircle2 } from "lucide-react";
+import { KHLogo } from "@/components/kh-logo";
 
 export default function ResetPassword() {
   const [newPassword, setNewPassword] = useState("");
@@ -55,11 +57,8 @@ export default function ResetPassword() {
     return (
       <div className="min-h-screen bg-background flex items-center justify-center px-4">
         <div className="w-full max-w-sm text-center">
-          <div className="inline-flex items-center gap-2 mb-6">
-            <div className="w-7 h-7 rounded-lg bg-gradient-to-br from-[hsl(271,91%,65%)] to-[hsl(330,81%,60%)] flex items-center justify-center">
-              <Sparkles className="w-3.5 h-3.5 text-white" />
-            </div>
-            <span className="font-bold text-sm">KH Academy</span>
+          <div className="mb-6">
+            <KHLogo />
           </div>
           <h1 className="text-2xl font-bold mb-2">Invalid reset link</h1>
           <p className="text-sm text-muted-foreground mb-6">
@@ -80,11 +79,8 @@ export default function ResetPassword() {
     <div className="min-h-screen bg-background flex items-center justify-center px-4">
       <div className="w-full max-w-sm">
         <div className="text-center mb-8">
-          <div className="inline-flex items-center gap-2 mb-6">
-            <div className="w-7 h-7 rounded-lg bg-gradient-to-br from-[hsl(271,91%,65%)] to-[hsl(330,81%,60%)] flex items-center justify-center">
-              <Sparkles className="w-3.5 h-3.5 text-white" />
-            </div>
-            <span className="font-bold text-sm">KH Academy</span>
+          <div className="mb-6">
+            <KHLogo />
           </div>
 
           {success ? (
@@ -117,9 +113,8 @@ export default function ResetPassword() {
           <form onSubmit={handleSubmit} className="space-y-4">
             <div className="space-y-2">
               <Label htmlFor="newPassword">New password</Label>
-              <Input
+              <PasswordInput
                 id="newPassword"
-                type="password"
                 placeholder="••••••••"
                 value={newPassword}
                 onChange={(e) => setNewPassword(e.target.value)}
@@ -130,9 +125,8 @@ export default function ResetPassword() {
             </div>
             <div className="space-y-2">
               <Label htmlFor="confirmPassword">Confirm password</Label>
-              <Input
+              <PasswordInput
                 id="confirmPassword"
-                type="password"
                 placeholder="••••••••"
                 value={confirmPassword}
                 onChange={(e) => setConfirmPassword(e.target.value)}

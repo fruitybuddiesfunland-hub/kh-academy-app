@@ -4,9 +4,11 @@ import { useAuth } from "@/lib/auth";
 import { PRODUCTS, PRODUCT_ORDER } from "@/lib/products";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { PasswordInput } from "@/components/password-input";
 import { Label } from "@/components/ui/label";
 import { Badge } from "@/components/ui/badge";
-import { Sparkles, ArrowRight, CheckCircle2 } from "lucide-react";
+import { ArrowRight, CheckCircle2 } from "lucide-react";
+import { KHLogo } from "@/components/kh-logo";
 
 export function LoginPage() {
   const [email, setEmail] = useState("");
@@ -61,11 +63,8 @@ export function LoginPage() {
         <div className="lg:w-[440px] lg:min-w-[440px] flex flex-col justify-center px-6 py-12 lg:px-12 lg:border-r border-border/50">
           <div className="w-full max-w-sm mx-auto">
             <div className="mb-8">
-              <div className="inline-flex items-center gap-2 mb-6">
-                <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-[hsl(271,91%,65%)] to-[hsl(330,81%,60%)] flex items-center justify-center">
-                  <Sparkles className="w-4 h-4 text-white" />
-                </div>
-                <span className="font-bold text-lg">KH Academy</span>
+              <div className="mb-6">
+                <KHLogo size="md" />
               </div>
               <h1 className="text-2xl font-bold" data-testid="auth-title">
                 Access your courses
@@ -90,9 +89,8 @@ export function LoginPage() {
               </div>
               <div className="space-y-2">
                 <Label htmlFor="password">Password</Label>
-                <Input
+                <PasswordInput
                   id="password"
-                  type="password"
                   placeholder="••••••••"
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
