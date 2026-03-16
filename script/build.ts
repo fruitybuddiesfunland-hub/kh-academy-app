@@ -38,7 +38,7 @@ async function buildAll() {
   console.log("building client...");
   await viteBuild();
 
-  console.log("building server...");
+  console.log("building server (standalone)...");
   const pkg = JSON.parse(await readFile("package.json", "utf-8"));
   const allDeps = [
     ...Object.keys(pkg.dependencies || {}),
@@ -46,12 +46,29 @@ async function buildAll() {
   ];
   const externals = allDeps.filter((dep) => !allowlist.includes(dep));
 
+  // Build the standalone server (for local/VPS deployment with listen())
   await esbuild({
     entryPoints: ["server/index.ts"],
     platform: "node",
     bundle: true,
     format: "cjs",
     outfile: "dist/index.cjs",
+    define: {
+      "process.env.NODE_ENV": '"production"',
+    },
+    minify: true,
+    external: externals,
+    logLevel: "info",
+  });
+
+  // Build the serverless handler (for Vercel — exports the Express app, no listen())
+  console.log("building server (serverless)...");
+  await esbuild({
+    entryPoints: ["server/app.ts"],
+    platform: "node",
+    bundle: true,
+    format: "cjs",
+    outfile: "dist/serverless.cjs",
     define: {
       "process.env.NODE_ENV": '"production"',
     },
