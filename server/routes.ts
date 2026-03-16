@@ -20,7 +20,7 @@ const PRODUCT_NAMES: Record<string, string> = {
 // Stripe price ID → internal product ID mapping
 const STRIPE_PRICE_MAP: Record<string, { productId: string; name: string }> = {
   // Live mode price IDs
-  "price_1TBcZhArAw5l5wB9Pg0Oj2hq": { productId: "starter-kit", name: "AI Starter Kit" },
+  "price_1TBdaPArAw5l5wB9bNTlXhP4": { productId: "starter-kit", name: "AI Starter Kit" },
   "price_1TBca6ArAw5l5wB9HMHqQDSw": { productId: "skills-builder", name: "AI Skills Builder" },
   "price_1TBcaWArAw5l5wB9tRtT6zUW": { productId: "small-business", name: "AI for Small Business" },
   "price_1TBcatArAw5l5wB9246xvAab": { productId: "automation-mastery", name: "AI Automation Mastery" },
