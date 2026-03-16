@@ -234,8 +234,18 @@ export async function registerRoutes(
 
   // ─── Stripe Checkout ───────────────────────────────────────────
   const stripeSecretKey = process.env.STRIPE_SECRET_KEY;
+  console.log(`Stripe configured: ${!!stripeSecretKey}, key prefix: ${stripeSecretKey ? stripeSecretKey.substring(0, 8) + '...' : 'MISSING'}`);
   const stripeWebhookSecret = process.env.STRIPE_WEBHOOK_SECRET;
   const stripe = stripeSecretKey ? new Stripe(stripeSecretKey) : null;
+
+  // GET /api/health — check if Stripe is configured
+  app.get("/api/health", (_req: Request, res: Response) => {
+    res.json({
+      stripe: !!stripeSecretKey,
+      webhook: !!stripeWebhookSecret,
+      keyPrefix: stripeSecretKey ? stripeSecretKey.substring(0, 7) : null,
+    });
+  });
 
   // POST /api/checkout — create a Stripe Checkout session
   app.post("/api/checkout", async (req: Request, res: Response) => {
