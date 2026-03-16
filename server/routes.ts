@@ -4,6 +4,24 @@ import { storage } from "./storage";
 import { scrypt, randomBytes, timingSafeEqual } from "crypto";
 import { promisify } from "util";
 import { COURSE_DATA, VALID_PRODUCT_IDS } from "./course-data";
+import Stripe from "stripe";
+
+// Stripe price ID → internal product ID mapping
+const STRIPE_PRICE_MAP: Record<string, { productId: string; name: string }> = {
+  "price_1TBZzzArAw5l5wB9n5blv4ne": { productId: "starter-kit", name: "AI Starter Kit" },
+  "price_1TBa0cArAw5l5wB90wXSAx5w": { productId: "skills-builder", name: "AI Skills Builder" },
+  "price_1TBa0tArAw5l5wB9Pp59DiaJ": { productId: "small-business", name: "AI for Small Business" },
+  "price_1TBa1AArAw5l5wB9Y1QxeX5n": { productId: "automation-mastery", name: "AI Automation Mastery" },
+  "price_1TBa1PArAw5l5wB9PKnsfBwn": { productId: "ultimate-bundle", name: "Ultimate AI Bundle" },
+};
+
+// Internal product ID → Stripe price ID (reverse lookup)
+const PRODUCT_TO_PRICE: Record<string, string> = Object.fromEntries(
+  Object.entries(STRIPE_PRICE_MAP).map(([priceId, { productId }]) => [productId, priceId])
+);
+
+// For the bundle, grant all individual products
+const BUNDLE_PRODUCTS = ["starter-kit", "skills-builder", "small-business", "automation-mastery"];
 
 const scryptAsync = promisify(scrypt);
 
@@ -211,6 +229,127 @@ export async function registerRoutes(
       return res.status(201).json({ success: true, message: "You're on the waitlist!" });
     } catch (err: any) {
       return res.status(400).json({ message: err.message || "Waitlist signup failed" });
+    }
+  });
+
+  // ─── Stripe Checkout ───────────────────────────────────────────
+  const stripeSecretKey = process.env.STRIPE_SECRET_KEY;
+  const stripeWebhookSecret = process.env.STRIPE_WEBHOOK_SECRET;
+  const stripe = stripeSecretKey ? new Stripe(stripeSecretKey) : null;
+
+  // POST /api/checkout — create a Stripe Checkout session
+  app.post("/api/checkout", async (req: Request, res: Response) => {
+    try {
+      if (!stripe) {
+        return res.status(503).json({ message: "Payments are not configured yet" });
+      }
+      const { productId, email } = req.body;
+      if (!productId) {
+        return res.status(400).json({ message: "productId is required" });
+      }
+      const priceId = PRODUCT_TO_PRICE[productId];
+      if (!priceId) {
+        return res.status(400).json({ message: "Invalid product" });
+      }
+
+      const sessionParams: Stripe.Checkout.SessionCreateParams = {
+        mode: "payment",
+        payment_method_types: ["card"],
+        line_items: [{ price: priceId, quantity: 1 }],
+        success_url: `https://www.kh-academy.com/success.html?session_id={CHECKOUT_SESSION_ID}`,
+        cancel_url: `https://www.kh-academy.com/#products`,
+        metadata: { productId },
+      };
+
+      // Pre-fill email if provided
+      if (email) {
+        sessionParams.customer_email = email;
+      }
+
+      const session = await stripe.checkout.sessions.create(sessionParams);
+      return res.json({ url: session.url });
+    } catch (err: any) {
+      console.error("Checkout error:", err);
+      return res.status(500).json({ message: err.message || "Checkout failed" });
+    }
+  });
+
+  // POST /api/webhook/stripe — handle Stripe webhook events
+  // IMPORTANT: This must use the raw body, not parsed JSON
+  app.post("/api/webhook/stripe", async (req: Request, res: Response) => {
+    try {
+      if (!stripe || !stripeWebhookSecret) {
+        return res.status(503).json({ message: "Webhook not configured" });
+      }
+
+      const sig = req.headers["stripe-signature"] as string;
+      let event: Stripe.Event;
+
+      try {
+        event = stripe.webhooks.constructEvent(
+          req.rawBody as Buffer,
+          sig,
+          stripeWebhookSecret
+        );
+      } catch (webhookErr: any) {
+        console.error("Webhook signature verification failed:", webhookErr.message);
+        return res.status(400).json({ message: "Invalid signature" });
+      }
+
+      if (event.type === "checkout.session.completed") {
+        const session = event.data.object as Stripe.Checkout.Session;
+        const customerEmail = session.customer_details?.email || session.customer_email;
+        const productId = session.metadata?.productId;
+
+        if (customerEmail && productId) {
+          console.log(`Payment received: ${customerEmail} purchased ${productId}`);
+
+          // Check if user already exists
+          let user = await storage.getUserByEmail(customerEmail);
+          let tempPassword: string | null = null;
+
+          if (!user) {
+            // Create new user with temporary password
+            const chars = "ABCDEFGHJKLMNPQRSTUVWXYZabcdefghjkmnpqrstuvwxyz23456789";
+            tempPassword = "";
+            const bytes = randomBytes(8);
+            for (let i = 0; i < 8; i++) {
+              tempPassword += chars[bytes[i] % chars.length];
+            }
+            const hashedPw = await hashPassword(tempPassword);
+            user = await storage.createUser(
+              { email: customerEmail, password: hashedPw, name: customerEmail.split("@")[0] },
+              true
+            );
+            console.log(`Created new user: ${customerEmail}`);
+          }
+
+          // Grant product access
+          if (productId === "ultimate-bundle") {
+            // Bundle grants all individual products + the bundle itself
+            for (const pid of [...BUNDLE_PRODUCTS, "ultimate-bundle"]) {
+              await storage.createPurchase({ userId: user.id, productId: pid });
+            }
+          } else {
+            await storage.createPurchase({ userId: user.id, productId });
+          }
+          // Also grant the free quick-start for any purchaser
+          await storage.createPurchase({ userId: user.id, productId: "quick-start" });
+
+          console.log(`Granted ${productId} access to ${customerEmail}`);
+
+          // TODO: Send login credentials email via Resend (to be set up)
+          // For now, log the temp password so it can be sent manually
+          if (tempPassword) {
+            console.log(`TEMP PASSWORD for ${customerEmail}: ${tempPassword}`);
+          }
+        }
+      }
+
+      return res.json({ received: true });
+    } catch (err: any) {
+      console.error("Webhook error:", err);
+      return res.status(500).json({ message: "Webhook processing failed" });
     }
   });
 
