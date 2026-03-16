@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useLocation } from "wouter";
+import { Link, useLocation } from "wouter";
 import { useAuth } from "@/lib/auth";
 import { PRODUCTS, PRODUCT_ORDER } from "@/lib/products";
 import { Button } from "@/components/ui/button";
@@ -119,8 +119,12 @@ export function LoginPage() {
             </form>
 
             <p className="text-center text-xs text-muted-foreground mt-6">
-              Forgot your password? Contact{" "}
-              <span className="text-[hsl(var(--primary))]">support@khacademy.com</span>
+              <Link
+                href="/forgot-password"
+                className="text-[hsl(var(--primary))] hover:underline"
+              >
+                Forgot your password?
+              </Link>
             </p>
 
             <div className="mt-8 p-3 rounded-lg bg-muted/30 border border-border/50 text-center">

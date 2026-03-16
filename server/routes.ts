@@ -5,6 +5,17 @@ import { scrypt, randomBytes, timingSafeEqual } from "crypto";
 import { promisify } from "util";
 import { COURSE_DATA, VALID_PRODUCT_IDS } from "./course-data";
 import Stripe from "stripe";
+import { Resend } from "resend";
+
+// Product display names
+const PRODUCT_NAMES: Record<string, string> = {
+  "quick-start": "AI Quick Start",
+  "starter-kit": "AI Starter Kit",
+  "skills-builder": "AI Skills Builder",
+  "small-business": "AI for Small Business",
+  "automation-mastery": "AI Automation Mastery",
+  "ultimate-bundle": "Ultimate AI Bundle",
+};
 
 // Stripe price ID → internal product ID mapping
 const STRIPE_PRICE_MAP: Record<string, { productId: string; name: string }> = {
@@ -40,6 +51,9 @@ async function comparePasswords(supplied: string, stored: string): Promise<boole
 
 // Simple in-memory token store: token -> userId
 const tokenStore = new Map<string, string>();
+
+// Password reset tokens: token -> { email, expiresAt }
+const resetTokenStore = new Map<string, { email: string; expiresAt: Date }>();
 
 function generateToken(): string {
   return randomBytes(32).toString("hex");
@@ -159,6 +173,88 @@ export async function registerRoutes(
     }
   });
 
+  // POST /api/forgot-password — send reset link
+  app.post("/api/forgot-password", async (req: Request, res: Response) => {
+    try {
+      const { email } = req.body;
+      if (!email) {
+        return res.status(400).json({ message: "Email is required" });
+      }
+      const user = await storage.getUserByEmail(email);
+      // Always return success to avoid email enumeration
+      if (!user) {
+        return res.json({ message: "If that email exists, a reset link has been sent." });
+      }
+      // Generate reset token (valid for 1 hour)
+      const resetToken = generateToken();
+      resetTokenStore.set(resetToken, {
+        email: user.email,
+        expiresAt: new Date(Date.now() + 60 * 60 * 1000),
+      });
+      // Send reset email
+      if (resend) {
+        const resetUrl = `https://app.kh-academy.com/#/reset-password?token=${resetToken}`;
+        try {
+          await resend.emails.send({
+            from: FROM_EMAIL,
+            to: email,
+            subject: "Reset your password — KH Academy",
+            html: `
+              <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; max-width: 560px; margin: 0 auto; padding: 40px 20px;">
+                <h1 style="font-size: 24px; color: #111; text-align: center;">Password Reset</h1>
+                <p style="font-size: 16px; color: #333; line-height: 1.6;">We received a request to reset your KH Academy password.</p>
+                <div style="text-align: center; margin: 32px 0;">
+                  <a href="${resetUrl}" style="display: inline-block; background: linear-gradient(135deg, #a855f7, #ec4899); color: white; text-decoration: none; padding: 14px 36px; border-radius: 8px; font-weight: 600; font-size: 15px;">Reset Password</a>
+                </div>
+                <p style="font-size: 14px; color: #666; line-height: 1.6;">This link expires in 1 hour. If you didn't request this, you can safely ignore this email.</p>
+              </div>
+            `,
+          });
+        } catch (err: any) {
+          console.error("Failed to send reset email:", err.message);
+        }
+      } else {
+        console.log(`[Resend not configured] Reset token for ${email}: ${resetToken}`);
+      }
+      return res.json({ message: "If that email exists, a reset link has been sent." });
+    } catch (err: any) {
+      return res.status(400).json({ message: err.message || "Request failed" });
+    }
+  });
+
+  // POST /api/reset-password — use reset token to set new password
+  app.post("/api/reset-password", async (req: Request, res: Response) => {
+    try {
+      const { token, newPassword } = req.body;
+      if (!token || !newPassword) {
+        return res.status(400).json({ message: "Token and new password are required" });
+      }
+      if (newPassword.length < 6) {
+        return res.status(400).json({ message: "Password must be at least 6 characters" });
+      }
+      const resetData = resetTokenStore.get(token);
+      if (!resetData) {
+        return res.status(400).json({ message: "Invalid or expired reset link" });
+      }
+      if (new Date() > resetData.expiresAt) {
+        resetTokenStore.delete(token);
+        return res.status(400).json({ message: "Reset link has expired. Please request a new one." });
+      }
+      const user = await storage.getUserByEmail(resetData.email);
+      if (!user) {
+        return res.status(400).json({ message: "Account not found" });
+      }
+      const hashedPw = await hashPassword(newPassword);
+      await storage.updateUserPassword(user.id, hashedPw);
+      await storage.clearMustChangePassword(user.id);
+      // Remove used token
+      resetTokenStore.delete(token);
+      return res.json({ message: "Password has been reset. You can now log in." });
+    } catch (err: any) {
+      return res.status(400).json({ message: err.message || "Reset failed" });
+    }
+  });
+
   // GET /api/purchases
   app.get("/api/purchases", requireAuth, async (req: Request, res: Response) => {
     const user = (req as any).authUser;
@@ -212,6 +308,8 @@ export async function registerRoutes(
       const user = await storage.createUser({ email, password: hashedPassword, name }, true);
       // Auto-grant the free quick-start product
       await storage.createPurchase({ userId: user.id, productId: "quick-start" });
+      // Send login email
+      await sendLoginEmail(email, tempPassword, "AI Quick Start");
       return res.status(201).json({ success: true, email, tempPassword });
     } catch (err: any) {
       return res.status(400).json({ message: err.message || "Signup failed" });
@@ -232,18 +330,57 @@ export async function registerRoutes(
     }
   });
 
+  // ─── Resend Email ────────────────────────────────────────────
+  const resendApiKey = process.env.RESEND_API_KEY;
+  const resend = resendApiKey ? new Resend(resendApiKey) : null;
+  const FROM_EMAIL = process.env.FROM_EMAIL || "KH Academy <hello@send.kh-academy.com>";
+
+  async function sendLoginEmail(email: string, password: string, productName: string) {
+    if (!resend) {
+      console.log(`[Resend not configured] Would send login email to ${email}`);
+      return;
+    }
+    try {
+      await resend.emails.send({
+        from: FROM_EMAIL,
+        to: email,
+        subject: `Your ${productName} access is ready — KH Academy`,
+        html: `
+          <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; max-width: 560px; margin: 0 auto; padding: 40px 20px;">
+            <div style="text-align: center; margin-bottom: 32px;">
+              <h1 style="font-size: 24px; color: #111; margin: 0;">Welcome to KH Academy</h1>
+            </div>
+            <p style="font-size: 16px; color: #333; line-height: 1.6;">Thank you for purchasing <strong>${productName}</strong>. Your course access is ready.</p>
+            <div style="background: #f4f0ff; border: 1px solid #e0d4fc; border-radius: 8px; padding: 20px; margin: 24px 0;">
+              <p style="font-size: 14px; color: #666; margin: 0 0 12px;"><strong>Your Login Credentials</strong></p>
+              <p style="font-size: 15px; color: #111; margin: 0 0 8px;">Email: <strong>${email}</strong></p>
+              <p style="font-size: 15px; color: #111; margin: 0;">Password: <strong>${password}</strong></p>
+            </div>
+            <p style="font-size: 14px; color: #666; line-height: 1.6;">You'll be asked to change your password on first login.</p>
+            <div style="text-align: center; margin: 32px 0;">
+              <a href="https://app.kh-academy.com" style="display: inline-block; background: linear-gradient(135deg, #a855f7, #ec4899); color: white; text-decoration: none; padding: 12px 32px; border-radius: 8px; font-weight: 600; font-size: 15px;">Access Your Course</a>
+            </div>
+            <p style="font-size: 13px; color: #999; line-height: 1.5; border-top: 1px solid #eee; padding-top: 20px; margin-top: 32px;">If you have any questions, reply to this email or contact us at support@khacademy.com</p>
+          </div>
+        `,
+      });
+      console.log(`Login email sent to ${email}`);
+    } catch (err: any) {
+      console.error(`Failed to send email to ${email}:`, err.message);
+    }
+  }
+
   // ─── Stripe Checkout ───────────────────────────────────────────
   const stripeSecretKey = process.env.STRIPE_SECRET_KEY;
-  console.log(`Stripe configured: ${!!stripeSecretKey}, key prefix: ${stripeSecretKey ? stripeSecretKey.substring(0, 8) + '...' : 'MISSING'}`);
   const stripeWebhookSecret = process.env.STRIPE_WEBHOOK_SECRET;
   const stripe = stripeSecretKey ? new Stripe(stripeSecretKey) : null;
 
-  // GET /api/health — check if Stripe is configured
+  // GET /api/health — check if services are configured
   app.get("/api/health", (_req: Request, res: Response) => {
     res.json({
       stripe: !!stripeSecretKey,
       webhook: !!stripeWebhookSecret,
-      keyPrefix: stripeSecretKey ? stripeSecretKey.substring(0, 7) : null,
+      resend: !!resendApiKey,
     });
   });
 
@@ -348,10 +485,33 @@ export async function registerRoutes(
 
           console.log(`Granted ${productId} access to ${customerEmail}`);
 
-          // TODO: Send login credentials email via Resend (to be set up)
-          // For now, log the temp password so it can be sent manually
+          // Send login credentials email
+          const productName = PRODUCT_NAMES[productId] || productId;
           if (tempPassword) {
-            console.log(`TEMP PASSWORD for ${customerEmail}: ${tempPassword}`);
+            await sendLoginEmail(customerEmail, tempPassword, productName);
+          } else {
+            // Existing user — send a simpler "new product added" email
+            if (resend) {
+              try {
+                await resend.emails.send({
+                  from: FROM_EMAIL,
+                  to: customerEmail,
+                  subject: `${productName} added to your account — KH Academy`,
+                  html: `
+                    <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; max-width: 560px; margin: 0 auto; padding: 40px 20px;">
+                      <h1 style="font-size: 24px; color: #111;">New Course Unlocked</h1>
+                      <p style="font-size: 16px; color: #333; line-height: 1.6;"><strong>${productName}</strong> has been added to your KH Academy account.</p>
+                      <p style="font-size: 16px; color: #333; line-height: 1.6;">Log in with your existing credentials to access it.</p>
+                      <div style="text-align: center; margin: 32px 0;">
+                        <a href="https://app.kh-academy.com" style="display: inline-block; background: linear-gradient(135deg, #a855f7, #ec4899); color: white; text-decoration: none; padding: 12px 32px; border-radius: 8px; font-weight: 600;">Go to My Courses</a>
+                      </div>
+                    </div>
+                  `,
+                });
+              } catch (err: any) {
+                console.error(`Failed to send product-added email:`, err.message);
+              }
+            }
           }
         }
       }
