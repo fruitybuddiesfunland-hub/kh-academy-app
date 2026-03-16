@@ -19,11 +19,12 @@ const PRODUCT_NAMES: Record<string, string> = {
 
 // Stripe price ID → internal product ID mapping
 const STRIPE_PRICE_MAP: Record<string, { productId: string; name: string }> = {
-  "price_1TBZzzArAw5l5wB9n5blv4ne": { productId: "starter-kit", name: "AI Starter Kit" },
-  "price_1TBa0cArAw5l5wB90wXSAx5w": { productId: "skills-builder", name: "AI Skills Builder" },
-  "price_1TBa0tArAw5l5wB9Pp59DiaJ": { productId: "small-business", name: "AI for Small Business" },
-  "price_1TBa1AArAw5l5wB9Y1QxeX5n": { productId: "automation-mastery", name: "AI Automation Mastery" },
-  "price_1TBa1PArAw5l5wB9PKnsfBwn": { productId: "ultimate-bundle", name: "Ultimate AI Bundle" },
+  // Live mode price IDs
+  "price_1TBcZhArAw5l5wB9Pg0Oj2hq": { productId: "starter-kit", name: "AI Starter Kit" },
+  "price_1TBca6ArAw5l5wB9HMHqQDSw": { productId: "skills-builder", name: "AI Skills Builder" },
+  "price_1TBcaWArAw5l5wB9tRtT6zUW": { productId: "small-business", name: "AI for Small Business" },
+  "price_1TBcatArAw5l5wB9246xvAab": { productId: "automation-mastery", name: "AI Automation Mastery" },
+  "price_1TBcbDArAw5l5wB9emU5K3dG": { productId: "ultimate-bundle", name: "Ultimate AI Bundle" },
 };
 
 // Internal product ID → Stripe price ID (reverse lookup)
