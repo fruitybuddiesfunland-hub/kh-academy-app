@@ -7,7 +7,7 @@
   "version": "1.0 — March 2026",
   "pages": 32,
   "publisher": "KH Academy",
-  "website": "khacademy.com",
+  "website": "kh-academy.com",
   "compatible_tools": ["Claude", "Gemini", "Zapier", "n8n"],
   "sections": [
     {
@@ -642,10 +642,10 @@
           "offer": "Ultimate AI Bundle",
           "price": "$147",
           "description": "All 4 products | Separately: $162 | Save $15. AI Starter Kit + AI Skills Builder + AI for Small Business + AI Automation Mastery.",
-          "url": "khacademy.com"
+          "url": "https://www.kh-academy.com"
         }
       ],
-      "contact": "support@khacademy.com"
+      "contact": "info@kh-academy.com"
     }
   ]
 }

@@ -36,7 +36,7 @@ export class MemStorage implements IStorage {
     const demoUserId = randomUUID();
     const demoUser: User = {
       id: demoUserId,
-      email: "demo@khacademy.com",
+      email: "demo@kh-academy.com",
       password: hashedPw,
       name: "Demo User",
       mustChangePassword: true,

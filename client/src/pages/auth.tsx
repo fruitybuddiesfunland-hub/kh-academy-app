@@ -128,7 +128,7 @@ export function LoginPage() {
             <div className="mt-8 p-3 rounded-lg bg-muted/30 border border-border/50 text-center">
               <p className="text-xs text-muted-foreground mb-1">Demo credentials</p>
               <p className="text-xs font-mono text-muted-foreground">
-                demo@khacademy.com / Welcome123
+                demo@kh-academy.com / Welcome123
               </p>
             </div>
           </div>

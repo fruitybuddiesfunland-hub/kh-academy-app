@@ -361,7 +361,7 @@ export async function registerRoutes(
             <div style="text-align: center; margin: 32px 0;">
               <a href="https://app.kh-academy.com" style="display: inline-block; background: linear-gradient(135deg, #a855f7, #ec4899); color: white; text-decoration: none; padding: 12px 32px; border-radius: 8px; font-weight: 600; font-size: 15px;">Access Your Course</a>
             </div>
-            <p style="font-size: 13px; color: #999; line-height: 1.5; border-top: 1px solid #eee; padding-top: 20px; margin-top: 32px;">If you have any questions, reply to this email or contact us at support@khacademy.com</p>
+            <p style="font-size: 13px; color: #999; line-height: 1.5; border-top: 1px solid #eee; padding-top: 20px; margin-top: 32px;">If you have any questions, reply to this email or contact us at info@kh-academy.com</p>
           </div>
         `,
       });

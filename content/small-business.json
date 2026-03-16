@@ -7,7 +7,7 @@
   "version": "1.0 — March 2026",
   "pages": 44,
   "publisher": "KH Academy",
-  "website": "khacademy.com",
+  "website": "kh-academy.com",
   "compatible_tools": ["Claude", "Gemini"],
   "sections": [
     {
@@ -795,7 +795,7 @@
           "offer": "Ultimate AI Bundle",
           "price": "$147 (Save 40%)",
           "description": "All 4 products + future updates. vs. $162 buying separately.",
-          "url": "khacademy.com"
+          "url": "https://www.kh-academy.com"
         }
       ]
     }

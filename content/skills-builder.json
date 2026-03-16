@@ -7,7 +7,7 @@
   "version": "1.0 — March 2026",
   "pages": 32,
   "publisher": "KH Academy",
-  "website": "khacademy.com",
+  "website": "kh-academy.com",
   "compatible_tools": ["Claude", "Gemini"],
   "sections": [
     {
@@ -580,25 +580,25 @@
           "offer": "AI Starter Kit",
           "price": "$19",
           "description": "50+ ready-to-use prompts for ChatGPT, Claude & Gemini",
-          "url": "khacademy.com"
+          "url": "https://www.kh-academy.com"
         },
         {
           "offer": "AI for Small Business Owners",
           "price": "$47",
           "description": "Pre-built skills for business operations",
-          "url": "khacademy.com"
+          "url": "https://www.kh-academy.com"
         },
         {
           "offer": "AI Automation Cookbook",
           "price": "$67",
           "description": "Advanced multi-step workflows as installable skills",
-          "url": "khacademy.com"
+          "url": "https://www.kh-academy.com"
         },
         {
           "offer": "Ultimate AI Bundle",
           "price": "$147",
           "description": "All products, everything you need",
-          "url": "khacademy.com"
+          "url": "https://www.kh-academy.com"
         }
       ]
     }

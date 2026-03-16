@@ -6,7 +6,7 @@
   "version": "2.0 — March 2026",
   "pages": 25,
   "publisher": "KH Academy",
-  "website": "khacademy.com",
+  "website": "kh-academy.com",
   "compatible_tools": ["ChatGPT", "Claude", "Gemini"],
   "sections": [
     {
@@ -553,19 +553,19 @@
           "offer": "AI Prompt Master Pack",
           "price": "$47",
           "description": "300+ prompts for every use case",
-          "url": "khacademy.com"
+          "url": "https://www.kh-academy.com"
         },
         {
           "offer": "AI Business Automation Toolkit",
           "price": "$67",
           "description": "Automate your entire workflow with AI",
-          "url": "khacademy.com"
+          "url": "https://www.kh-academy.com"
         },
         {
           "offer": "Ultimate AI Bundle",
           "price": "$197",
           "description": "All 6 products — everything you need",
-          "url": "khacademy.com"
+          "url": "https://www.kh-academy.com"
         }
       ]
     }

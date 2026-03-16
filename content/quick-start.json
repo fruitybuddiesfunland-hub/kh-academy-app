@@ -6,7 +6,7 @@
   "version": null,
   "pages": 9,
   "publisher": "KH Academy",
-  "website": "khacademy.com",
+  "website": "kh-academy.com",
   "compatible_tools": ["ChatGPT", "Claude", "Gemini"],
   "sections": [
     {
@@ -142,13 +142,13 @@
           "offer": "Get the Complete AI Starter Kit",
           "price": "$19",
           "description": "50+ expert prompts | 8 categories | Copy-paste ready",
-          "url": "khacademy.com"
+          "url": "https://www.kh-academy.com"
         },
         {
           "offer": "Save 40% with the Ultimate AI Bundle",
           "price": "$197 for all 6 products",
           "description": "AI Starter Kit + ChatGPT Playbook + Prompt Engineering + Business + Freelancer + Career",
-          "url": "khacademy.com"
+          "url": "https://www.kh-academy.com"
         }
       ]
     }
