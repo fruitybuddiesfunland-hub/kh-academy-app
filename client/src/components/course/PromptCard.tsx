@@ -1,4 +1,4 @@
-import { Lightbulb } from "lucide-react";
+import { Lightbulb, MessageSquare, Info } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { CopyButton } from "./CopyButton";
 
@@ -48,6 +48,23 @@ export function PromptCard({ prompt }: { prompt: any }) {
         <div className="mt-3 flex items-start gap-2 text-xs text-muted-foreground bg-[hsl(var(--primary))]/5 rounded-lg p-3">
           <Lightbulb className="w-3.5 h-3.5 text-[hsl(var(--primary))] shrink-0 mt-0.5" />
           <span><strong>Pro tip:</strong> {prompt.tip || prompt.pro_tip}</span>
+        </div>
+      )}
+
+      {prompt.why_it_works && (
+        <div className="mt-3 flex items-start gap-2 text-xs text-muted-foreground bg-muted/50 rounded-lg p-3">
+          <Info className="w-3.5 h-3.5 text-muted-foreground shrink-0 mt-0.5" />
+          <span><strong>Why this works:</strong> {prompt.why_it_works}</span>
+        </div>
+      )}
+
+      {prompt.follow_up && (
+        <div className="mt-3 flex items-start gap-2 text-xs text-muted-foreground bg-emerald-500/5 rounded-lg p-3">
+          <MessageSquare className="w-3.5 h-3.5 text-emerald-500 shrink-0 mt-0.5" />
+          <div>
+            <strong>Follow-up prompt:</strong>
+            <span className="block mt-1 font-mono">{prompt.follow_up}</span>
+          </div>
         </div>
       )}
     </div>
