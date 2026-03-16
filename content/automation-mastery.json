@@ -1,0 +1,651 @@
+{
+  "product_id": "automation-mastery",
+  "title": "AI Automation Mastery",
+  "subtitle": "Hands-Free AI Workflows That Market, Sell & Serve Your Customers on Autopilot",
+  "tagline": "9 Ready-to-Use Workflows | Claude + Gemini + Zapier + n8n",
+  "source": "ai-automation-mastery.pdf",
+  "version": "1.0 — March 2026",
+  "pages": 32,
+  "publisher": "KH Academy",
+  "website": "khacademy.com",
+  "compatible_tools": ["Claude", "Gemini", "Zapier", "n8n"],
+  "sections": [
+    {
+      "title": "Welcome",
+      "type": "intro",
+      "content": "YOUR AI SHOULD WORK WHILE YOU DON'T. You've learned the prompts (Product 1). You've built the Skills and Gems (Product 2). You've deployed complete business systems (Product 3). Now it's time for the final level: automation that runs without you. This guide gives you ready-to-use, step-by-step workflows that connect Claude and Gemini to tools like Zapier and n8n. The result? Your AI writes, responds, follows up, and reports — automatically. You just review the output.",
+      "automation_ladder": [
+        { "level": "01", "name": "Manual AI", "description": "You type prompts one at a time", "status": "DONE" },
+        { "level": "02", "name": "Specialist AI", "description": "You built Skills & Gems", "status": "DONE" },
+        { "level": "03", "name": "System AI", "description": "You deployed business systems", "status": "DONE" },
+        { "level": "04", "name": "Automated AI", "description": "Systems run on autopilot", "status": "YOU ARE HERE" }
+      ],
+      "items": []
+    },
+    {
+      "title": "How to Use This Guide",
+      "type": "instructions",
+      "content": "Three-step guide to setting up and launching automations.",
+      "items": [
+        { "step": 1, "title": "Pick a Workflow", "instruction": "Browse by category: Marketing or Customer Service." },
+        { "step": 2, "title": "Set Up the Workflow", "instruction": "Follow the step-by-step setup for Zapier OR n8n." },
+        { "step": 3, "title": "Customize & Launch", "instruction": "Fill in your [BRACKETS], test once, let it run." }
+      ]
+    },
+    {
+      "title": "Table of Contents",
+      "type": "toc",
+      "content": "4 parts. 9 workflows. All templates included.",
+      "items": [
+        { "part": "I — AUTOMATION FOUNDATION", "chapter": "01", "title": "Understanding Automation Platforms", "pages": "4-5" },
+        { "part": "I — AUTOMATION FOUNDATION", "chapter": "02", "title": "Your Automation Toolkit Setup", "pages": "6-7" },
+        { "part": "II — MARKETING AUTOMATION", "chapter": "03", "title": "Auto-Generate Social Media Posts", "pages": "8-9" },
+        { "part": "II — MARKETING AUTOMATION", "chapter": "04", "title": "Email Sequence Generator", "pages": "10-11" },
+        { "part": "II — MARKETING AUTOMATION", "chapter": "05", "title": "Content Repurposing Engine", "pages": "12-13" },
+        { "part": "II — MARKETING AUTOMATION", "chapter": "06", "title": "Lead Magnet Follow-Up", "pages": "14-15" },
+        { "part": "II — MARKETING AUTOMATION", "chapter": "07", "title": "Competitor Watch & Alert", "pages": "16-17" },
+        { "part": "III — CUSTOMER SERVICE AUTOMATION", "chapter": "08", "title": "Smart Inquiry Auto-Responder", "pages": "18-19" },
+        { "part": "III — CUSTOMER SERVICE AUTOMATION", "chapter": "09", "title": "Client Onboarding Automation", "pages": "20-21" },
+        { "part": "III — CUSTOMER SERVICE AUTOMATION", "chapter": "10", "title": "Review & Testimonial Collector", "pages": "22-23" },
+        { "part": "III — CUSTOMER SERVICE AUTOMATION", "chapter": "11", "title": "Customer Follow-Up & Re-Engagement", "pages": "24-25" },
+        { "part": "IV — OPTIMIZATION", "chapter": "12", "title": "Automation Dashboard", "pages": "26-27" },
+        { "part": "IV — OPTIMIZATION", "chapter": "13", "title": "Troubleshooting & Optimization", "pages": "28-29" },
+        { "part": "IV — OPTIMIZATION", "chapter": "14", "title": "What's Next: Ultimate AI Bundle", "pages": "30-31" }
+      ]
+    },
+    {
+      "title": "Chapter 01: Understanding Automation Platforms",
+      "type": "educational",
+      "content": "THE TWO TOOLS THAT MAKE YOUR AI RUN ON AUTOPILOT",
+      "automation_anatomy": {
+        "description": "The 4 Parts of Every Automation",
+        "parts": [
+          { "number": 1, "label": "TRIGGER", "description": "When this happens..." },
+          { "number": 2, "label": "AI ACTION", "description": "Ask AI to..." },
+          { "number": 3, "label": "OUTPUT", "description": "Take the result..." },
+          { "number": 4, "label": "DESTINATION", "description": "Send it to..." }
+        ]
+      },
+      "platforms": [
+        {
+          "name": "Zapier",
+          "tagline": "The Easy Button",
+          "what_it_is": "Cloud-based, no-code, 7,000+ app integrations",
+          "best_for": "Non-technical users, quick setup, massive app library",
+          "ai_integrations": "Built-in Claude AI and Google Gemini integrations",
+          "pricing": "Free = 100 tasks/month; Starter = $19.99/mo for 750 tasks",
+          "key_terms": { "Zap": "one workflow", "Task": "one execution of a step" }
+        },
+        {
+          "name": "n8n",
+          "tagline": "The Power Tool",
+          "what_it_is": "Open-source, self-hostable or cloud, visual workflow builder",
+          "best_for": "Users who want more control, complex logic, cost savings",
+          "ai_integrations": "Native Claude + Gemini nodes via API keys",
+          "pricing": "Free self-hosted; Cloud starts at EUR 20/month",
+          "key_terms": { "Workflow": "automation", "Execution": "one run" }
+        }
+      ],
+      "decision_guide": {
+        "choose_zapier_if": [
+          "You want the fastest setup (under 10 min)",
+          "You're not technical — no-code everything",
+          "You need to connect to many different apps",
+          "You're okay paying per task as you scale"
+        ],
+        "choose_n8n_if": [
+          "You want more control over workflows",
+          "You're comfortable with slightly more tech",
+          "You want to self-host for cost savings",
+          "You need complex logic (loops, branching)"
+        ]
+      },
+      "pro_tip": "Every workflow in this guide includes setup steps for BOTH platforms. You can start with Zapier for speed, then migrate to n8n later if you want more control."
+    },
+    {
+      "title": "Chapter 02: Your Automation Toolkit Setup",
+      "type": "educational",
+      "content": "GET EVERYTHING CONNECTED IN 30 MINUTES OR LESS",
+      "pre_flight_checklist": [
+        "Claude account (free or Pro) — claude.ai",
+        "Gemini account (free or Advanced) — gemini.google.com",
+        "Anthropic API key — console.anthropic.com",
+        "Google AI Studio API key — aistudio.google.com",
+        "Zapier account — zapier.com",
+        "n8n account — n8n.io (cloud) or self-hosted"
+      ],
+      "optional_but_recommended": [
+        "Gmail / Google Workspace",
+        "Google Sheets (for tracking outputs)",
+        "Your CRM (HubSpot, Salesforce, etc.)",
+        "Social media accounts",
+        "Slack or Teams (for notifications)"
+      ],
+      "zapier_setup": [
+        { "step": 1, "action": "Sign up at zapier.com", "detail": "Choose Starter plan or higher for AI actions" },
+        { "step": 2, "action": "Connect Anthropic", "detail": "Settings > Connections > Search 'Anthropic' > Paste API key" },
+        { "step": 3, "action": "Connect Gemini", "detail": "Settings > Connections > Search 'Google AI Studio' > Paste API key" },
+        { "step": 4, "action": "Test connection", "detail": "Create test Zap > Add Claude step > Send 'Hello, test!'" }
+      ],
+      "n8n_setup": [
+        { "step": 1, "action": "Sign up at app.n8n.cloud", "detail": "Choose Starter plan, or self-host for free" },
+        { "step": 2, "action": "Add Anthropic credential", "detail": "Settings > Credentials > New > Anthropic > Paste API key" },
+        { "step": 3, "action": "Add Gemini credential", "detail": "Settings > Credentials > New > Google Gemini > Paste API key" },
+        { "step": 4, "action": "Test workflow", "detail": "Create new workflow > Add Anthropic node > Execute > Verify" }
+      ],
+      "credentials_tracker": {
+        "platform": "[Zapier / n8n / Both]",
+        "plan": "[tier]",
+        "budget": "$[___]",
+        "anthropic_api_key_location": "[location]",
+        "gemini_api_key_location": "[location]",
+        "setup_date": "[___/___/2026]"
+      }
+    },
+    {
+      "title": "Workflow 03: Auto-Generate Social Posts",
+      "type": "workflow",
+      "tagline": "FRESH CONTENT EVERY DAY — WITHOUT TOUCHING A KEYBOARD",
+      "metrics": {
+        "time_saved": "5-7 hrs",
+        "difficulty": "Beginner",
+        "tools_needed": 3,
+        "frequency": "Daily"
+      },
+      "flow": [
+        { "step": "S", "label": "SCHEDULE", "description": "Daily 7AM" },
+        { "step": "G", "label": "SHEETS", "description": "Read topics from Google Sheet" },
+        { "step": "AI", "label": "CLAUDE", "description": "Generate post" },
+        { "step": "B", "label": "BUFFER", "description": "Publish to social media" }
+      ],
+      "content_calendar_template": {
+        "columns": ["Date", "Topic", "Platform", "Tone", "Key Message"],
+        "example_rows": [
+          ["[Monday]", "[Industry tip]", "LinkedIn", "Expert", "[Your main point]"],
+          ["[Tuesday]", "[Behind scenes]", "Instagram", "Casual", "[What to share]"],
+          ["[Wednesday]", "[Client story]", "X/Twitter", "Bold", "[Success metric]"],
+          ["[Thursday]", "[How-to]", "LinkedIn", "Helpful", "[Problem > Solution]"],
+          ["[Friday]", "[Weekend take]", "X/Twitter", "Casual", "[Your perspective]"]
+        ]
+      },
+      "ai_prompt": {
+        "platform": "Claude / Gemini",
+        "prompt": "SYSTEM: You are a social media content creator for [YOUR BUSINESS NAME]. Your brand voice is [PROFESSIONAL/CASUAL/BOLD]. You write for [YOUR INDUSTRY]. RULES: Keep posts under [280 chars for X / 1300 for LinkedIn]. Use 3-5 relevant hashtags. Include a hook in the first line. End with a question or call-to-action. Never use 'In today's fast-paced world'. Reference real audience problems: [PAIN POINTS]. TODAY'S POST — Topic: {{topic}} | Platform: {{platform}} | Tone: {{tone}} | Key message: {{key_message}}. Write the post now."
+      },
+      "zapier_setup": [
+        { "step": "T", "node": "Schedule by Zapier", "detail": "Every day at 7:00 AM" },
+        { "step": "S", "node": "Google Sheets", "detail": "Get row from Content Calendar (Status=Pending)" },
+        { "step": "AI", "node": "Claude AI", "detail": "Generate post using topic, platform, tone" },
+        { "step": "A", "node": "Buffer", "detail": "Publish post to social media" }
+      ],
+      "n8n_setup": [
+        { "step": "T", "node": "Schedule Trigger", "detail": "Daily at your chosen time" },
+        { "step": "S", "node": "Google Sheets", "detail": "Read row: Status=Pending, 1 Limit" },
+        { "step": "AI", "node": "Claude AI", "detail": "claude-sonnet model with prompt template" },
+        { "step": "A", "node": "HTTP Request", "detail": "POST to Buffer/LinkedIn API" }
+      ],
+      "customization": {
+        "business_name": "[___]",
+        "platform": "[LinkedIn / X / Instagram]",
+        "brand_voice": "[Professional / Casual / Bold / Friendly]",
+        "post_frequency": "[Daily / 3x per week / Weekly]",
+        "content_themes": ["[___]", "[___]", "[___]"]
+      }
+    },
+    {
+      "title": "Workflow 04: Email Sequence Generator",
+      "type": "workflow",
+      "tagline": "AUTOMATED NURTURE SEQUENCES THAT SOUND LIKE YOU WROTE EACH ONE",
+      "metrics": {
+        "time_saved": "3-5 hrs",
+        "difficulty": "Intermediate",
+        "tools_needed": 3,
+        "frequency": "Per lead"
+      },
+      "flow": [
+        { "step": "L", "label": "NEW LEAD", "description": "CRM trigger" },
+        { "step": "E", "label": "ENRICH", "description": "Pull details" },
+        { "step": "AI", "label": "CLAUDE", "description": "Write 5 emails" },
+        { "step": "R", "label": "REVIEW", "description": "Your approval" },
+        { "step": "S", "label": "SEND", "description": "Auto-queue" }
+      ],
+      "why_this_beats_generic_templates": "Every email tool has templates. But they're the same for everyone. This workflow generates sequences personalized to each lead — their industry, their pain points, their entry point — using YOUR brand voice.",
+      "ai_prompt": {
+        "platform": "Claude",
+        "prompt": "SYSTEM: You are an email marketing specialist for [YOUR BUSINESS NAME]. BRAND VOICE: [YOUR EMAIL TONE]. PRODUCT: [WHAT YOU SELL] at [PRICE]. UNIQUE VALUE: [WHY CHOOSE YOU]. LEAD: Name: {{lead_name}} | Company: {{company}} | Source: {{lead_source}} | Industry: {{industry}}. Generate a 5-email nurture sequence: EMAIL 1 (Immediate): Welcome + value. EMAIL 2 (Day 3): Educational, no selling. EMAIL 3 (Day 7): Case study for their industry. EMAIL 4 (Day 10): Soft offer with specific benefit. EMAIL 5 (Day 14): Direct offer with urgency. For each: Subject line (<50 chars), Preview text (<90 chars), Body (<200 words), CTA, Send timing."
+      },
+      "zapier_setup": [
+        { "step": "T", "node": "HubSpot / Mailchimp", "detail": "New Contact or New detected Subscriber" },
+        { "step": "AI", "node": "Claude AI", "detail": "Generate 5-email nurture sequence" },
+        { "step": "S", "node": "Google Sheets", "detail": "Create row per email with send dates" },
+        { "step": "@", "node": "Gmail / Mailchimp", "detail": "Send approved emails on schedule" }
+      ],
+      "n8n_setup": [
+        { "step": "T", "node": "Webhook / CRM", "detail": "Fires when new lead enters system" },
+        { "step": "AI", "node": "Claude AI", "detail": "Paste prompt template, map lead data" },
+        { "step": "S", "node": "Google Sheets", "detail": "Write all 5 emails as separate rows" },
+        { "step": "@", "node": "Gmail", "detail": "Send on scheduled dates" }
+      ],
+      "pro_tip": "Start with manual approval for the first 10 sequences. Once you trust the output, let it run fully automated.",
+      "customization": {
+        "email_tool": "[Mailchimp / HubSpot / Gmail]",
+        "crm": "[HubSpot / Sheets]",
+        "approval_mode": "[Manual / Auto]"
+      }
+    },
+    {
+      "title": "Workflow 05: Content Repurposing Engine",
+      "type": "workflow",
+      "tagline": "ONE PIECE OF CONTENT → 10+ PIECES ACROSS EVERY PLATFORM",
+      "metrics": {
+        "time_saved": "8-10 hrs",
+        "difficulty": "Intermediate",
+        "tools_needed": 4,
+        "frequency": "Per post"
+      },
+      "flow": [
+        { "step": "P", "label": "PUBLISH", "description": "Blog/Video" },
+        { "step": "E", "label": "EXTRACT", "description": "Get full text" },
+        { "step": "AI", "label": "CLAUDE", "description": "Repurpose" },
+        { "step": "G", "label": "SHEETS", "description": "Store all pieces" },
+        { "step": "Q", "label": "QUEUE", "description": "Schedule" }
+      ],
+      "repurposing_matrix": [
+        { "output": "5 LinkedIn posts", "description": "Different angles from the original" },
+        { "output": "5 X/Twitter posts", "description": "Punchy, under 280 characters" },
+        { "output": "1 Email newsletter", "description": "Hook + key insight + link" },
+        { "output": "3 Instagram captions", "description": "Visual-friendly with CTAs" },
+        { "output": "5 Quote graphics", "description": "Quotable lines for Canva" }
+      ],
+      "stats": {
+        "original_pieces": 1,
+        "output_pieces": "19+",
+        "weeks_covered": "4+"
+      },
+      "ai_prompt": {
+        "platform": "Gemini",
+        "prompt": "SYSTEM: You are a content repurposing specialist. You take one piece of long-form content and create multiple shorter pieces. BRAND VOICE: [YOUR VOICE]. BUSINESS: [YOUR NAME]. ORIGINAL CONTENT: {{full_text}}. Create: 1) 5 LinkedIn posts (100-200 words, end with question, 3-5 hashtags). 2) 5 X/Twitter posts (under 280 chars, punchy). 3) 1 Email newsletter intro (100 words, hook + insight). 4) 5 Quote graphics (most quotable lines). Format each with platform headers."
+      },
+      "zapier_setup": [
+        { "step": 1, "action": "Trigger: RSS / Webhook", "detail": "New blog post published or Google Doc updated" },
+        { "step": 2, "action": "Extract content", "detail": "Formatter by Zapier > Extract text from URL or doc" },
+        { "step": 3, "action": "Claude: Send Message", "detail": "Paste repurposing prompt > Map full text" },
+        { "step": 4, "action": "Google Sheets: Create Rows", "detail": "One row per piece with platform + date columns" }
+      ],
+      "customization": {
+        "source_content_type": "[Blog / Video / Podcast / Newsletter]",
+        "publishing_frequency": "[Weekly / Bi-weekly / Monthly]",
+        "target_platforms": "[LinkedIn / X / Instagram / Email / YouTube]",
+        "repurposing_schedule": "Spread over [___] weeks",
+        "content_themes": "[___]"
+      }
+    },
+    {
+      "title": "Workflow 06: Lead Magnet Follow-Up",
+      "type": "workflow",
+      "tagline": "TURN EVERY FREE DOWNLOAD INTO A SALES CONVERSATION",
+      "metrics": {
+        "time_saved": "2-4 hrs",
+        "difficulty": "Beginner",
+        "tools_needed": 3,
+        "frequency": "Per download"
+      },
+      "flow": [
+        { "step": "D", "label": "DOWNLOAD", "description": "Visitor downloads guide" },
+        { "step": "T", "label": "DETECT", "description": "New subscriber triggered" },
+        { "step": "C", "label": "CLASSIFY", "description": "AI reads which lead magnet" },
+        { "step": "AI", "label": "GENERATE", "description": "4-email sequence created" },
+        { "step": "S", "label": "SEND", "description": "Emails sent automatically" }
+      ],
+      "performance_stats": {
+        "generic_open_rate": "15%",
+        "personalized_open_rate": "35-45%",
+        "more_replies": "3x"
+      },
+      "ai_prompt": {
+        "platform": "Claude",
+        "prompt": "SYSTEM: You are a follow-up email specialist for [YOUR BUSINESS NAME]. LEAD MAGNET: {{lead_magnet_name}}. KEY TOPICS: {{key_topics}}. NEXT PAID PRODUCT: {{product_name}} at {{price}}. LEAD: {{name}}. Write 4 emails: EMAIL 1 (Immediate): Deliver download + bonus tip not in the guide. EMAIL 2 (Day 2): Ask if they tried [specific technique]. Quick-win example. No selling. EMAIL 3 (Day 5): Success story. Bridge to paid product. Soft mention only. EMAIL 4 (Day 7): Direct offer for paid product. Specific benefit. Time-limited bonus. Clear CTA."
+      },
+      "zapier_setup": [
+        { "step": 1, "action": "Trigger: ConvertKit/Mailchimp", "detail": "New Subscriber with tag = lead magnet name" },
+        { "step": 2, "action": "Claude: Send Message", "detail": "Follow-up prompt > Map subscriber + lead magnet details" },
+        { "step": 3, "action": "Google Sheets: Create Rows", "detail": "Store all 4 emails with send dates" },
+        { "step": 4, "action": "Email tool: Create Sequence", "detail": "Queue emails on the generated schedule" }
+      ],
+      "customization": {
+        "lead_magnet_name": "[___]",
+        "key_topics_in_guide": ["[___]", "[___]", "[___]"],
+        "next_paid_product": "[___] at $[___]",
+        "email_tool": "[ConvertKit / Mailchimp / HubSpot]",
+        "from_name": "[___]",
+        "reply_to_email": "[___]"
+      }
+    },
+    {
+      "title": "Workflow 07: Competitor Watch & Alert",
+      "type": "workflow",
+      "tagline": "KNOW WHAT YOUR COMPETITORS DO — BEFORE YOUR CUSTOMERS TELL YOU",
+      "metrics": {
+        "time_saved": "3-4 hrs",
+        "difficulty": "Intermediate",
+        "tools_needed": 3,
+        "frequency": "Daily"
+      },
+      "flow": [
+        { "step": "S", "label": "SCHEDULE", "description": "Daily 8AM" },
+        { "step": "W", "label": "SCAN", "description": "Check competitor sources" },
+        { "step": "AI", "label": "CLAUDE", "description": "Analyze changes" },
+        { "step": "F", "label": "FILTER", "description": "Significant only?" },
+        { "step": "A", "label": "ALERT", "description": "Notify you" }
+      ],
+      "what_ai_monitors": [
+        { "category": "New announcements", "detail": "Blog posts, press releases, product launches" },
+        { "category": "Pricing changes", "detail": "Plan updates, discounts, new tiers" },
+        { "category": "Marketing campaigns", "detail": "Social media pushes, ad campaigns, promotions" },
+        { "category": "Customer reviews", "detail": "Google, Trustpilot, G2 — opportunities for you" },
+        { "category": "Content strategy", "detail": "Topics they're publishing — topics to respond to" }
+      ],
+      "ai_prompt": {
+        "platform": "Claude",
+        "prompt": "SYSTEM: You are a competitive intelligence analyst for [YOUR BUSINESS] in [YOUR INDUSTRY]. MY COMPETITORS: 1. [COMPETITOR 1 — name + website] 2. [COMPETITOR 2] 3. [COMPETITOR 3]. WHAT I CARE ABOUT: Pricing changes, new launches, marketing campaigns, negative reviews (opportunities for me), content topics. TODAY'S DATA: {{scraped_content}}. Analyze: 1) ALERT LEVEL: Red Urgent / Yellow Notable / Green Routine. 2) WHAT CHANGED. 3) WHY IT MATTERS. 4) RECOMMENDED ACTION. 5) OPPORTUNITY to exploit. If nothing significant: respond 'NO SIGNIFICANT CHANGES TODAY.'"
+      },
+      "setup_steps": [
+        { "step": 1, "action": "Trigger: Daily schedule", "detail": "RSS for competitor blogs + Google Alerts for brand mentions" },
+        { "step": 2, "action": "HTTP Request: Fetch data", "detail": "Pull latest from competitor websites and review sites" },
+        { "step": 3, "action": "Claude: Analyze", "detail": "Send competitor data through analysis prompt" },
+        { "step": 4, "action": "Filter: Significant only", "detail": "IF response != 'NO SIGNIFICANT CHANGES' then continue" },
+        { "step": 5, "action": "Slack/Email: Alert", "detail": "Send summary to your preferred notification channel" }
+      ],
+      "customization": {
+        "competitor_1": { "name": "[Name]", "website": "[URL]", "social": "[LinkedIn / X / Instagram URLs]" },
+        "competitor_2": { "name": "[Name]", "website": "[URL]", "social": "[LinkedIn / X / Instagram URLs]" },
+        "competitor_3": { "name": "[Name]", "website": "[URL]", "social": "[LinkedIn / X / Instagram URLs]" },
+        "alert_delivery": "[Slack / Email / Both]"
+      }
+    },
+    {
+      "title": "Workflow 08: Smart Inquiry Auto-Responder",
+      "type": "workflow",
+      "tagline": "RESPOND TO EVERY CUSTOMER INQUIRY IN UNDER 60 SECONDS — 24/7",
+      "metrics": {
+        "time_saved": "5-8 hrs",
+        "difficulty": "Intermediate",
+        "tools_needed": 3,
+        "frequency": "Instant"
+      },
+      "stats": {
+        "avg_response_time_before": "42 hrs",
+        "with_workflow": "<60 sec",
+        "customers_who_leave_if_slow": "78%"
+      },
+      "flow": [
+        { "step": "I", "label": "INQUIRY", "description": "New email/form" },
+        { "step": "C", "label": "CLASSIFY", "description": "Sales/Support/General/Spam" },
+        { "step": "AI", "label": "GENERATE", "description": "Write response" },
+        { "step": "R", "label": "ROUTE", "description": "CRM + queue" },
+        { "step": "S", "label": "SEND", "description": "Auto-reply" }
+      ],
+      "classifier_prompt": {
+        "platform": "Claude",
+        "prompt": "SYSTEM: You are a customer inquiry classifier for [YOUR BUSINESS]. Read the incoming message and classify: SALES (pricing, demos, quotes), SUPPORT (existing customer issues), GENERAL (partnerships, media, jobs), SPAM (irrelevant). Also extract: URGENCY (High/Medium/Low), CUSTOMER_NAME, KEY_QUESTION, SUMMARY. INCOMING: {{message_body}} FROM: {{sender_email}} SUBJECT: {{subject}}. Respond in JSON format only."
+      },
+      "response_prompt": {
+        "platform": "Claude",
+        "prompt": "SYSTEM: You are a customer service rep for [YOUR BUSINESS]. WHAT WE SELL: [PRODUCTS/SERVICES]. PRICING: [STRUCTURE]. HOURS: [BUSINESS HOURS]. BOOKING: [LINK]. INQUIRY: Category: {{category}} | Name: {{customer_name}} | Question: {{key_question}} | Original: {{original_message}}. Write a professional, warm response that: 1) Addresses by name. 2) Acknowledges their question. 3) Provides a helpful answer. 4) Includes a clear next step. 5) Feels personal, NOT like a bot. Under 150 words. Sign off as [YOUR NAME]."
+      },
+      "zapier_setup": [
+        { "step": "T", "node": "Gmail", "detail": "New inquiry arrives" },
+        { "step": "AI", "node": "Claude AI", "detail": "Classify: Sales / Support / General / Spam" },
+        { "step": "F", "node": "Filter", "detail": "Only continue if NOT Spam" },
+        { "step": "AI", "node": "Claude AI", "detail": "Generate personalized response" },
+        { "step": "@", "node": "Gmail", "detail": "Send reply to customer" },
+        { "step": "A", "node": "HubSpot", "detail": "Create/update contact record" }
+      ],
+      "customization": {
+        "business_name": "[___]",
+        "inquiry_sources": "[Email / Website form / Social DMs]",
+        "response_mode": "[Auto-send / Approve first]",
+        "booking_link": "[___]",
+        "response_sign_off": "[Your name / Team name]"
+      }
+    },
+    {
+      "title": "Workflow 09: Client Onboarding Automation",
+      "type": "workflow",
+      "tagline": "PROFESSIONAL ONBOARDING IN MINUTES — NOT DAYS",
+      "metrics": {
+        "time_saved": "2-3 hrs",
+        "difficulty": "Intermediate",
+        "tools_needed": 4,
+        "frequency": "Per client"
+      },
+      "stats": {
+        "manual_onboarding": "2-3 hrs",
+        "automated": "<5 min",
+        "consistency": "100%"
+      },
+      "flow": [
+        { "step": "P", "label": "PAYMENT", "description": "Stripe/PayPal" },
+        { "step": "AI", "label": "CLAUDE", "description": "Generate welcome package" },
+        { "step": "D", "label": "DOCS", "description": "Create onboarding guide" },
+        { "step": "E", "label": "EMAIL", "description": "Send welcome email" },
+        { "step": "C", "label": "CRM", "description": "Update status" }
+      ],
+      "ai_prompt": {
+        "platform": "Claude",
+        "prompt": "SYSTEM: You are an onboarding specialist for [YOUR BUSINESS]. Create personalized onboarding docs. SERVICE: {{service_name}}. CLIENT: {{client_name}} at {{company_name}} in {{industry}}. START: {{start_date}}. Generate: 1) WELCOME: Personalized message + what to expect in first 7 days + key contacts. 2) CHECKLIST: Step-by-step for them + what we need from them + deadlines. 3) TIMELINE: Week 1-4 milestones. 4) FAQ: 5 common questions with answers. 5) NEXT STEPS: Book kickoff [LINK], complete intake [LINK], join channel [LINK]."
+      },
+      "zapier_setup": [
+        { "step": "T", "node": "Stripe: New Payment OR CRM Deal Won / PayPal New Sale" },
+        { "step": "AI", "node": "Claude AI", "detail": "Generate onboarding doc from template" },
+        { "step": "A", "node": "Google Docs + Gmail", "detail": "Create doc + send welcome email with links" },
+        { "step": "A", "node": "HubSpot", "detail": "Update client status to Onboarding" }
+      ],
+      "n8n_setup": [
+        { "step": "T", "node": "Webhook Trigger", "detail": "Connected to Stripe or CRM" },
+        { "step": "AI", "node": "Claude AI", "detail": "Generate onboarding document" },
+        { "step": "A", "node": "Google Docs + Gmail", "detail": "Create doc + send welcome email" },
+        { "step": "A", "node": "HTTP Request", "detail": "Update CRM status via API" }
+      ],
+      "customization": {
+        "service_product_name": "[___]",
+        "payment_processor": "[Stripe / PayPal]",
+        "intake_form_link": "[___]",
+        "booking_calendar_link": "[___]",
+        "communication_channel": "[Slack / Email / WhatsApp]"
+      }
+    },
+    {
+      "title": "Workflow 10: Review & Testimonial Collector",
+      "type": "workflow",
+      "tagline": "AUTOMATICALLY COLLECT AND SHOWCASE YOUR BEST CLIENT FEEDBACK",
+      "metrics": {
+        "time_saved": "2-3 hrs",
+        "difficulty": "Beginner",
+        "tools_needed": 3,
+        "frequency": "Per project"
+      },
+      "flow": [
+        { "step": "C", "label": "COMPLETE", "description": "Project done" },
+        { "step": "R", "label": "REQUEST", "description": "AI-crafted review ask" },
+        { "step": "F", "label": "COLLECT", "description": "Response arrives" },
+        { "step": "AI", "label": "FORMAT", "description": "3 versions created" },
+        { "step": "S", "label": "STORE", "description": "Added to library" }
+      ],
+      "request_email_prompt": {
+        "platform": "Claude",
+        "prompt": "SYSTEM: You write review request emails for [YOUR BUSINESS] that feel personal and genuine — never pushy. CLIENT: {{client_name}}. SERVICE: {{service_name}}. DURATION: {{duration}}. RESULTS: {{results_delivered}}. Write a short, warm email (under 100 words) asking for a review. Reference specific results you delivered. Make it easy — offer 3 questions: 1) What was your situation before working with us? 2) What specific results did you see? 3) Would you recommend us? Why?"
+      },
+      "testimonial_formatter_prompt": {
+        "platform": "Gemini",
+        "prompt": "Take this raw customer feedback and create 3 versions: RAW: {{raw_feedback}}. VERSION 1 — WEBSITE (2-3 sentences, impactful, with attribution). VERSION 2 — SOCIAL MEDIA (1 sentence, punchy, shareable). VERSION 3 — CASE STUDY INTRO (3-4 sentences, story format: problem > solution > result)."
+      },
+      "setup_steps": [
+        { "step": 1, "action": "Trigger: CRM status change", "detail": "Project marked 'Complete' or X days after purchase" },
+        { "step": 2, "action": "Claude: Generate request email", "detail": "Personalized to their project and results" },
+        { "step": 3, "action": "Email: Send request", "detail": "Gmail or email tool sends the review request" },
+        { "step": 4, "action": "Trigger 2: Form response", "detail": "When they reply or submit the review form" },
+        { "step": 5, "action": "Gemini: Format testimonial", "detail": "Create 3 versions (website, social, case study)" },
+        { "step": 6, "action": "Google Sheets: Store", "detail": "Add to your Testimonial Library with all versions" }
+      ],
+      "customization": {
+        "ask_for_review_days_after_completion": "[___ days]",
+        "review_platform": "[Google / Trustpilot / G2 / Website]",
+        "request_sender": "[Your name / Team name]",
+        "testimonial_storage": "[Google Sheet URL]",
+        "follow_up_if_no_response": "[Yes/No — after ___ days]"
+      }
+    },
+    {
+      "title": "Workflow 11: Follow-Up & Re-Engagement",
+      "type": "workflow",
+      "tagline": "NEVER LOSE A CUSTOMER TO SILENCE AGAIN",
+      "metrics": {
+        "time_saved": "3-5 hrs",
+        "difficulty": "Intermediate",
+        "tools_needed": 3,
+        "frequency": "Weekly"
+      },
+      "stats": {
+        "follow_ups_needed_for_sale": "5+",
+        "give_up_after_1": "44%",
+        "sales_close_after_5th_follow_up": "80%"
+      },
+      "three_workflows": [
+        {
+          "label": "A: LEAD FOLLOW-UP",
+          "description": "Scan CRM weekly > Find leads inactive 7+ days > AI check-in > Send"
+        },
+        {
+          "label": "B: POST-PURCHASE",
+          "description": "30/60/90 days after purchase > AI value-check email > Send"
+        },
+        {
+          "label": "C: WIN-BACK",
+          "description": "Customers inactive 90+ days > AI re-engagement offer > Send"
+        }
+      ],
+      "lead_follow_up_prompt": {
+        "platform": "Claude",
+        "prompt": "SYSTEM: You write follow-up emails for [YOUR BUSINESS]. LEAD: {{lead_name}} at {{company}}. LAST CONTACT: {{last_date}} — {{last_type}}. DAYS INACTIVE: {{days}}. Write a brief follow-up (under 100 words): 1) Reference last interaction. 2) Offer something valuable. 3) Ask one simple question. 4) Soft CTA. DO NOT use 'just checking in' or 'touching base'."
+      },
+      "win_back_prompt": {
+        "platform": "Gemini",
+        "prompt": "SYSTEM: You write win-back emails for [YOUR BUSINESS]. CUSTOMER: {{name}}. LAST PURCHASE: {{date}} — {{product}}. DAYS SINCE: {{days}}. Write a re-engagement email (under 120 words): 1) Acknowledge the gap without guilt. 2) Share something new. 3) Offer exclusive 'welcome back' incentive. 4) Gentle urgency. Tone: Warm, not desperate."
+      },
+      "zapier_setup": [
+        { "step": "T", "node": "Weekly Schedule", "detail": "Scan CRM for inactive leads/customers" },
+        { "step": "A", "node": "CRM: Search Contacts", "detail": "Filter by last activity date > threshold" },
+        { "step": "AI", "node": "Claude / Gemini", "detail": "Generate personalized email follow-up" },
+        { "step": "@", "node": "Gmail / Mailchimp", "detail": "Send the follow-up automatically" },
+        { "step": "A", "node": "CRM: Log Activity", "detail": "Record that follow-up was sent" }
+      ],
+      "customization": {
+        "lead_follow_up_every_days": "[___] days",
+        "win_back_days": "[___] days",
+        "incentive": "[Discount / Free resource / Exclusive]",
+        "crm": "[HubSpot / Salesforce / Google Sheets]",
+        "email_tool": "[Gmail / Mailchimp / ConvertKit]"
+      }
+    },
+    {
+      "title": "Chapter 12: Automation Dashboard",
+      "type": "templates",
+      "content": "SEE ALL YOUR AUTOMATIONS IN ONE PLACE",
+      "dashboard_template": {
+        "columns": ["Workflow", "Platform", "Status", "Runs/Wk", "Time Saved"],
+        "example_rows": [
+          ["Social Post Gen", "Zapier", "Active", "7", "5 hrs"],
+          ["Email Sequences", "n8n", "Active", "12", "4 hrs"],
+          ["Content Repurpose", "Zapier", "Active", "3", "8 hrs"],
+          ["Lead Magnet Follow", "Zapier", "Active", "15", "3 hrs"],
+          ["Competitor Watch", "n8n", "Active", "7", "3 hrs"],
+          ["Inquiry Responder", "Zapier", "Active", "28", "7 hrs"],
+          ["Client Onboarding", "n8n", "Active", "4", "8 hrs"],
+          ["Review Collector", "Zapier", "Active", "3", "2 hrs"],
+          ["Customer Follow-Up", "n8n", "Active", "8", "4 hrs"]
+        ]
+      },
+      "weekly_summary_prompt": {
+        "platform": "Gemini",
+        "prompt": "Here is my automation dashboard data for this week: {{dashboard_data}}. Generate a weekly report: 1) TOTAL TIME SAVED. 2) MOST ACTIVE workflow. 3) ANY ERRORS needing attention. 4) OPTIMIZATION SUGGESTIONS. 5) ROI ESTIMATE: Time saved x $[YOUR_HOURLY_RATE] = value generated."
+      },
+      "monthly_optimization_checklist": {
+        "for_each_active_workflow": [
+          "Review AI output quality — still accurate?",
+          "Check error logs — any recurring failures?",
+          "Review API costs — within budget?",
+          "Test with edge cases — handling unusual inputs?",
+          "Update prompts — business info changed?"
+        ],
+        "scaling_questions": [
+          "Which workflow saves the most time? Can I expand it?",
+          "Which has the most errors? Fix or replace?",
+          "What manual task am I still doing? New workflow needed?",
+          "Am I under API budget? Add more automations",
+          "Am I over API budget? Switch models or reduce frequency"
+        ]
+      },
+      "cost_tracker": {
+        "anthropic_api": "$[___] / month ([___] runs)",
+        "google_ai_studio": "$[___] / month ([___] runs)",
+        "zapier_plan": "$[___] / month",
+        "n8n_plan": "$[___] / month",
+        "total": "$[___] / month",
+        "time_saved": "[___] hours / month",
+        "value_at_hourly_rate": "$[___] / month"
+      }
+    },
+    {
+      "title": "Chapter 13: Troubleshooting & Optimization",
+      "type": "educational",
+      "content": "FIX PROBLEMS FAST. MAKE GOOD AUTOMATIONS GREAT.",
+      "common_issues": [
+        { "problem": "AI output too generic", "fix": "Add your Business Profile to every prompt" },
+        { "problem": "Automation stopped", "fix": "Check API key + billing on provider dashboard" },
+        { "problem": "Wrong tone in emails", "fix": "Add 3 example emails in YOUR voice to the prompt" },
+        { "problem": "Too many errors", "fix": "Add a 'clean data' step before AI processes" },
+        { "problem": "API rate limits hit", "fix": "Add 30-60 second delays between steps" },
+        { "problem": "AI hallucinating facts", "fix": "Always feed real data, never ask AI to guess" },
+        { "problem": "Task limit reached", "fix": "Consolidate workflows or upgrade plan" }
+      ],
+      "optimization_strategies": [
+        { "number": 1, "name": "Model Selection", "description": "Use cheaper models (claude-haiku, gemini-flash) for simple tasks; expensive for complex." },
+        { "number": 2, "name": "Batching", "description": "Process multiple items in one AI call instead of one at a time." },
+        { "number": 3, "name": "Caching", "description": "Store repeated AI responses to avoid redundant API calls." },
+        { "number": 4, "name": "Pre-Filtering", "description": "Add conditional logic to only send relevant data to AI." },
+        { "number": 5, "name": "Prompt Engineering", "description": "More specific prompts = better output = fewer retries = lower cost." }
+      ],
+      "emergency_checklist": {
+        "sending_wrong_output": ["PAUSE immediately", "Check last 5 outputs", "Fix prompt", "Test > Resume"],
+        "stopped_working": ["Check API key/billing", "Check platform status", "Re-auth connections", "Fix > Resume"],
+        "results_are_meh": ["Grade last 10 outputs", "Add more context", "Add example outputs", "Upgrade model"]
+      }
+    },
+    {
+      "title": "Chapter 14: What's Next",
+      "type": "educational",
+      "content": "Your Complete AI Journey",
+      "complete_journey": [
+        { "step": "01", "product": "AI Starter Kit", "price": "$19", "description": "Learned to talk to AI", "status": "DONE" },
+        { "step": "02", "product": "AI Skills Builder", "price": "$29", "description": "Built AI specialists", "status": "DONE" },
+        { "step": "03", "product": "AI for Small Business", "price": "$47", "description": "Deployed business systems", "status": "DONE" },
+        { "step": "04", "product": "AI Automation Mastery", "price": "$67", "description": "Put it all on autopilot", "status": "DONE" }
+      ]
+    },
+    {
+      "title": "Upsell / CTA",
+      "type": "cta",
+      "content": "YOUR AI RUNS. YOU REVIEW.",
+      "items": [
+        {
+          "offer": "Ultimate AI Bundle",
+          "price": "$147",
+          "description": "All 4 products | Separately: $162 | Save $15. AI Starter Kit + AI Skills Builder + AI for Small Business + AI Automation Mastery.",
+          "url": "khacademy.com"
+        }
+      ],
+      "contact": "support@khacademy.com"
+    }
+  ]
+}

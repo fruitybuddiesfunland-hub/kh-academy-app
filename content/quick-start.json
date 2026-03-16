@@ -1,0 +1,156 @@
+{
+  "product_id": "quick-start",
+  "title": "AI Quick Start",
+  "subtitle": "10 Free Prompts That Will Change How You Work",
+  "source": "ai-quick-start-free.pdf",
+  "version": null,
+  "pages": 9,
+  "publisher": "KH Academy",
+  "website": "khacademy.com",
+  "compatible_tools": ["ChatGPT", "Claude", "Gemini"],
+  "sections": [
+    {
+      "title": "Welcome",
+      "type": "intro",
+      "content": "These 10 prompts are hand-picked from our full AI Starter Kit (50+ prompts). They cover the areas where AI makes the biggest immediate impact on your work.",
+      "items": []
+    },
+    {
+      "title": "How to Use",
+      "type": "instructions",
+      "content": "Step-by-step guide for using the prompts.",
+      "items": [
+        { "step": 1, "instruction": "Copy the prompt from this guide" },
+        { "step": 2, "instruction": "Replace [bracketed text] with your specific details" },
+        { "step": 3, "instruction": "Paste into ChatGPT, Claude, or Gemini" },
+        { "step": 4, "instruction": "Refine the output with follow-up questions" }
+      ]
+    },
+    {
+      "title": "Pro Tip — Getting Better Results",
+      "type": "tips",
+      "content": "The best results come from being specific. Instead of [topic], write the exact topic. Instead of [audience], describe your actual target reader. The more context you give, the better the output.",
+      "items": []
+    },
+    {
+      "title": "What's Inside",
+      "type": "overview",
+      "content": "Overview of 10 prompts across 7 categories.",
+      "items": [
+        { "category": "Productivity", "count": 1 },
+        { "category": "Writing", "count": 2 },
+        { "category": "Business", "count": 2 },
+        { "category": "Marketing", "count": 2 },
+        { "category": "Research", "count": 1 },
+        { "category": "Personal Growth", "count": 1 },
+        { "category": "Advanced", "count": 1 }
+      ]
+    },
+    {
+      "title": "The 10 Prompts",
+      "type": "prompts",
+      "content": "10 hand-picked prompts from the full AI Starter Kit.",
+      "items": [
+        {
+          "number": "01",
+          "name": "The Daily Prioritizer",
+          "category": "PRODUCTIVITY",
+          "prompt": "Act as my personal productivity coach. I have [X hours] available today. Here are my tasks: [list your tasks]. Prioritize them using the Eisenhower Matrix. Build me a time-blocked schedule with buffer periods.",
+          "best_on": ["ChatGPT", "Claude"],
+          "tip": null
+        },
+        {
+          "number": "02",
+          "name": "The Email Drafter",
+          "category": "WRITING",
+          "prompt": "Write a professional email to [recipient's role] at [company type] requesting [specific outcome]. Tone: direct but warm. Length: under 120 words. End with a single, clear ask. Do not use 'I hope this email finds you well.'",
+          "best_on": ["ChatGPT", "Claude"],
+          "tip": null
+        },
+        {
+          "number": "03",
+          "name": "The Business Idea Validator",
+          "category": "BUSINESS",
+          "prompt": "I have a business idea: [describe in 2-3 sentences]. Act as a brutally honest VC. Analyze: 5 biggest risks, ideal customer and market size, 3 existing competitors, what needs to be true for success, and a $100 validation test I can run this week.",
+          "best_on": ["Claude", "ChatGPT"],
+          "tip": null
+        },
+        {
+          "number": "04",
+          "name": "The Blog Post Generator",
+          "category": "WRITING",
+          "prompt": "Write a 1,000-word blog post about [topic] for [audience]. Structure: Hook opening, 3-5 subheadings with actionable content, real examples, conclusion with CTA. Tone: [your preference]. Do NOT use 'In today's fast-paced world' or similar cliches.",
+          "best_on": ["Claude", "ChatGPT"],
+          "tip": null
+        },
+        {
+          "number": "05",
+          "name": "The Content Calendar",
+          "category": "MARKETING",
+          "prompt": "Create a 30-day content calendar for [business] on [platform]. Include daily topic, content type, caption with hook and CTA, and hashtags. Content pillars: [list 3-4]. Mix educational, entertaining, and promotional at 40/40/20.",
+          "best_on": ["ChatGPT", "Gemini"],
+          "tip": null
+        },
+        {
+          "number": "06",
+          "name": "The Research Synthesizer",
+          "category": "RESEARCH",
+          "prompt": "I need to quickly understand [topic]. Provide: 3-sentence simple summary, 5 most important facts, key players, current trends, common misconceptions, and 3 sources for deeper reading.",
+          "best_on": ["Gemini", "Claude"],
+          "tip": null
+        },
+        {
+          "number": "07",
+          "name": "The SWOT Analyzer",
+          "category": "BUSINESS",
+          "prompt": "Conduct a SWOT analysis for [business/project]. 5+ specific items per quadrant. Then create a 2x2 action matrix showing how to leverage strengths and fix weaknesses.",
+          "best_on": ["Claude", "Gemini"],
+          "tip": null
+        },
+        {
+          "number": "08",
+          "name": "The Skill Learning Plan",
+          "category": "PERSONAL GROWTH",
+          "prompt": "Create a 30-day plan to go from beginner to competent in [skill]. Daily 30-60 min tasks, free resources, weekly mini-projects, and common mistakes to avoid.",
+          "best_on": ["ChatGPT", "Gemini"],
+          "tip": null
+        },
+        {
+          "number": "09",
+          "name": "The Landing Page Copy",
+          "category": "MARKETING",
+          "prompt": "Write landing page copy for [product/service]. Hero headline, 3 pain points, solution section, features-to-benefits, social proof, FAQ, and final CTA with urgency.",
+          "best_on": ["Claude", "ChatGPT"],
+          "tip": null
+        },
+        {
+          "number": "10",
+          "name": "The MEGA Prompt Framework",
+          "category": "ADVANCED",
+          "prompt": "[ROLE]: Act as [expert]. [CONTEXT]: Background info. [TASK]: What to do. [FORMAT]: Output format. [CONSTRAINTS]: Rules. [TONE]: Voice. [EXAMPLE]: Sample output.",
+          "best_on": ["ChatGPT", "Claude", "Gemini"],
+          "tip": null
+        }
+      ]
+    },
+    {
+      "title": "Upsell / CTA",
+      "type": "cta",
+      "content": "Loved These Prompts? You've only scratched the surface. The full AI Starter Kit has 50+ prompts across 8 categories.",
+      "items": [
+        {
+          "offer": "Get the Complete AI Starter Kit",
+          "price": "$19",
+          "description": "50+ expert prompts | 8 categories | Copy-paste ready",
+          "url": "khacademy.com"
+        },
+        {
+          "offer": "Save 40% with the Ultimate AI Bundle",
+          "price": "$197 for all 6 products",
+          "description": "AI Starter Kit + ChatGPT Playbook + Prompt Engineering + Business + Freelancer + Career",
+          "url": "khacademy.com"
+        }
+      ]
+    }
+  ]
+}

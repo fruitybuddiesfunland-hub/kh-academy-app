@@ -1,0 +1,573 @@
+{
+  "product_id": "starter-kit",
+  "title": "AI Starter Kit",
+  "subtitle": "50+ Essential Prompts for ChatGPT, Claude & Gemini",
+  "source": "ai-starter-kit.pdf",
+  "version": "2.0 — March 2026",
+  "pages": 25,
+  "publisher": "KH Academy",
+  "website": "khacademy.com",
+  "compatible_tools": ["ChatGPT", "Claude", "Gemini"],
+  "sections": [
+    {
+      "title": "Welcome",
+      "type": "intro",
+      "content": "Welcome to the AI Starter Kit — your shortcut to getting real results from AI tools. These aren't random prompts copied from the internet. Every prompt in this kit has been tested across ChatGPT, Claude, and Gemini to ensure it actually works.",
+      "items": []
+    },
+    {
+      "title": "How to Use This Kit",
+      "type": "instructions",
+      "content": "Three-step guide for using the kit effectively.",
+      "items": [
+        {
+          "step": 1,
+          "title": "Copy & Customize",
+          "instruction": "Copy any prompt exactly as written, then replace the [bracketed text] with your specific details. The brackets show you exactly what to personalize."
+        },
+        {
+          "step": 2,
+          "title": "Check the 'Best On' Tag",
+          "instruction": "Each prompt includes a 'Best On' tag showing which AI tool gives the best results for that specific task. Start with the recommended tool for optimal output."
+        },
+        {
+          "step": 3,
+          "title": "Use the Pro Tips",
+          "instruction": "Try the 'Pro Tip' beneath each prompt to get even better outputs. These are power-user techniques that take your results from good to exceptional."
+        }
+      ]
+    },
+    {
+      "title": "What's Inside",
+      "type": "overview",
+      "content": "50+ battle-tested prompts organized into 8 categories. 'Best On' recommendations for ChatGPT, Claude & Gemini. Pro Tips to maximize every prompt's effectiveness. 4 advanced frameworks for power users.",
+      "items": [
+        { "category": "Productivity & Time Management", "count": 8, "pages": "4–6" },
+        { "category": "Business & Strategy", "count": 8, "pages": "7–9" },
+        { "category": "Writing & Communication", "count": 8, "pages": "10–12" },
+        { "category": "Marketing & Social Media", "count": 8, "pages": "13–15" },
+        { "category": "Research & Analysis", "count": 6, "pages": "16–17" },
+        { "category": "Learning & Personal Growth", "count": 6, "pages": "18–19" },
+        { "category": "Coding & Technical", "count": 6, "pages": "20–21" },
+        { "category": "Bonus: Advanced Frameworks", "count": 4, "pages": "22–23" }
+      ]
+    },
+    {
+      "title": "Category 01: Productivity & Time Management",
+      "type": "prompts",
+      "content": "8 prompts to manage your time, schedule, and decisions.",
+      "items": [
+        {
+          "number": "01",
+          "name": "The Daily Prioritizer",
+          "category": "PRODUCTIVITY & TIME MANAGEMENT",
+          "prompt": "Act as my personal productivity coach. I have [X hours] available today. Here are my tasks: [list your tasks]. Prioritize them using the Eisenhower Matrix (Urgent/Important quadrants). Flag anything I should delegate or drop entirely. Then build me a time-blocked schedule with 15-minute buffer periods between deep work sessions.",
+          "best_on": ["ChatGPT", "Claude"],
+          "tip": "Run this every morning. Save your task list in a note app so you can paste it instantly."
+        },
+        {
+          "number": "02",
+          "name": "The Meeting Summarizer",
+          "category": "PRODUCTIVITY & TIME MANAGEMENT",
+          "prompt": "Summarize the following meeting notes into: (1) Key decisions made, (2) Action items with owners and deadlines, (3) Open questions that need follow-up, (4) A 2-sentence summary I can share with stakeholders who weren't there. Here are the notes: [paste meeting notes]",
+          "best_on": ["Claude", "Gemini"],
+          "tip": "Record meetings with Otter.ai or your phone, transcribe, then paste here."
+        },
+        {
+          "number": "03",
+          "name": "The Email Drafter",
+          "category": "PRODUCTIVITY & TIME MANAGEMENT",
+          "prompt": "Write a professional email to [recipient's role] at [company type] requesting [specific outcome]. Tone: direct but warm. Length: under 120 words. End with a single, clear ask — not multiple options. Do not use the phrase 'I hope this email finds you well.'",
+          "best_on": ["ChatGPT", "Claude"],
+          "tip": "Add \"Match this writing style: [paste a previous email you've sent]\" for personalization."
+        },
+        {
+          "number": "04",
+          "name": "The Decision Matrix",
+          "category": "PRODUCTIVITY & TIME MANAGEMENT",
+          "prompt": "I need to decide between [Option A] and [Option B]. For each option, analyze: (1) Pros and cons, (2) Short-term vs long-term impact, (3) Financial implications, (4) Risk level (low/medium/high), (5) What I'd regret more if I didn't choose it. Present this as a clear comparison table, then give me your recommendation with reasoning.",
+          "best_on": ["Claude", "ChatGPT"],
+          "tip": "Add your personal constraints like budget, timeline, or values for a more tailored answer."
+        },
+        {
+          "number": "05",
+          "name": "The Weekly Review",
+          "category": "PRODUCTIVITY & TIME MANAGEMENT",
+          "prompt": "Help me conduct a weekly review. Ask me these questions one at a time, wait for my response, then summarize: (1) What were my top 3 accomplishments this week? (2) What didn't go as planned? (3) What did I learn? (4) What are my top 3 priorities for next week? (5) What's one thing I should stop doing? After all answers, create a concise weekly report I can save.",
+          "best_on": ["ChatGPT", "Claude"],
+          "tip": "Schedule this for Friday afternoon. It takes 10 minutes and transforms your planning."
+        },
+        {
+          "number": "06",
+          "name": "The SOP Generator",
+          "category": "PRODUCTIVITY & TIME MANAGEMENT",
+          "prompt": "Create a detailed Standard Operating Procedure (SOP) for [task/process]. Include: (1) Purpose of this SOP, (2) Step-by-step instructions with numbered steps, (3) Tools/resources needed, (4) Common mistakes to avoid, (5) Quality checklist to verify completion. Format it so someone with no prior experience could follow it perfectly.",
+          "best_on": ["Claude", "ChatGPT"],
+          "tip": "Use this to document everything you do repeatedly — then delegate or automate it."
+        },
+        {
+          "number": "07",
+          "name": "The Automation Finder",
+          "category": "PRODUCTIVITY & TIME MANAGEMENT",
+          "prompt": "I spend my work time on these tasks: [list 5-10 regular tasks]. For each task, tell me: (1) Can it be fully automated, partially automated, or not automated? (2) Which specific tool would automate it (Zapier, Make, AI, etc.)? (3) Estimated time saved per week. (4) How hard is it to set up (easy/medium/hard)? Rank them by time-saved-to-effort ratio.",
+          "best_on": ["ChatGPT", "Gemini"],
+          "tip": "Start with the highest-ratio task. One automation can save you 5+ hours/week."
+        },
+        {
+          "number": "08",
+          "name": "The Focus Session Designer",
+          "category": "PRODUCTIVITY & TIME MANAGEMENT",
+          "prompt": "Design a [X]-hour deep work session for me. I need to accomplish: [describe task]. Create: (1) A pre-session ritual (2 minutes to get into focus mode), (2) Time blocks within the session with specific micro-goals, (3) When to take short breaks, (4) What to do if I get stuck, (5) A closing ritual to capture what I accomplished. I work best when [describe your focus style].",
+          "best_on": ["ChatGPT"],
+          "tip": "Put your phone in another room and use this plan. You'll be amazed at the output."
+        }
+      ]
+    },
+    {
+      "title": "Category 02: Business & Strategy",
+      "type": "prompts",
+      "content": "8 prompts for business analysis, strategy, and planning.",
+      "items": [
+        {
+          "number": "09",
+          "name": "The Business Idea Validator",
+          "category": "BUSINESS & STRATEGY",
+          "prompt": "I have a business idea: [describe idea in 2-3 sentences]. Act as a brutally honest venture capitalist. Analyze: (1) The 5 biggest risks of failure, (2) Who the ideal customer is and how large the market is, (3) What 3 existing competitors do and how this differs, (4) What needs to be true for this to succeed, (5) The minimum viable test I could run this week for under $100 to validate demand.",
+          "best_on": ["Claude", "ChatGPT"],
+          "tip": "Don't defend your idea — let the AI poke holes. Better to find problems now than after investing."
+        },
+        {
+          "number": "10",
+          "name": "The Elevator Pitch Crafter",
+          "category": "BUSINESS & STRATEGY",
+          "prompt": "Help me create a 30-second elevator pitch for my [business/product/service]. It should cover: what it does, who it's for, why it's different, and a memorable hook. My audience is [describe who you're pitching to]. Create 3 versions: (1) Formal (investor meeting), (2) Casual (networking event), (3) One-liner (when someone asks 'what do you do?').",
+          "best_on": ["Claude", "ChatGPT"],
+          "tip": "Practice the one-liner version until it feels natural. That's your most-used version."
+        },
+        {
+          "number": "11",
+          "name": "The SWOT Analyzer",
+          "category": "BUSINESS & STRATEGY",
+          "prompt": "Conduct a comprehensive SWOT analysis for [business/product/project]. For each quadrant (Strengths, Weaknesses, Opportunities, Threats), provide at least 5 specific, actionable items — not vague generalities. Then create a 2x2 action matrix: (1) Use Strengths to capture Opportunities, (2) Use Strengths to counter Threats, (3) Fix Weaknesses to capture Opportunities, (4) Fix Weaknesses to avoid Threats.",
+          "best_on": ["Claude", "Gemini"],
+          "tip": "Share this with your team and ask what they'd add. AI gives you 80% — your team adds the nuance."
+        },
+        {
+          "number": "12",
+          "name": "The Customer Persona Builder",
+          "category": "BUSINESS & STRATEGY",
+          "prompt": "Build a detailed customer persona for my [product/service] which solves [problem]. Include: (1) Demographics (age, income, location, job), (2) Psychographics (values, fears, aspirations), (3) Daily routine and pain points, (4) Where they hang out online, (5) What would make them say 'shut up and take my money', (6) What would make them say 'not for me', (7) The exact words they'd use to describe their problem to a friend.",
+          "best_on": ["Claude", "ChatGPT"],
+          "tip": "Item 7 is gold — use those exact words in your marketing copy."
+        },
+        {
+          "number": "13",
+          "name": "The Pricing Strategist",
+          "category": "BUSINESS & STRATEGY",
+          "prompt": "Help me price my [product/service]. Here's what I know: it costs me [cost] to deliver, competitors charge [range], my target customer is [description], and the main value I provide is [value]. Analyze: (1) Cost-plus pricing, (2) Value-based pricing, (3) Competitor-based pricing. For each, give me a specific price point and explain the psychology behind it. Then recommend which strategy fits my situation and why.",
+          "best_on": ["Claude", "ChatGPT"],
+          "tip": "Most people underprice. Ask the AI \"what would a premium version look like at 3x this price?\""
+        },
+        {
+          "number": "14",
+          "name": "The 90-Day Action Plan",
+          "category": "BUSINESS & STRATEGY",
+          "prompt": "Create a 90-day action plan for [business goal]. Break it into three 30-day sprints, each with: (1) The one key metric to track, (2) 3-5 specific actions per week, (3) Resources or tools needed, (4) A milestone that proves progress, (5) What could go wrong and how to course-correct. My current situation: [describe where you are now]. My resources: [time/money/team available].",
+          "best_on": ["Claude", "ChatGPT"],
+          "tip": "Print this out and put it on your wall. Review weekly. Adjust monthly."
+        },
+        {
+          "number": "15",
+          "name": "The Revenue Model Calculator",
+          "category": "BUSINESS & STRATEGY",
+          "prompt": "Help me build a revenue model for [business]. I need to understand: (1) What are all possible revenue streams? (2) For each stream, what's a realistic monthly revenue in months 1, 6, and 12? (3) What are the key assumptions behind each projection? (4) What are the main costs I'll incur? (5) When do I break even? Show this as a simple table. Be conservative in estimates.",
+          "best_on": ["ChatGPT", "Claude"],
+          "tip": "Run this with \"optimistic,\" \"realistic,\" and \"pessimistic\" scenarios."
+        },
+        {
+          "number": "16",
+          "name": "The Competitor Spy",
+          "category": "BUSINESS & STRATEGY",
+          "prompt": "Analyze [competitor name/URL] as if you were a competitive intelligence analyst. Tell me: (1) Their apparent target audience, (2) Their pricing strategy and positioning, (3) Their strengths I should respect, (4) Their weaknesses I can exploit, (5) What customers complain about (check review sites), (6) 3 specific things I can do better than them. Be specific, not generic.",
+          "best_on": ["Gemini", "Claude"],
+          "tip": "Do this for your top 3 competitors. The patterns you'll see are invaluable."
+        }
+      ]
+    },
+    {
+      "title": "Category 03: Writing & Communication",
+      "type": "prompts",
+      "content": "8 prompts for writing, editing, and communication tasks.",
+      "items": [
+        {
+          "number": "17",
+          "name": "The Blog Post Generator",
+          "category": "WRITING & COMMUNICATION",
+          "prompt": "Write a 1,000-word blog post about [topic]. Target audience: [who]. Goal: [inform/persuade/entertain]. Structure: Hook opening (no generic intros), 3-5 subheadings with actionable content, real examples or data points, and a conclusion with a clear call-to-action. Tone: [conversational/professional/authoritative]. Do NOT use these overused phrases: 'In today's fast-paced world', 'It's no secret that', 'At the end of the day'.",
+          "best_on": ["Claude", "ChatGPT"],
+          "tip": "Always add \"Do NOT use\" instructions. It prevents the AI-sounding cliches."
+        },
+        {
+          "number": "18",
+          "name": "The Rewriter",
+          "category": "WRITING & COMMUNICATION",
+          "prompt": "Rewrite the following text to be [shorter/more engaging/simpler/more professional]. Keep the core meaning but make it sound like a human expert wrote it — not AI. Remove filler words, passive voice, and unnecessary qualifiers. If the original is over 200 words, cut it by 30%. Here's the text: [paste text]",
+          "best_on": ["Claude"],
+          "tip": "Claude is the best rewriter. It preserves your voice while tightening the prose."
+        },
+        {
+          "number": "19",
+          "name": "The LinkedIn Post Creator",
+          "category": "WRITING & COMMUNICATION",
+          "prompt": "Write a LinkedIn post about [topic/experience/insight]. Format: Hook line (pattern interrupt or bold statement), then short paragraphs (1-2 sentences each), use line breaks for readability. Include a personal angle or story. End with a question to drive engagement. Length: 150-200 words. Tone: confident but not preachy. Do NOT use hashtags in the body — add 3-5 at the very end.",
+          "best_on": ["ChatGPT", "Claude"],
+          "tip": "The hook line determines 80% of your engagement. Ask for 5 hook variations and pick the best."
+        },
+        {
+          "number": "20",
+          "name": "The Tone Matcher",
+          "category": "WRITING & COMMUNICATION",
+          "prompt": "Analyze my writing style from these samples: [paste 2-3 paragraphs you've written]. Identify: (1) My typical sentence length, (2) Words or phrases I frequently use, (3) My tone (formal/casual/etc.), (4) Any quirks or patterns. Then create a 'Writing Style Guide' for me that I can use in future prompts to make AI-generated text sound like me.",
+          "best_on": ["Claude"],
+          "tip": "Save the output and paste it at the start of any writing prompt: \"Match this writing style: [paste guide]\""
+        },
+        {
+          "number": "21",
+          "name": "The Email Sequence Builder",
+          "category": "WRITING & COMMUNICATION",
+          "prompt": "Create a [3/5/7]-email sequence for [purpose: welcome series, product launch, re-engagement, etc.]. For each email, provide: (1) Subject line (under 50 characters), (2) Preview text, (3) Full email body, (4) Call-to-action, (5) Send timing (days between emails). Target audience: [describe]. The sequence should build progressively toward [goal]. Tone: [describe].",
+          "best_on": ["ChatGPT", "Claude"],
+          "tip": "Email subject lines make or break open rates. Ask for 5 subject line options per email."
+        },
+        {
+          "number": "22",
+          "name": "The Press Release Writer",
+          "category": "WRITING & COMMUNICATION",
+          "prompt": "Write a press release for [announcement]. Follow AP style. Include: compelling headline, dateline, strong opening paragraph covering who/what/when/where/why, 2-3 supporting paragraphs with quotes, boilerplate about the company, and media contact info placeholder. Length: 400-500 words. Make it newsworthy, not promotional.",
+          "best_on": ["ChatGPT", "Claude"],
+          "tip": "The headline and first paragraph are all most journalists read. Make them count."
+        },
+        {
+          "number": "23",
+          "name": "The Script Writer",
+          "category": "WRITING & COMMUNICATION",
+          "prompt": "Write a [length]-minute video script about [topic] for [platform: YouTube, TikTok, Instagram Reel, etc.]. Include: (1) A hook in the first 3 seconds, (2) Visual/action cues in brackets, (3) Natural, conversational tone — write for speaking, not reading, (4) A clear CTA at the end. My audience is [describe]. The goal is [educate/entertain/sell].",
+          "best_on": ["ChatGPT", "Claude"],
+          "tip": "Read the script aloud. If you stumble on any phrase, it's not natural enough — ask AI to simplify."
+        },
+        {
+          "number": "24",
+          "name": "The Proposal Template",
+          "category": "WRITING & COMMUNICATION",
+          "prompt": "Create a professional [business/project/freelance] proposal for [client/project description]. Include: (1) Executive summary, (2) Problem statement (what the client is facing), (3) Proposed solution with deliverables, (4) Timeline with milestones, (5) Investment/pricing section, (6) Why choose us / qualifications, (7) Next steps. Tone: professional and confident. Length: 2-3 pages.",
+          "best_on": ["Claude", "ChatGPT"],
+          "tip": "Customize the \"problem statement\" with specific details about the client. Generic proposals lose deals."
+        }
+      ]
+    },
+    {
+      "title": "Category 04: Marketing & Social Media",
+      "type": "prompts",
+      "content": "8 prompts for marketing, social media, and content creation.",
+      "items": [
+        {
+          "number": "25",
+          "name": "The Content Calendar Generator",
+          "category": "MARKETING & SOCIAL MEDIA",
+          "prompt": "Create a 30-day social media content calendar for [business/brand] on [platforms]. Include: (1) Daily post topic/theme, (2) Content type (carousel, video, story, reel, text), (3) Caption with hook and CTA, (4) Best posting time, (5) Relevant hashtags (5-10 per post). My content pillars are: [list 3-4 topics]. Mix educational, entertaining, and promotional content at a 40/40/20 ratio.",
+          "best_on": ["ChatGPT", "Gemini"],
+          "tip": "Batch-create a month's content in one sitting using this calendar as your roadmap."
+        },
+        {
+          "number": "26",
+          "name": "The Ad Copy Writer",
+          "category": "MARKETING & SOCIAL MEDIA",
+          "prompt": "Write [Facebook/Google/Instagram] ad copy for [product/service]. Target audience: [describe]. Include: (1) 3 headline variations (under 30 characters each), (2) 3 primary text variations, (3) Description, (4) Call-to-action suggestion. Use these persuasion techniques: social proof, urgency, and benefit-focused language. Pain point this ad addresses: [describe].",
+          "best_on": ["ChatGPT"],
+          "tip": "Always test at least 3 variations. Ask for \"Version A: emotional appeal, Version B: logical appeal, Version C: curiosity-driven.\""
+        },
+        {
+          "number": "27",
+          "name": "The SEO Article Planner",
+          "category": "MARKETING & SOCIAL MEDIA",
+          "prompt": "Create an SEO content plan for the keyword [target keyword]. Include: (1) Search intent analysis (informational/transactional/navigational), (2) Suggested article title (with keyword), (3) Meta description (155 characters), (4) H2 and H3 heading structure, (5) 5 related keywords to include naturally, (6) Suggested internal/external links, (7) Content length recommendation. My website is about [topic/niche].",
+          "best_on": ["Gemini", "ChatGPT"],
+          "tip": "Gemini has the most current web data. Use it for keyword research, then write with Claude."
+        },
+        {
+          "number": "28",
+          "name": "The Landing Page Copy",
+          "category": "MARKETING & SOCIAL MEDIA",
+          "prompt": "Write landing page copy for [product/service]. Structure: (1) Hero headline + subheadline, (2) Problem section (3 pain points), (3) Solution section (how product solves each pain), (4) Features to benefits translation (3-5 items), (5) Social proof section, (6) FAQ (5 questions), (7) Final CTA with urgency. Conversion goal: [purchase/signup/book a call]. Target audience: [describe].",
+          "best_on": ["Claude", "ChatGPT"],
+          "tip": "The best landing pages follow the formula: Problem > Agitate > Solution > Proof > CTA."
+        },
+        {
+          "number": "29",
+          "name": "The Hashtag Strategist",
+          "category": "MARKETING & SOCIAL MEDIA",
+          "prompt": "Generate a hashtag strategy for my [niche/industry] content on [Instagram/TikTok/LinkedIn]. Provide: (1) 10 high-volume hashtags (1M+ posts), (2) 10 medium-volume (100K-1M posts), (3) 10 niche/low-competition hashtags (under 100K), (4) 5 branded hashtag suggestions, (5) Which combination to use for maximum reach vs. engagement. My content is about [describe].",
+          "best_on": ["Gemini", "ChatGPT"],
+          "tip": "Use 3 large + 4 medium + 3 niche hashtags per post. This balances reach with discoverability."
+        },
+        {
+          "number": "30",
+          "name": "The Product Description Writer",
+          "category": "MARKETING & SOCIAL MEDIA",
+          "prompt": "Write 3 product descriptions for [product name]. Description 1: Benefit-focused (emphasize outcomes). Description 2: Feature-focused (specs and details). Description 3: Story-driven (narrative approach). Each should be 80-150 words. Target customer: [describe]. Key differentiator: [what makes this unique]. Include sensory language and a strong CTA.",
+          "best_on": ["ChatGPT", "Claude"],
+          "tip": "A/B test all three on your product page. Story-driven descriptions often convert 20-30% better."
+        },
+        {
+          "number": "31",
+          "name": "The Audience Pain Point Finder",
+          "category": "MARKETING & SOCIAL MEDIA",
+          "prompt": "My product/service helps with [problem/category]. List the top 15 pain points my target audience ([describe]) experiences related to this. For each pain point: (1) Describe it in the exact words the customer would use, (2) Rate its emotional intensity (1-10), (3) Suggest a content piece that addresses it. Rank them from most to least painful.",
+          "best_on": ["Claude", "ChatGPT"],
+          "tip": "The top 3 pain points = your marketing headlines. Use the customer's exact words, not corporate language."
+        },
+        {
+          "number": "32",
+          "name": "The Email Subject Line Generator",
+          "category": "MARKETING & SOCIAL MEDIA",
+          "prompt": "Generate 20 email subject lines for [purpose: newsletter, product launch, abandoned cart, re-engagement, etc.]. Target audience: [describe]. Requirements: (1) Under 50 characters each, (2) Mix of curiosity, urgency, benefit, and personalization styles, (3) No ALL CAPS or excessive punctuation, (4) At least 3 should use numbers, (5) At least 3 should ask a question. Rate each on estimated open rate potential (1-10).",
+          "best_on": ["ChatGPT"],
+          "tip": "Subject lines with numbers outperform those without by 15-20%. Always test 2 subject lines per send."
+        }
+      ]
+    },
+    {
+      "title": "Category 05: Research & Analysis",
+      "type": "prompts",
+      "content": "6 prompts for research, data analysis, and trend spotting.",
+      "items": [
+        {
+          "number": "33",
+          "name": "The Research Synthesizer",
+          "category": "RESEARCH & ANALYSIS",
+          "prompt": "I need to quickly understand [topic/industry/trend]. Act as a research analyst and provide: (1) A 3-sentence summary a 10-year-old could understand, (2) The 5 most important facts or statistics, (3) Key players/companies in this space, (4) Current trends and where this is heading, (5) The most common misconceptions, (6) 3 sources I should read for deeper knowledge.",
+          "best_on": ["Gemini", "Claude"],
+          "tip": "Gemini has the most current data. Use it for trends and stats, then deep-dive with Claude."
+        },
+        {
+          "number": "34",
+          "name": "The Data Interpreter",
+          "category": "RESEARCH & ANALYSIS",
+          "prompt": "Analyze this data and tell me what it means in plain English: [paste data/numbers/results]. Specifically: (1) What's the headline takeaway? (2) What are 3 patterns or trends? (3) What's surprising or unexpected? (4) What action should I take based on this data? (5) What additional data would I need to make a more confident decision? Present your analysis as a brief executive summary.",
+          "best_on": ["Claude", "ChatGPT"],
+          "tip": "Always ask \"What additional data would I need?\" — it reveals blind spots."
+        },
+        {
+          "number": "35",
+          "name": "The Book Summarizer",
+          "category": "RESEARCH & ANALYSIS",
+          "prompt": "Summarize the book [title] by [author]. Provide: (1) The core thesis in one sentence, (2) Top 5 key ideas with a brief explanation of each, (3) The most actionable advice from the book, (4) Who should read this and who shouldn't, (5) 3 quotes from the book that capture its essence, (6) How to apply the main ideas starting today.",
+          "best_on": ["ChatGPT", "Claude"],
+          "tip": "After the summary, ask \"What would a critic say is wrong with this book's argument?\""
+        },
+        {
+          "number": "36",
+          "name": "The Industry Report Generator",
+          "category": "RESEARCH & ANALYSIS",
+          "prompt": "Create a mini industry report on [industry/market]. Include: (1) Market size and growth rate, (2) Top 5 companies and their market share, (3) Key trends shaping the industry in 2026, (4) Major challenges and disruptions, (5) Opportunities for new entrants, (6) 3 predictions for the next 2-3 years. Format this as a professional brief I can share with my team.",
+          "best_on": ["Gemini", "Claude"],
+          "tip": "Cross-reference the numbers with a quick Google search. AI estimates are directionally correct but not always precise."
+        },
+        {
+          "number": "37",
+          "name": "The Survey Designer",
+          "category": "RESEARCH & ANALYSIS",
+          "prompt": "Design a [5/10/15]-question survey to understand [research goal]. Target respondents: [describe]. For each question: (1) The question itself, (2) Question type (multiple choice, scale, open-ended), (3) Why this question matters, (4) Answer options if applicable. Include a mix of quantitative and qualitative questions. Start with easy questions and build to sensitive ones.",
+          "best_on": ["Claude", "ChatGPT"],
+          "tip": "Keep it under 10 questions for 80%+ completion rates. Every additional question drops completion by 5-10%."
+        },
+        {
+          "number": "38",
+          "name": "The Trend Spotter",
+          "category": "RESEARCH & ANALYSIS",
+          "prompt": "Identify 10 emerging trends in [industry/niche] for 2026-2027. For each trend: (1) What it is in one sentence, (2) Why it matters, (3) Who's already doing it well, (4) How a [small business/freelancer/startup] could capitalize on it, (5) Confidence level (high/medium/low) that this trend will grow. Rank from most to least impactful.",
+          "best_on": ["Gemini", "Claude"],
+          "tip": "Focus on the 2-3 trends with high confidence that align with your skills. Ignore the rest."
+        }
+      ]
+    },
+    {
+      "title": "Category 06: Learning & Personal Growth",
+      "type": "prompts",
+      "content": "6 prompts for learning, interviews, negotiation, and personal development.",
+      "items": [
+        {
+          "number": "39",
+          "name": "The Skill Learning Plan",
+          "category": "LEARNING & PERSONAL GROWTH",
+          "prompt": "Create a 30-day learning plan to go from beginner to competent in [skill]. Include: (1) Daily tasks (30-60 minutes each), (2) Free resources for each day (YouTube, articles, tools), (3) A mini-project for each week to apply what I've learned, (4) How to know when I've reached 'competent' level, (5) Common beginner mistakes to avoid. My learning style: [visual/reading/hands-on].",
+          "best_on": ["ChatGPT", "Gemini"],
+          "tip": "The mini-projects are the most important part. You don't learn by consuming — you learn by doing."
+        },
+        {
+          "number": "40",
+          "name": "The Interview Prep Coach",
+          "category": "LEARNING & PERSONAL GROWTH",
+          "prompt": "I'm interviewing for a [job title] position at [company type/name]. Help me prepare: (1) The 10 most likely interview questions for this role, (2) A strong answer framework for each (using the STAR method), (3) 5 smart questions I should ask the interviewer, (4) What to research about the company beforehand, (5) Red flags I should watch for about the company. My background: [brief summary].",
+          "best_on": ["Claude", "ChatGPT"],
+          "tip": "Practice answers out loud, not just in your head. Record yourself on your phone and review."
+        },
+        {
+          "number": "41",
+          "name": "The Negotiation Prep",
+          "category": "LEARNING & PERSONAL GROWTH",
+          "prompt": "Help me prepare to negotiate [salary/contract/deal/price]. My current situation: [describe]. What I want: [describe]. What I think the other side wants: [describe]. Provide: (1) 3 strong opening positions, (2) My BATNA (best alternative), (3) Key leverage points, (4) Likely objections and how to counter each, (5) Walk-away point, (6) Word-for-word scripts for the 3 hardest moments in the conversation.",
+          "best_on": ["Claude"],
+          "tip": "Claude excels at nuanced negotiation scenarios. It'll give you scripts you can actually use."
+        },
+        {
+          "number": "42",
+          "name": "The Feedback Translator",
+          "category": "LEARNING & PERSONAL GROWTH",
+          "prompt": "I received this feedback: [paste feedback]. Help me: (1) Separate the emotional content from the actionable content, (2) Identify the 2-3 specific things I should actually change, (3) Determine what I should ignore (opinion vs. fact), (4) Create 3 concrete action items with deadlines, (5) Draft a professional response that shows I've listened without being defensive.",
+          "best_on": ["Claude"],
+          "tip": "This is incredibly useful for harsh performance reviews or critical client feedback."
+        },
+        {
+          "number": "43",
+          "name": "The Networking Message Crafter",
+          "category": "LEARNING & PERSONAL GROWTH",
+          "prompt": "Write a [LinkedIn/email/Twitter DM] message to connect with [person's role/description]. My goal: [what I want from the connection — advice, collaboration, introduction, etc.]. Rules: (1) Under 75 words, (2) Reference something specific about their work, (3) Make it about them, not me, (4) Include a clear but low-pressure ask, (5) No flattery that sounds fake. My background: [brief description].",
+          "best_on": ["ChatGPT", "Claude"],
+          "tip": "The shorter the message, the higher the response rate. 50-75 words is the sweet spot."
+        },
+        {
+          "number": "44",
+          "name": "The Difficult Conversation Planner",
+          "category": "LEARNING & PERSONAL GROWTH",
+          "prompt": "Help me plan a difficult conversation with [person/role] about [topic]. Provide: (1) An opening statement that's honest but non-confrontational, (2) 3 key points I need to make, (3) How to frame the conversation around shared goals, (4) Likely defensive reactions and how to respond calmly, (5) What a successful outcome looks like, (6) A closing statement that preserves the relationship.",
+          "best_on": ["Claude"],
+          "tip": "Claude gives the most emotionally intelligent responses for interpersonal scenarios."
+        }
+      ]
+    },
+    {
+      "title": "Category 07: Coding & Technical",
+      "type": "prompts",
+      "content": "6 prompts for coding, debugging, and technical work.",
+      "items": [
+        {
+          "number": "45",
+          "name": "The Code Explainer",
+          "category": "CODING & TECHNICAL",
+          "prompt": "Explain this code to me like I'm a smart beginner. Break it into sections and explain what each part does and WHY it does it — not just WHAT. Use analogies where helpful. Then list: (1) What this code is good at, (2) Potential problems or bugs, (3) How I could improve it. Here's the code: [paste code]",
+          "best_on": ["Claude", "ChatGPT"],
+          "tip": "Claude is the best code explainer. It gives context that ChatGPT often skips."
+        },
+        {
+          "number": "46",
+          "name": "The Debug Helper",
+          "category": "CODING & TECHNICAL",
+          "prompt": "I'm getting this error: [paste error message]. Here's my code: [paste code]. Language: [language]. What I expected: [describe]. What happened instead: [describe]. Please: (1) Explain why this error occurs in plain English, (2) Show me the exact fix, (3) Explain what the fix does, (4) Suggest how to prevent this type of error in the future.",
+          "best_on": ["Claude", "ChatGPT"],
+          "tip": "Always include what you expected vs. what happened. It cuts the back-and-forth in half."
+        },
+        {
+          "number": "47",
+          "name": "The Code Reviewer",
+          "category": "CODING & TECHNICAL",
+          "prompt": "Review this code as a senior developer would. Check for: (1) Bugs or logical errors, (2) Security vulnerabilities, (3) Performance issues, (4) Readability and naming conventions, (5) Missing edge cases, (6) Best practices violations. For each issue, explain the problem and show the improved code. Here's the code: [paste code]",
+          "best_on": ["Claude"],
+          "tip": "Claude catches subtle bugs that other AIs miss. Always use it for code review."
+        },
+        {
+          "number": "48",
+          "name": "The Tech Stack Advisor",
+          "category": "CODING & TECHNICAL",
+          "prompt": "I'm building [describe project]. Help me choose a tech stack. My experience level: [beginner/intermediate/advanced]. My priorities: [speed to launch, scalability, cost, learning, etc.]. Recommend: (1) Frontend framework, (2) Backend language/framework, (3) Database, (4) Hosting, (5) Key libraries or tools. For each, explain why in one sentence. Also suggest one 'if you want to keep it simple' alternative stack.",
+          "best_on": ["ChatGPT", "Claude"],
+          "tip": "If you're a solo developer, always go with the \"keep it simple\" option. Complexity kills solo projects."
+        },
+        {
+          "number": "49",
+          "name": "The API Integrator",
+          "category": "CODING & TECHNICAL",
+          "prompt": "I need to integrate [API/service] into my [project type]. Show me: (1) The minimal code needed to make it work, (2) How to handle authentication, (3) How to handle errors gracefully, (4) A complete working example I can copy and modify. Language: [language]. Keep it simple — I want the shortest path to a working integration.",
+          "best_on": ["ChatGPT", "Claude"],
+          "tip": "Ask for the \"minimal viable\" version first. You can always add complexity later."
+        },
+        {
+          "number": "50",
+          "name": "The Regex Generator",
+          "category": "CODING & TECHNICAL",
+          "prompt": "Create a regex pattern that matches [describe what you want to match]. Give me: (1) The regex pattern, (2) A plain English explanation of each part, (3) 5 test strings it should match, (4) 5 test strings it should NOT match, (5) Any edge cases to watch out for. Language/environment: [JavaScript, Python, etc.].",
+          "best_on": ["ChatGPT", "Claude"],
+          "tip": "Always test regex with the provided test strings before using in production. AI regex is right 90% of the time."
+        }
+      ]
+    },
+    {
+      "title": "Bonus: Advanced Frameworks",
+      "type": "templates",
+      "content": "4 advanced frameworks for power users to get consistently great outputs.",
+      "items": [
+        {
+          "number": "F1",
+          "name": "The MEGA Prompt Framework",
+          "category": "ADVANCED FRAMEWORKS",
+          "description": "Use this template to get consistently great outputs from any AI. Fill in each section.",
+          "prompt": "[ROLE]: Act as a [specific expert role with years of experience]. [CONTEXT]: Here's the background: [relevant context]. [TASK]: I need you to [specific task]. [FORMAT]: Present the output as [format: bullet points, table, essay, etc.]. [CONSTRAINTS]: Keep it [length]. Don't [list things to avoid]. Must include [requirements]. [TONE]: Write in a [describe tone] voice. [EXAMPLE]: Here's an example of what good looks like: [paste example].",
+          "best_on": ["ChatGPT", "Claude", "Gemini"],
+          "tip": "You don't need to fill in every section every time. But the more you fill in, the better the output."
+        },
+        {
+          "number": "F2",
+          "name": "The Iterative Refinement Loop",
+          "category": "ADVANCED FRAMEWORKS",
+          "description": "Never settle for the first output. Use this 3-step loop.",
+          "prompt": "Step 1: Generate — Use your prompt to get the first draft. Step 2: Critique — \"Rate this output on a scale of 1-10. What would make it a 10? Be specific about what's missing, weak, or wrong.\" Step 3: Improve — \"Now rewrite it, incorporating all the improvements you just identified. Make it a 10.\"",
+          "best_on": ["ChatGPT", "Claude", "Gemini"],
+          "tip": "You can run this loop 2-3 times. Each iteration gets dramatically better."
+        },
+        {
+          "number": "F3",
+          "name": "The Expert Panel Technique",
+          "category": "ADVANCED FRAMEWORKS",
+          "description": "Get multiple perspectives on any decision or problem.",
+          "prompt": "Analyze [problem/question] from 3 different expert perspectives: (1) A skeptical CFO focused on costs and risks (2) An innovative CTO focused on possibilities and technology (3) A customer-obsessed CMO focused on user experience. Each expert should argue their position. Then synthesize their views into a final recommendation.",
+          "best_on": ["ChatGPT", "Claude", "Gemini"],
+          "tip": "Change the experts based on your situation. The key is diverse, conflicting viewpoints."
+        },
+        {
+          "number": "F4",
+          "name": "The Chain-of-Thought Prompt",
+          "category": "ADVANCED FRAMEWORKS",
+          "description": "Force the AI to show its work for complex reasoning.",
+          "prompt": "Before giving me your answer to [question/problem], first: (1) List your assumptions (2) Break the problem into sub-problems (3) Work through each sub-problem step by step (4) Check your reasoning for logical errors (5) Then give me your final answer with confidence level (high/medium/low)",
+          "best_on": ["ChatGPT", "Claude", "Gemini"],
+          "tip": "This technique reduces AI hallucinations significantly. Use it whenever accuracy matters."
+        }
+      ]
+    },
+    {
+      "title": "Upsell / CTA",
+      "type": "cta",
+      "content": "You've just unlocked your AI advantage. Ready to go deeper? Check out our other products.",
+      "items": [
+        {
+          "offer": "AI Prompt Master Pack",
+          "price": "$47",
+          "description": "300+ prompts for every use case",
+          "url": "khacademy.com"
+        },
+        {
+          "offer": "AI Business Automation Toolkit",
+          "price": "$67",
+          "description": "Automate your entire workflow with AI",
+          "url": "khacademy.com"
+        },
+        {
+          "offer": "Ultimate AI Bundle",
+          "price": "$197",
+          "description": "All 6 products — everything you need",
+          "url": "khacademy.com"
+        }
+      ]
+    }
+  ]
+}

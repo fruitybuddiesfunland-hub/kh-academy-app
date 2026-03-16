@@ -1,0 +1,803 @@
+{
+  "product_id": "small-business",
+  "title": "AI for Small Business",
+  "subtitle": "Ready-to-Deploy AI Systems That Run Your Business While You Sleep",
+  "tagline": "6 Complete Business Systems + Templates Inside",
+  "source": "ai-small-business.pdf",
+  "version": "1.0 — March 2026",
+  "pages": 44,
+  "publisher": "KH Academy",
+  "website": "khacademy.com",
+  "compatible_tools": ["Claude", "Gemini"],
+  "sections": [
+    {
+      "title": "Welcome",
+      "type": "intro",
+      "content": "YOUR BUSINESS DOESN'T NEED MORE AI ADVICE. IT NEEDS AI SYSTEMS. You've read the articles. You've tried the prompts. But here's what nobody tells you: using AI for one task at a time is like hiring an employee and only letting them answer one question per day. This playbook is different. Instead of scattered prompts, you get complete business systems — tested workflows where AI handles entire processes from start to finish. Each system comes with ready-to-use templates you customize once, then run forever.",
+      "comparison": {
+        "what_most_people_do": [
+          "Ask AI one question at a time",
+          "Start over every session",
+          "Get generic answers",
+          "Waste 2+ hours daily on repetitive tasks"
+        ],
+        "what_this_playbook_gives_you": [
+          "Complete systems that chain tasks",
+          "Pre-loaded business context",
+          "Output tailored to YOUR business",
+          "Systems that run in under 15 minutes"
+        ]
+      },
+      "items": []
+    },
+    {
+      "title": "How to Use This Playbook",
+      "type": "instructions",
+      "content": "Three-step guide to deploying AI systems in your business.",
+      "items": [
+        { "step": 1, "title": "Pick a System", "instruction": "Start with your biggest time-waster. Each system stands alone." },
+        { "step": 2, "title": "Fill in Your Details", "instruction": "Every template has [BRACKETS] for your business info. Fill once, use forever." },
+        { "step": 3, "title": "Deploy & Repeat", "instruction": "Use the system daily — AI remembers your context and gets better over time." }
+      ]
+    },
+    {
+      "title": "Table of Contents",
+      "type": "toc",
+      "content": "3 parts. 6 systems. All templates included.",
+      "items": [
+        { "part": "I — FOUNDATION", "chapter": "01", "title": "The AI Business Profile", "pages": "4-5" },
+        { "part": "II — 6 BUSINESS SYSTEMS", "chapter": "02", "title": "Customer Inquiry & Response", "pages": "6-13" },
+        { "part": "II — 6 BUSINESS SYSTEMS", "chapter": "03", "title": "Content & Social Media", "pages": "14-18" },
+        { "part": "II — 6 BUSINESS SYSTEMS", "chapter": "04", "title": "Financial Analysis & Reporting", "pages": "19-22" },
+        { "part": "II — 6 BUSINESS SYSTEMS", "chapter": "05", "title": "Sales & Lead Follow-Up", "pages": "23-28" },
+        { "part": "II — 6 BUSINESS SYSTEMS", "chapter": "06", "title": "Operations & SOP", "pages": "29-32" },
+        { "part": "II — 6 BUSINESS SYSTEMS", "chapter": "07", "title": "Hiring & Team Management", "pages": "33-36" },
+        { "part": "III — CUSTOMIZATION", "chapter": "08", "title": "Industry Quick-Start Guides", "pages": "37-39" },
+        { "part": "III — CUSTOMIZATION", "chapter": "09", "title": "Your AI Operations Manual", "pages": "40-41" },
+        { "part": "III — CUSTOMIZATION", "chapter": "10", "title": "What's Next: Systems to Automation", "pages": "42-43" }
+      ]
+    },
+    {
+      "title": "Chapter 01: The AI Business Profile",
+      "type": "templates",
+      "content": "Fill this in ONCE. Every system in this playbook uses it.",
+      "master_template": {
+        "label": "BUSINESS PROFILE — [Your Business Name]",
+        "fields": {
+          "industry": "[e.g., Restaurant / Retail / Consulting / Freelance]",
+          "business_type": "[B2B / B2C / Both]",
+          "years_operating": "[___]",
+          "team_size": "[Solo / 2-5 / 6-20 / 20+]",
+          "customers": {
+            "primary_customer": "[Who buys from you? Age, role, situation]",
+            "pain_points": "[Top 3 problems you solve]",
+            "average_transaction_value": "$[___]",
+            "how_customers_find_you": "[Social / Referral / Walk-in / Search]"
+          },
+          "voice_and_brand": {
+            "brand_tone": "[Professional / Friendly / Casual / Luxury / Fun]",
+            "words_we_always_use": "[3-5 brand words]",
+            "words_we_never_use": "[3-5 words to avoid]",
+            "competitor_difference": "[What makes you different in 1 sentence]"
+          },
+          "operations": {
+            "biggest_time_waster": "[The task that eats most of your week]",
+            "software_you_use": "[List your tools — POS, CRM, email, etc.]",
+            "business_hours": "[___]",
+            "peak_season": "[___]"
+          }
+        }
+      },
+      "how_to_use_profile": [
+        { "step": 1, "platform": "Claude", "instruction": "Copy your completed Business Profile into a Claude Project as the project instruction. Every conversation in that project will automatically know your business." },
+        { "step": 2, "platform": "Gemini", "instruction": "Paste your profile at the start of any Gemini Gem instruction. The Gem becomes a specialist that already knows who you are." },
+        { "step": 3, "platform": "Everywhere", "instruction": "Every system in this playbook references [YOUR PROFILE] — that means this template. Fill it once and all 6 systems auto-customize to your business." }
+      ],
+      "pro_tip": "Update your Business Profile quarterly as your business evolves. Your prices change, your customers shift, your tools upgrade — keep this document alive and every AI system stays current."
+    },
+    {
+      "title": "System 01: Customer Response System",
+      "type": "system",
+      "problem": "You spend 1-2 hours daily writing similar emails and messages",
+      "solution": "A system that drafts responses in your brand voice in under 60 seconds",
+      "time_saved": "8-10 hours per week",
+      "whats_inside": [
+        "8 ready-to-use response templates (all fully written out)",
+        "Escalation decision tree (AI vs. human)",
+        "Claude Skill + Gemini Gem setup instructions",
+        "AI prompts to customize any response"
+      ],
+      "response_templates": [
+        {
+          "template_number": 1,
+          "name": "New Inquiry / First Contact",
+          "scenario": "Someone contacts you for the first time",
+          "trigger": "New email, DM, or form submission",
+          "tone": "[BRAND TONE] — warm, welcoming",
+          "template": "Hi [Customer Name],\n\nThanks so much for reaching out to [YOUR BUSINESS]!\n\nI'd love to help you with [restate their question/need].\n\nHere's a quick overview of what we offer:\n[YOUR TOP 2-3 SERVICES/PRODUCTS with 1-line descriptions]\n\nWould you like to [get a quote]? I'm happy to help you find the right fit.\n\nLooking forward to connecting,\n[YOUR NAME]\n[YOUR PREFERRED CONTACT METHOD]"
+        },
+        {
+          "template_number": 2,
+          "name": "Pricing Question",
+          "scenario": "Customer asks about pricing",
+          "trigger": "Customer asks 'how much' or 'what do you charge'",
+          "tone": "[BRAND TONE] — confident, transparent",
+          "template": "Hi [Customer Name],\n\nThanks for your interest in [YOUR BUSINESS]!\n\nHere's our pricing for [what they asked about]:\n[Price details from YOUR product/service list]\n\nWhat makes us different: [YOUR COMPETITOR DIFFERENCE]\n\nHappy to answer any other questions —\n[YOUR PREFERRED CONTACT METHOD]\n\n[YOUR NAME]"
+        },
+        {
+          "template_number": 3,
+          "name": "Complaint / Negative Feedback",
+          "scenario": "Customer is unhappy or reports a problem",
+          "trigger": "Complaint email, negative review, angry message",
+          "tone": "[BRAND TONE] — empathetic, solution-focused",
+          "template": "Hi [Customer Name],\n\nThank you for letting us know about this. I'm really sorry you had this experience — that's not the standard we hold ourselves to at [YOUR BUSINESS].\n\nHere's what I'd like to do to make this right:\n[Specific remedy: refund / redo / discount / replacement]\n\nI've also [updated our process / personally reviewed what happened] so this doesn't happen again.\n\nCan I [call you / schedule a time to chat] to make sure you're fully taken care of?\n\n[YOUR NAME]"
+        },
+        {
+          "template_number": 4,
+          "name": "Follow-Up (No Response)",
+          "scenario": "You reached out but haven't heard back",
+          "trigger": "3-5 days since last contact with no reply",
+          "tone": "[BRAND TONE] — helpful, not pushy",
+          "template": "Hi [Customer Name],\n\nJust checking in — I wanted to make sure my last message didn't get buried in your inbox!\n\nTo recap, you asked about [their original question], and I'd shared [brief summary of your response].\n\nIf you have any other questions or if your needs have changed, I'm here to help. No pressure at all.\n\nHave a great [day of week]!\n[YOUR NAME]"
+        },
+        {
+          "template_number": 5,
+          "name": "Booking / Appointment Confirmation",
+          "scenario": "Customer books an appointment or reservation",
+          "trigger": "New booking received",
+          "tone": "[BRAND TONE] — organized, reassuring",
+          "template": "Hi [Customer Name],\n\nYou're all set! Here are your booking details:\n\nDate: [DATE]\nTime: [TIME]\nLocation: [ADDRESS / virtual link]\nService: [WHAT THEY BOOKED]\n\nA few things to know before your visit:\n- [Preparation info: what to bring, parking, etc.]\n- [Cancellation/reschedule policy]\n\nIf anything changes, just reply to this message or call us at [PHONE]. We look forward to seeing you!\n\n[YOUR NAME] at [YOUR BUSINESS]"
+        },
+        {
+          "template_number": 6,
+          "name": "Thank You / Post-Purchase",
+          "scenario": "Customer just made a purchase or completed service",
+          "trigger": "Transaction complete",
+          "tone": "[BRAND TONE] — grateful, personal",
+          "template": "Hi [Customer Name],\n\nThank you for choosing [YOUR BUSINESS]! We truly appreciate your [purchase / visit / business].\n\nJust a quick summary:\n[Order details / service summary / receipt reference]\n\nA few things that might be helpful:\n- [Care instructions / next steps / how to get support]\n- [Warranty / return policy reminder]\n\nIf you enjoyed your experience, we'd love a quick review on [Google / Yelp / your platform]: [REVIEW LINK]\n\nThanks again — hope to see you back soon!\n[YOUR NAME]"
+        },
+        {
+          "template_number": 7,
+          "name": "Refund / Cancellation Request",
+          "scenario": "Customer wants a refund or to cancel",
+          "trigger": "Refund/cancellation request received",
+          "tone": "[BRAND TONE] — understanding, professional",
+          "template": "Hi [Customer Name],\n\nI understand, and I appreciate you letting us know.\n\nI've started processing your [refund / cancellation]. Here's what to expect:\n- [Timeline: refund in 5-7 business days / etc.]\n- [Any conditions or next steps they need to take]\n\nIf you don't mind me asking — was there anything we could have done differently? Your feedback helps us improve for everyone.\n\nYou're always welcome back at [YOUR BUSINESS].\n\n[YOUR NAME]"
+        },
+        {
+          "template_number": 8,
+          "name": "Review Request",
+          "scenario": "You want to ask a happy customer for a review",
+          "trigger": "1-3 days after positive interaction or purchase",
+          "tone": "[BRAND TONE] — warm, appreciative, brief",
+          "template": "Hi [Customer Name],\n\nIt was great [helping you with ___] recently!\n\nIf you have 30 seconds, a quick review would mean the world to us. It helps other people like you find us:\n\n[REVIEW LINK — Google / Yelp / Facebook / your platform]\n\nNo pressure at all — and thank you again for choosing [YOUR BUSINESS]. We're here whenever you need us!\n\n[YOUR NAME]"
+        }
+      ],
+      "escalation_decision_tree": [
+        { "situation": "Simple question", "action": "AI handles it (use response template)" },
+        { "situation": "Pricing inquiry", "action": "AI drafts, quick review, then send" },
+        { "situation": "Complaint", "action": "AI drafts, YOU review before sending" },
+        { "situation": "Legal / safety issue", "action": "YOU handle directly — no AI" },
+        { "situation": "VIP / high-value", "action": "AI drafts, YOU personalize & send" }
+      ],
+      "pro_tip": "Set a rule: if the customer's issue involves money, emotions, or legal risk — always have a human review before sending. AI is great at drafting, but judgment calls need you.",
+      "time_savings": { "before": "1-2 hours/day writing repetitive responses", "after": "Under 10 minutes — AI drafts, you approve" },
+      "ai_skill_instructions": {
+        "claude": {
+          "skill_name": "Customer Response Agent",
+          "role": "You are a customer response specialist for [YOUR BUSINESS NAME].",
+          "context": "Use the Business Profile attached to this project to understand our brand, customers, and tone.",
+          "rules": [
+            "Always match our brand tone: [BRAND TONE]",
+            "Include our differentiator when relevant",
+            "Keep responses under 150 words",
+            "Flag complaints for human review",
+            "Never make promises about pricing or timelines without checking the product/service list"
+          ],
+          "workflow": [
+            "Read the customer message",
+            "Identify the scenario type (pricing, complaint, etc.)",
+            "Use the matching template from the library",
+            "Customize with business details",
+            "Output: ready-to-send response"
+          ]
+        },
+        "gemini": {
+          "gem_name": "Customer Response Agent",
+          "instructions": "You are a customer response specialist for [YOUR BUSINESS NAME]. Use the Business Profile in my instructions to understand our brand. When I paste a customer message, identify the type (pricing, complaint, review request, etc.) and draft a response using our brand tone: [BRAND TONE]. Keep it under 150 words. Flag complaints for review."
+        }
+      },
+      "quick_use_prompts": [
+        {
+          "label": "AI Prompt (Claude / Gemini)",
+          "prompt": "Using my Business Profile, draft a response to this customer message: [paste message]. Identify which scenario it is (new inquiry, pricing, complaint, follow-up, booking, thank you, refund, or review request) and use the matching template. Match my brand tone. Keep it under 100 words."
+        },
+        {
+          "label": "Review Response Prompt (Claude / Gemini)",
+          "prompt": "A customer left this negative review: [paste review]. Draft a public response that (1) acknowledges their concern, (2) apologizes sincerely, (3) offers a specific remedy, and (4) invites them to continue the conversation privately. Match my brand tone: [BRAND TONE]."
+        },
+        {
+          "label": "Batch Follow-Up Prompt (Claude / Gemini)",
+          "prompt": "I need to follow up with [X] customers who haven't responded. Here are their names and original inquiries: [paste list]. For each, draft a brief, friendly follow-up using Template 4. Personalize each one based on their original question."
+        }
+      ]
+    },
+    {
+      "title": "System 02: Content & Social Media",
+      "type": "system",
+      "problem": "Content creation takes 5+ hours/week and still feels inconsistent",
+      "solution": "A batch system that produces a full week of branded content in one sitting",
+      "time_saved": "4-6 hours per week",
+      "whats_inside": [
+        "4-pillar content framework (customized to your business)",
+        "30-minute batch workflow (a full week of content)",
+        "Platform-specific templates (Instagram, Facebook, LinkedIn, Email)",
+        "AI prompts for both Claude and Gemini"
+      ],
+      "content_pillar_framework": {
+        "description": "Stop guessing what to post. These 4 pillars give you a rotation system that keeps content varied, on-brand, and engaging.",
+        "pillars": [
+          { "number": 1, "name": "Behind the Scenes", "description": "How we do it, workspace tours, process reveals, day-in-the-life" },
+          { "number": 2, "name": "Customer Results", "description": "Testimonials, before-after, case studies, success stories" },
+          { "number": 3, "name": "Education & Tips", "description": "How-to's, tips your audience needs, myth-busting, FAQs" },
+          { "number": 4, "name": "Personality & Culture", "description": "Team introductions, values, humor, what makes you human" }
+        ],
+        "weekly_rotation": {
+          "Monday": "Pillar 1 — Behind the Scenes",
+          "Tuesday": "Pillar 2 — Customer Results",
+          "Wednesday": "Pillar 3 — Education & Tips",
+          "Thursday": "Pillar 4 — Personality & Culture",
+          "Friday": "Pillar 2 or 3 — Repurpose best performer"
+        }
+      },
+      "batch_workflow": {
+        "title": "The 30-Minute Batch Workflow",
+        "description": "One sitting. One week of content.",
+        "steps": [
+          { "step": 1, "action": "Feed AI Your Context", "detail": "Paste Business Profile + this week's theme. (2 min)" },
+          { "step": 2, "action": "Generate 5 Post Concepts", "detail": "Ask AI for 5 ideas using Pillar rotation. (3 min)" },
+          { "step": 3, "action": "Expand to Drafts", "detail": "AI writes platform-specific drafts. (10 min)" },
+          { "step": 4, "action": "Add Captions & Hashtags", "detail": "Generate captions and hashtags. (5 min)" },
+          { "step": 5, "action": "Create Newsletter", "detail": "Convert best post into email newsletter. (5 min)" },
+          { "step": 6, "action": "Review & Schedule", "detail": "Quick review, adjust, schedule. (5 min)" }
+        ],
+        "ai_prompt": "Using my Business Profile, create 5 social media post concepts for this week. Use the 4-pillar rotation. Theme: [YOUR THEME]. For each: headline, 2-sentence description, suggested visual, and best platform."
+      },
+      "platform_templates": [
+        {
+          "platform": "Instagram",
+          "format": "Carousel / Single Post / Story Sequence",
+          "structure": {
+            "hook": "[Attention-grabbing question or stat]",
+            "body": "[2-3 short paragraphs, one idea per paragraph]",
+            "cta": "[What you want them to do — save, share, comment]",
+            "hashtags": "[5-10 relevant, mix of niche + broad]"
+          },
+          "ai_prompt": "Write an Instagram [carousel/post/story] about [TOPIC] for my [INDUSTRY] business. Use my brand tone: [BRAND TONE]. Hook them with the first line."
+        },
+        {
+          "platform": "Facebook",
+          "format": "Engagement Post / Event Promo / Review Share",
+          "structure": {
+            "opening": "[Personal story or question to spark comments]",
+            "body": "[Conversational, 3-5 sentences max]",
+            "cta": "[Ask a question to drive comments]"
+          },
+          "ai_prompt": "Write a Facebook [engagement post/event promo] about [TOPIC]. Make it conversational. Ask a question to drive comments. Match my brand tone: [BRAND TONE]."
+        },
+        {
+          "platform": "LinkedIn",
+          "format": "Thought Leadership / Case Study / Hiring",
+          "structure": {
+            "hook": "[Bold statement or contrarian take]",
+            "story": "[3-4 short paragraphs with line breaks]",
+            "insight": "[What you learned or what others should know]",
+            "cta": "[Agree? Disagree? Share your experience.]"
+          },
+          "ai_prompt": "Write a LinkedIn post about [TOPIC] from my perspective as a [YOUR ROLE] in [INDUSTRY]. Professional but authentic tone."
+        },
+        {
+          "platform": "Email Newsletter",
+          "format": "Weekly digest / single-topic deep-dive",
+          "structure": {
+            "subject_line": "[Curiosity-driven, under 50 characters]",
+            "preview_text": "[Complement the subject, don't repeat it]",
+            "body": "[One main story/tip from this week's best post]",
+            "cta": "[One clear action — reply, click, shop]"
+          },
+          "ai_prompt": "Turn this social media post into a weekly email newsletter: [paste post]. Add a personal intro, expand the content, and end with one clear CTA."
+        }
+      ]
+    },
+    {
+      "title": "System 03: Financial Analysis & Reporting",
+      "type": "system",
+      "problem": "You know your revenue but not your real profitability drivers",
+      "solution": "Monthly financial health checks that take 15 minutes",
+      "time_saved": "3-5 hours per month",
+      "whats_inside": [
+        "Monthly business health check template",
+        "Pricing & profitability analyzer",
+        "3-month cash flow forecaster",
+        "AI prompts to turn your numbers into insights"
+      ],
+      "monthly_health_check_template": {
+        "fields": {
+          "month": "[___]",
+          "year": "[___]",
+          "revenue": {
+            "total": "$[___]",
+            "product_service_a": "$[___]",
+            "product_service_b": "$[___]",
+            "product_service_c": "$[___]"
+          },
+          "costs": {
+            "total": "$[___]",
+            "cost_of_goods": "$[___]",
+            "rent_utilities": "$[___]",
+            "staff": "$[___]",
+            "marketing": "$[___]",
+            "software_tools": "$[___]",
+            "other": "$[___]"
+          },
+          "customers": {
+            "total": "[___]",
+            "new": "[___]",
+            "returning": "[___]",
+            "lost": "[___]"
+          }
+        },
+        "ai_prompt": "Analyze this month's data against last month. Identify: (1) top revenue driver, (2) biggest cost increase, (3) customer retention rate, (4) three specific actions to improve next month. Be direct — I'm a busy owner."
+      },
+      "pricing_analysis_template": {
+        "description": "Most small businesses underprice. This template helps you evaluate whether your pricing is right.",
+        "fields": {
+          "product_service": "[Name]",
+          "your_price": "$[___]",
+          "your_cost_to_deliver": "$[___]",
+          "your_margin": "[___]%",
+          "competitor_pricing": [
+            { "competitor": "Competitor 1: [Name]", "price": "$[___]" },
+            { "competitor": "Competitor 2: [Name]", "price": "$[___]" },
+            { "competitor": "Competitor 3: [Name]", "price": "$[___]" }
+          ],
+          "positioning": "[Budget / Mid-range / Premium]",
+          "last_price_increase": "[Date or 'Never']"
+        },
+        "ai_prompt": "Review my pricing data above. Compare my margins to industry averages for [INDUSTRY]. Analyze my competitor positioning. Recommend: should I raise prices, by how much, and how to communicate the increase. Give me a specific plan.",
+        "pro_tip": "Run this analysis quarterly. Most small businesses haven't raised prices in 2+ years while costs have increased 15-20%. A 10% price increase with zero customer loss goes straight to your bottom line."
+      },
+      "cash_flow_forecast_template": {
+        "description": "See the future before it arrives. This 3-month template helps you spot cash crunches before they hit.",
+        "fields": {
+          "current_cash_balance": "$[___]",
+          "month_1": {
+            "name": "[Month Name]",
+            "expected_revenue": "$[___]",
+            "expected_costs": "$[___]",
+            "seasonal_factor": "[Peak / Normal / Slow]",
+            "projected_balance": "$[___]"
+          },
+          "month_2": {
+            "name": "[Month Name]",
+            "expected_revenue": "$[___]",
+            "expected_costs": "$[___]",
+            "seasonal_factor": "[Peak / Normal / Slow]",
+            "projected_balance": "$[___]"
+          },
+          "month_3": {
+            "name": "[Month Name]",
+            "expected_revenue": "$[___]",
+            "expected_costs": "$[___]",
+            "seasonal_factor": "[Peak / Normal / Slow]",
+            "projected_balance": "$[___]"
+          },
+          "upcoming_big_expenses": "[List any known large costs]"
+        },
+        "ai_prompt": "Using my cash flow data and my Business Profile (peak season: [PEAK SEASON]), identify: (1) months where cash might run low, (2) seasonal adjustment recommendations, (3) how much reserve I should keep. Be specific with dollar amounts."
+      }
+    },
+    {
+      "title": "System 04: Sales & Lead Follow-Up",
+      "type": "system",
+      "problem": "80% of sales need 5+ follow-ups, but most businesses stop at 1-2",
+      "solution": "A 5-touch follow-up sequence with templates for each stage",
+      "time_saved": "5-8 hours per week",
+      "whats_inside": [
+        "5-touch follow-up sequence with full email templates",
+        "Lead scoring cheat sheet (hot / warm / cool)",
+        "Proposal & quote generator template",
+        "AI prompts for personalized outreach"
+      ],
+      "follow_up_sequence": [
+        {
+          "touch": 1,
+          "name": "Initial Response",
+          "timing": "Day 0 — within 1 hour of inquiry",
+          "goal": "Acknowledge, answer, invite next step",
+          "template": "Hi [Customer Name],\n\nThanks for reaching out to [YOUR BUSINESS]! I saw your question about [their specific inquiry].\n\n[Direct answer to their question — be specific]\n\nI'd love to learn more about what you're looking for. Would you be open to [sharing a few more details]?\n\nLooking forward to hearing from you,\n[YOUR NAME]\n[YOUR PHONE / BOOKING LINK]"
+        },
+        {
+          "touch": 2,
+          "name": "Value-Add Follow-Up",
+          "timing": "Day 2",
+          "goal": "Build trust by giving, not asking",
+          "template": "Hi [Customer Name],\n\nI was thinking about [their situation/question] and wanted to share something that might help:\n\n[helpful resource related to their need — NOT a sales pitch]\n\nA lot of our customers in [similar situation] have found this really helpful. No strings attached — just thought of you.\n\nLet me know if you have any questions!\n[YOUR NAME]"
+        },
+        {
+          "touch": 3,
+          "name": "Social Proof",
+          "timing": "Day 5",
+          "goal": "Show results others have gotten",
+          "template": "Hi [Customer Name],\n\nQuick thought — I wanted to share how we helped [similar customer/business] with [similar need]:\n\n\"[2-3 sentences about the result they achieved]\"\n— [Customer name/business], [their role]\n\nTheir situation was similar to yours, and I think we could get you similar results.\n\nWorth a conversation? I'm free [times]. Happy to keep it to 15 minutes.\n\n[YOUR NAME]"
+        },
+        {
+          "touch": 4,
+          "name": "Direct Ask",
+          "timing": "Day 10",
+          "goal": "Make a clear, specific offer",
+          "template": "Hi [Customer Name],\n\nI wanted to check in one more time about [their need].\n\nBased on what you shared, here's what I'd recommend:\n[Specific product/service recommendation with price]\n\n[Urgency element: 'We have 2 spots left this month' or 'Our seasonal offer runs through [date]']\n\nIf you'd like to move forward, here's the easiest way: [specific next step — book a call, reply, visit]\n\nAnd if now isn't the right time, no worries at all — I'll be here when you're ready.\n\n[YOUR NAME]"
+        },
+        {
+          "touch": 5,
+          "name": "Long-Term Nurture",
+          "timing": "Day 21",
+          "goal": "Stay top of mind without being pushy",
+          "template": "Hi [Customer Name],\n\nHope you're doing well! No sales pitch today — just wanted to share something I thought you'd find useful:\n\n[helpful resource, tip, or community event related to their interest]\n\nIf your needs around [their original question] ever come back up, I'm always happy to help.\n\nHave a great [day/week]!\n[YOUR NAME]"
+        }
+      ],
+      "follow_up_ai_prompt": "Using my Business Profile, write a [Touch 1/2/3/4/5] follow-up email for this lead: [paste lead details]. Match my brand tone. Keep it under 80 words. The goal is [proof / close / nurture].",
+      "lead_scoring": {
+        "hot": {
+          "label": "HOT — Follow Up Today",
+          "signals": [
+            "Asked about pricing",
+            "Mentioned a timeline or deadline",
+            "Referred by existing customer",
+            "Visited or contacted you twice or more"
+          ]
+        },
+        "warm": {
+          "label": "WARM — Follow Up This Week",
+          "signals": [
+            "Downloaded your content or signed up",
+            "Asked general questions about your services",
+            "Engaged with your social media content",
+            "Attended an event or webinar"
+          ]
+        },
+        "cool": {
+          "label": "COOL — Monthly Nurture",
+          "signals": [
+            "Early-stage research only",
+            "No budget or timeline mentioned",
+            "Competitor comparison shopping",
+            "Connected but no conversation yet"
+          ]
+        },
+        "pro_tip": "Create three saved AI prompts — one for each lead temperature. When a new lead comes in, classify them, then use the matching prompt to generate a personalized response in seconds."
+      },
+      "proposal_template": {
+        "description": "Stop spending hours on proposals. Paste your discovery call notes and let AI draft a professional proposal in minutes.",
+        "template": {
+          "for": "[Client Name / Company]",
+          "date": "[___]",
+          "prepared_by": "[YOUR NAME] at [YOUR BUSINESS]",
+          "understanding_your_needs": "[AI generates from your call notes]",
+          "recommended_solution": "[AI recommends from your services/products]",
+          "pricing": {
+            "service_1": "$[___]",
+            "service_2": "$[___]",
+            "total_investment": "$[___]"
+          },
+          "timeline": "[___]",
+          "whats_included": "[Scope of work]",
+          "next_steps": "[How to proceed]",
+          "valid_until": "[Date — 14 days recommended]"
+        },
+        "ai_prompt": "Using my Business Profile and this template, draft a proposal for: [describe the client request]. Match our brand tone. Recommend the right service/product combo. Include a 14-day validity period."
+      }
+    },
+    {
+      "title": "System 05: Operations & SOP System",
+      "type": "system",
+      "problem": "Everything lives in your head — if you're sick, the business stops",
+      "solution": "AI-generated SOPs from your verbal descriptions",
+      "time_saved": "Major — building a business that runs without you",
+      "whats_inside": [
+        "SOP generator workflow (voice to procedure)",
+        "SOP template with fill-in structure",
+        "Top 10 SOPs every small business needs",
+        "Delegation & handoff templates"
+      ],
+      "sop_generator_workflow": [
+        { "step": 1, "action": "Voice-Describe Your Process", "detail": "Talk like you're training a new employee. Record yourself explaining the task from start to finish." },
+        { "step": 2, "action": "Paste the Transcript", "detail": "Use speech-to-text or a free transcription tool. Paste the raw text into AI along with the SOP template." },
+        { "step": 3, "action": "AI Outputs Formatted SOP", "detail": "AI organizes your rambling into a clean, step-by-step procedure anyone can follow." }
+      ],
+      "sop_template": {
+        "name": "[Process Name]",
+        "owner": "[Who's responsible]",
+        "last_updated": "[Date]",
+        "purpose": "[Why this process exists]",
+        "trigger": "[What starts this process]",
+        "steps": [
+          { "step": 1, "action": "[Step]", "expected_output": "[___]" },
+          { "step": 2, "action": "[Step]", "expected_output": "[___]" },
+          { "step": 3, "action": "[Step]", "expected_output": "[___]" },
+          { "step": 4, "action": "[Step]", "expected_output": "[___]" }
+        ],
+        "exceptions": "[What to do when things go wrong]",
+        "tools_needed": "[Software, equipment]",
+        "time_estimate": "[How long it should take]"
+      },
+      "top_10_sops": [
+        { "rank": 1, "name": "Opening / closing procedures", "complexity": "Easy" },
+        { "rank": 2, "name": "New customer onboarding", "complexity": "Medium" },
+        { "rank": 3, "name": "Order fulfillment / service delivery", "complexity": "Medium" },
+        { "rank": 4, "name": "Complaint handling", "complexity": "Easy" },
+        { "rank": 5, "name": "Social media posting", "complexity": "Easy" },
+        { "rank": 6, "name": "Invoicing & payment collection", "complexity": "Easy" },
+        { "rank": 7, "name": "Inventory / supply reordering", "complexity": "Medium" },
+        { "rank": 8, "name": "Staff training for new hires", "complexity": "Complex" },
+        { "rank": 9, "name": "Monthly financial review", "complexity": "Medium" },
+        { "rank": 10, "name": "Emergency / crisis response", "complexity": "Complex" }
+      ],
+      "sop_ai_prompt": "I'm going to describe my [PROCESS NAME] process. Here's my raw description: [paste transcript]. Using the SOP template, organize this into a clean, step-by-step procedure. Include expected outputs, exceptions, and a time estimate.",
+      "task_handoff_template": {
+        "task": "[Name]",
+        "delegated_to": "[Person / Role]",
+        "sop_reference": "[Which SOP to follow]",
+        "due": "[Date / Recurring schedule]",
+        "what_success_looks_like": "[Describe the expected output clearly]",
+        "common_mistakes_to_avoid": ["[___]", "[___]", "[___]"],
+        "questions_contact": "[Your name / contact]",
+        "check_in_schedule": "[Daily / Weekly / As needed]"
+      },
+      "training_checklist": [
+        "Shared the SOP document with team member",
+        "Walked through the process together once",
+        "Team member completed process with supervision",
+        "Team member completed process independently",
+        "Reviewed quality of first 3 independent outputs",
+        "Scheduled recurring check-ins"
+      ],
+      "pro_tip": "Use AI to generate a quiz from any SOP. Paste the SOP and ask: 'Create a 5-question quiz to test understanding of this procedure.' Great for training verification."
+    },
+    {
+      "title": "System 06: Hiring & Team Management",
+      "type": "system",
+      "problem": "Hiring takes weeks and you still pick the wrong person",
+      "solution": "AI-assisted hiring pipeline — from posting to onboarding in half the time",
+      "time_saved": "10-15 hours per hire",
+      "whats_inside": [
+        "Job description generator template",
+        "Interview question bank (role + culture fit)",
+        "Scoring rubric for objective evaluation",
+        "30-day onboarding checklist"
+      ],
+      "job_description_input_template": {
+        "role": "[___]",
+        "reports_to": "[___]",
+        "type": "[Full-time / Part-time / Contract]",
+        "must_have_skills": ["[___]", "[___]", "[___]"],
+        "nice_to_have": ["[___]", "[___]"],
+        "personality_fit": "[From your Business Profile brand tone]",
+        "deal_breakers": "[What disqualifies a candidate]",
+        "compensation": "[Range or 'competitive']",
+        "location": "[On-site / Remote / Hybrid]"
+      },
+      "job_description_ai_prompt": "Using my Business Profile and this role template, write a job description for [ROLE]. Match our brand tone [BRAND TONE]. Include what makes working here different. Under 300 words. Make skills specific and measurable.",
+      "interview_questions": {
+        "role_specific": [
+          "Describe a time you [KEY SKILL] — what was the result?",
+          "How would you handle [COMMON SCENARIO]?",
+          "What tools/methods do you use for [CORE RESPONSIBILITY]?",
+          "Walk me through how you'd approach [REAL TASK].",
+          "What's the biggest [SKILL] challenge you've solved?"
+        ],
+        "culture_fit": [
+          "What kind of work environment brings out your best?",
+          "How do you handle [BRAND TONE-RELATED SCENARIO]?",
+          "Describe a team you loved — what made it great?",
+          "How do you handle feedback you disagree with?",
+          "What would your last manager say is your biggest strength?"
+        ]
+      },
+      "scoring_rubric": {
+        "scale": "1=Poor 2=Below Avg 3=Meets 4=Above 5=Exceptional",
+        "total_possible": 50,
+        "fields": {
+          "candidate": "[Name]",
+          "role": "[Position]",
+          "role_scores": "Role Q1: [/5] Role Q2: [/5] Role Q3: [/5] Role Q4: [/5] Role Q5: [/5]",
+          "culture_scores": "Culture Q1: [/5] Culture Q2: [/5] Culture Q3: [/5] Culture Q4: [/5] Culture Q5: [/5]",
+          "total": "[/50]",
+          "red_flags": "[___]",
+          "decision": "[ ] Advance [ ] Maybe [ ] Pass"
+        }
+      },
+      "onboarding_checklist": {
+        "week_1": {
+          "title": "Orientation",
+          "tasks": [
+            "Complete all paperwork and system access",
+            "Tour of workspace / intro to team",
+            "Review Business Profile and brand values",
+            "Shadow existing team member for 2 days",
+            "Read SOPs for their role (from Chapter 06)"
+          ]
+        },
+        "week_2": {
+          "title": "Supervised Work",
+          "tasks": [
+            "Complete first tasks with supervision",
+            "Daily 15-min check-in with manager",
+            "Review and practice all relevant SOPs",
+            "Start handling routine tasks independently",
+            "Document questions and feedback"
+          ]
+        },
+        "week_3": {
+          "title": "Independent Work",
+          "tasks": [
+            "Handle routine tasks independently",
+            "Check-in reduced to every other day",
+            "Introduce customer-facing responsibilities",
+            "Begin cross-training on secondary tasks",
+            "Manager observes and takes notes"
+          ]
+        },
+        "week_4": {
+          "title": "First Review",
+          "tasks": [
+            "Complete first performance review template",
+            "Discuss wins, challenges, and next goals",
+            "Adjust training plan based on performance",
+            "Set 60-day and 90-day milestones",
+            "Transition to regular check-in schedule"
+          ]
+        }
+      }
+    },
+    {
+      "title": "Chapter 08: Industry Quick-Start Guides",
+      "type": "educational",
+      "content": "Don't know where to start? Find your industry below. We've prioritized the systems and added industry-specific extras.",
+      "industries": [
+        {
+          "industry": "Restaurant / Food Service",
+          "priority_systems": ["#1 Customer Response", "#2 Content", "#3 Operations"],
+          "industry_specific_additions": [
+            "Menu update and seasonal special templates",
+            "Review response templates (Google, Yelp)",
+            "Staff scheduling SOP with peak-hour coverage",
+            "Daily prep checklist generator"
+          ],
+          "recommended_skill": "Restaurant Manager",
+          "quick_start_prompt": "I run a [TYPE] restaurant with [X] staff. Busiest days: [DAYS]. Brand voice: [TONE]. Customize the Customer Response System for: reservation inquiries, dietary restriction questions, complaint about food quality, and catering requests."
+        },
+        {
+          "industry": "Retail / E-Commerce",
+          "priority_systems": ["#1 Sales & Leads", "#2 Content", "#3 Financial"],
+          "industry_specific_additions": [
+            "Product description generator (SEO-optimized)",
+            "Seasonal promotion calendar template",
+            "Inventory alert and reorder SOP",
+            "Customer review collection sequence"
+          ],
+          "recommended_skill": "Retail Operations Manager",
+          "quick_start_prompt": "I run a [TYPE] retail store (online/physical/both) selling [PRODUCTS]. Average order: $[X]. Customize the Sales & Lead Follow-Up System for: abandoned cart follow-up, post-purchase thank you, seasonal promotion, and restock notification."
+        },
+        {
+          "industry": "Service Business / Consulting",
+          "priority_systems": ["#1 Sales & Leads", "#2 Customer Response", "#3 Hiring"],
+          "industry_specific_additions": [
+            "Proposal generator with scope-of-work",
+            "Scope creep prevention template",
+            "Testimonial collection and case study builder",
+            "Client offboarding and referral request"
+          ],
+          "recommended_skill": "Service Business Assistant",
+          "quick_start_prompt": "I run a [TYPE] service business. Average project: $[X] over [TIMELINE]. Customize the Operations & SOP System for: client intake, project kickoff, milestone check-in, and project completion/handoff."
+        },
+        {
+          "industry": "Freelancer / Solopreneur",
+          "priority_systems": ["#1 Content", "#2 Sales & Leads", "#3 Financial"],
+          "industry_specific_additions": [
+            "Personal brand content calendar",
+            "Rate calculator and pricing confidence builder",
+            "Contract and scope-of-work template",
+            "Late payment follow-up email sequence"
+          ],
+          "recommended_skill": "Freelance Business Manager"
+        }
+      ]
+    },
+    {
+      "title": "Chapter 09: Your AI Operations Manual",
+      "type": "templates",
+      "content": "Your master control panel. Track which systems you've deployed, how much time you're saving, and when to review.",
+      "ai_ops_dashboard": {
+        "systems_active": [
+          "[ ] System 1: Customer Response",
+          "[ ] System 2: Content & Social Media",
+          "[ ] System 3: Financial Analysis",
+          "[ ] System 4: Sales & Follow-Up",
+          "[ ] System 5: Operations & SOP",
+          "[ ] System 6: Hiring & Team"
+        ],
+        "weekly_ai_time_budget": "[___] hours",
+        "estimated_time_saved": "[___] hours",
+        "ai_tools_in_use": {
+          "claude_project": "[Project name]",
+          "gemini_gems": "[List active Gems]"
+        },
+        "monthly_review_date": "[First Monday / Last Friday / etc.]",
+        "next_review": "[Date]"
+      },
+      "pro_tip": "Print this page or keep it as a pinned document. Update it monthly. The businesses that succeed with AI aren't the ones with the best tools — they're the ones who review and iterate.",
+      "monthly_review_checklist": {
+        "review_your_systems": [
+          "Check each active system — still saving time?",
+          "Review AI outputs — quality still good?",
+          "Identify systems needing template updates",
+          "Check if any system should be activated or paused"
+        ],
+        "update_your_foundation": [
+          "Review and update your Business Profile",
+          "Update pricing, products, or services if changed",
+          "Refresh brand tone and messaging if evolved",
+          "Update competitor information"
+        ],
+        "optimize_and_expand": [
+          "Refresh templates with new products/services",
+          "Archive SOPs no longer relevant",
+          "Train new team members on AI systems",
+          "Consider adding the next system"
+        ],
+        "measure_your_results": [
+          "Calculate total hours saved this month",
+          "Note revenue attributed to AI systems",
+          "Record customer feedback improvements",
+          "Update your AI Ops Dashboard"
+        ]
+      }
+    },
+    {
+      "title": "Chapter 10: What's Next",
+      "type": "educational",
+      "content": "The Automation Ladder — You've been climbing. Here's where you are and what's next.",
+      "automation_ladder": [
+        { "level": 1, "name": "Manual AI", "description": "You type prompts one at a time", "product": "AI Starter Kit ($19)", "status": "COMPLETED" },
+        { "level": 2, "name": "Specialist AI", "description": "You built Skills & Gems", "product": "AI Skills Builder ($29)", "status": "COMPLETED" },
+        { "level": 3, "name": "System AI", "description": "You deployed business systems", "product": "AI for Small Business ($47)", "status": "YOU ARE HERE" },
+        { "level": 4, "name": "Automated AI", "description": "Systems run on autopilot with triggers", "product": "AI Automation Cookbook ($67)", "status": "NEXT" }
+      ],
+      "pro_tip": "You don't need Level 4 to see massive results. Most businesses save 15-20 hours/week with Level 3 systems. Automation is the cherry on top."
+    },
+    {
+      "title": "Upsell / CTA",
+      "type": "cta",
+      "content": "Coming Next: AI Automation Cookbook — You've built the systems. Now let them run without you. The AI Automation Cookbook connects your systems to triggers, schedules, and multi-tool workflows.",
+      "upcoming_product": {
+        "name": "AI Automation Cookbook",
+        "features": [
+          "Multi-tool workflows (connect AI to your existing tools)",
+          "Zapier + Make integration templates",
+          "Auto-triggers: new customer → welcome sequence → follow-up",
+          "Scheduled reports that run while you sleep",
+          "Advanced prompt chains for complex business decisions"
+        ]
+      },
+      "items": [
+        {
+          "offer": "Ultimate AI Bundle",
+          "price": "$147 (Save 40%)",
+          "description": "All 4 products + future updates. vs. $162 buying separately.",
+          "url": "khacademy.com"
+        }
+      ]
+    }
+  ]
+}

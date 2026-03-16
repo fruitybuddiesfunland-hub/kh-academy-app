@@ -1,0 +1,606 @@
+{
+  "product_id": "skills-builder",
+  "title": "AI Skills Builder",
+  "subtitle": "Build Your AI Dream Team with Claude Skills & Gemini Gems",
+  "tagline": "10+ Ready-to-Use Skill Templates Inside",
+  "source": "ai-skills-builder.pdf",
+  "version": "1.0 — March 2026",
+  "pages": 32,
+  "publisher": "KH Academy",
+  "website": "khacademy.com",
+  "compatible_tools": ["Claude", "Gemini"],
+  "sections": [
+    {
+      "title": "Welcome",
+      "type": "intro",
+      "content": "STOP CHATTING. START BUILDING. Most people use AI the wrong way — they open a chat, type a question, and start from scratch every single time. Power users do something different. They build Skills — specialized AI assistants that already know their business, their style, and their workflows. This playbook teaches you exactly how to do that on two of the most powerful platforms: Claude and Gemini.",
+      "items": []
+    },
+    {
+      "title": "How to Use This Playbook",
+      "type": "instructions",
+      "content": "Three-step approach to building your AI team.",
+      "items": [
+        {
+          "step": 1,
+          "title": "Learn the Concept",
+          "instruction": "Each chapter explains one skill-building technique in plain language. No coding required."
+        },
+        {
+          "step": 2,
+          "title": "Copy the Template",
+          "instruction": "Every chapter includes ready-to-use templates. Copy them directly into Claude or Gemini."
+        },
+        {
+          "step": 3,
+          "title": "Build Your AI Team",
+          "instruction": "By the end, you'll have 10+ specialized AI assistants working for you around the clock."
+        }
+      ]
+    },
+    {
+      "title": "What's Inside",
+      "type": "overview",
+      "content": "How to build Claude Skills & Gemini Gems from scratch. 10+ tested, ready-to-use skill templates. 5 AI team member roles you can set up today. Advanced techniques: voice cloning, prompt chaining, self-improvement loops. Step-by-step screenshots and real examples.",
+      "items": []
+    },
+    {
+      "title": "Table of Contents",
+      "type": "toc",
+      "content": "3 parts. 10+ templates. Your AI dream team.",
+      "items": [
+        { "part": "I", "title": "The Foundations", "chapters": ["What Are AI Skills? (Pages 4-5)", "Claude Skills: Your AI Specialist Factory (Pages 6-10)", "Gemini Gems: Your Google-Powered Experts (Pages 11-14)"] },
+        { "part": "II", "title": "Build Your AI Team", "chapters": ["The Marketing Manager (Pages 15-16)", "The Content Writer (Pages 17-18)", "The Financial Analyst (Pages 19-20)", "The Research Assistant (Pages 21-22)", "The Customer Support Agent (Pages 23-24)"] },
+        { "part": "III", "title": "Advanced Skills", "chapters": ["Voice Cloning: Make AI Sound Like You (Pages 25-26)", "Prompt Chaining: Multi-Step Workflows (Pages 27-28)", "The Self-Improving Loop (Pages 29-30)"] }
+      ]
+    },
+    {
+      "title": "Chapter 01: What Are AI Skills?",
+      "type": "educational",
+      "content": "The difference between chatting with AI and building with AI.",
+      "callout": "Chatting with AI = Hiring a new temp every day. They don't know you, your business, or what you did yesterday. Building AI Skills = Hiring permanent specialists. They know your brand, your style, your data, and your preferences — every single time.",
+      "items": [
+        {
+          "platform": "Claude Skills",
+          "builder": "Anthropic",
+          "features": ["Create custom workflows with instructions + knowledge files", "Can execute code and run complex tasks", "Best for: Deep work, long documents, specialized knowledge", "Works on: Claude.ai (Pro, Team, Enterprise) + Claude Code + API"]
+        },
+        {
+          "platform": "Gemini Gems",
+          "builder": "Google",
+          "features": ["Create custom AI assistants with detailed instructions", "Native integration with Google Workspace (Docs, Sheets, Gmail)", "Best for: Google Workspace users, quick-access specialists", "Works on: Gemini (free for basic, Advanced for full features)"]
+        }
+      ],
+      "comparison_table": {
+        "columns": ["Criteria", "Claude Skills", "Gemini Gems"],
+        "rows": [
+          ["You work mostly in...", "Any platform / standalone", "Google Workspace"],
+          ["You need...", "Deep analysis, long docs, code", "Quick tasks, Google integration"],
+          ["Knowledge upload", "Up to 200K tokens (massive)", "Via Google Drive (real-time)"],
+          ["Sharing", "Team plan members", "Anyone (view/use/edit)"],
+          ["Code execution", "Yes — Python, JS, data analysis", "Limited"],
+          ["Cost", "Claude Pro $20/mo", "Gemini Advanced $20/mo"],
+          ["Best for", "Power users, developers", "Google Workspace users, teams"]
+        ]
+      },
+      "pro_tip": "You don't have to choose one. Many power users build their 'thinking' skills in Claude (for deep analysis and writing) and their 'action' skills in Gemini (for tasks connected to Google Docs, Sheets, and Gmail)."
+    },
+    {
+      "title": "Chapter 02: Claude Skills — Your AI Specialist Factory",
+      "type": "educational",
+      "content": "Claude Skills are the most powerful way to create AI specialists. Each skill is a set of instructions (and optionally code + reference files) that teaches Claude exactly how to handle a specific type of work.",
+      "real_examples": [
+        "A brand guidelines enforcer that checks every piece of content against your style guide",
+        "A financial report generator that formats data exactly how your team expects",
+        "A customer email responder trained on your FAQs and policies",
+        "A code reviewer that follows your team's coding standards"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "name": "Simple",
+          "description": "Just a markdown file (SKILL.md) with instructions. Like giving someone a detailed job description."
+        },
+        {
+          "level": 2,
+          "name": "With Knowledge",
+          "description": "Add reference files (PDFs, docs, data) that Claude can access. Like giving someone a training manual."
+        },
+        {
+          "level": 3,
+          "name": "With Code",
+          "description": "Add executable scripts for complex workflows. Like giving someone tools to work with."
+        }
+      ],
+      "note": "This playbook focuses on Level 1 and 2. No coding needed.",
+      "how_to_build": [
+        { "step": 1, "action": "Open Claude", "detail": "Go to Settings → Capabilities → Skills" },
+        { "step": 2, "action": "Click 'Add Skill'", "detail": "Upload your SKILL.md file" },
+        { "step": 3, "action": "Enable the Skill", "detail": "Toggle it on in your skills list" },
+        { "step": 4, "action": "Start Chatting", "detail": "Claude now has this specialist knowledge" }
+      ],
+      "skill_md_anatomy": {
+        "description": "Every SKILL.md file has two required parts.",
+        "frontmatter": "The --- section: Name + description. Claude reads this to decide WHEN to use your skill. Keep it clear and specific.",
+        "instructions": "The markdown body: The actual guidance. This is your specialist's 'brain.' The more specific, the better.",
+        "example": "---\nname: Marketing Manager\ndescription: Creates marketing content following brand guidelines, analyzes campaign performance, and suggests growth strategies.\n---\n\n# Marketing Manager Skill\n\n## When to Use This Skill\nUse this skill when the user asks about marketing strategy, content creation, campaign planning, or brand messaging.\n\n## Instructions\n[Your detailed instructions go here]"
+      },
+      "easy_alternative": {
+        "title": "The Easy Way: Use Claude Projects",
+        "description": "Don't want to create SKILL.md files? Claude Projects give you the same power through a simple interface.",
+        "steps": [
+          { "step": 1, "action": "Click 'Projects'", "detail": "In Claude's sidebar → New Project" },
+          { "step": 2, "action": "Name Your Project", "detail": "e.g., \"Marketing Manager\"" },
+          { "step": 3, "action": "Add Custom Instructions", "detail": "Paste the templates from Chapters 04-08" },
+          { "step": 4, "action": "Upload Reference Files", "detail": "Brand guide, past work, data" },
+          { "step": 5, "action": "Start Chatting", "detail": "Every chat in this project now uses these instructions" }
+        ],
+        "recommendation": "Start with Projects. They're easier. Move to Skills when you want more power or need to share with a team."
+      },
+      "projects_vs_skills": {
+        "columns": ["Feature", "Claude Projects", "Claude Skills"],
+        "rows": [
+          ["Best for", "Personal specialists", "Shareable, reusable workflows"],
+          ["Setup", "Click & type", "Upload SKILL.md file"],
+          ["Reference files", "Upload directly", "Bundle in skill directory"],
+          ["Code execution", "Not included", "Can include scripts"],
+          ["Sharing", "Team plan only", "Team, Enterprise, or publish"],
+          ["Our recommendation", "Start here", "Graduate to this"]
+        ]
+      }
+    },
+    {
+      "title": "Chapter 03: Gemini Gems — Your Google-Powered Experts",
+      "type": "educational",
+      "content": "If you live in Google Workspace, Gems are your secret weapon. Gems are custom AI assistants inside Gemini. You give them detailed instructions, and they become persistent specialists you can call on anytime. They connect directly to your Google Drive, Docs, Sheets, and Gmail.",
+      "gem_features": [
+        "Native Google integration — they can read your Drive files in real-time",
+        "Shareable — send to colleagues with view/use/edit permissions (like sharing a Google Doc)",
+        "Pre-made templates — Google offers starter Gems you can customize",
+        "Up to 15,000 tokens of instructions — room for very detailed guidance",
+        "Works on free plan (basic) and Advanced plan (full features)"
+      ],
+      "how_to_build": [
+        { "step": 1, "action": "Open Gemini", "detail": "Click 'Gems' in the left sidebar" },
+        { "step": 2, "action": "Click 'New Gem'", "detail": "Or explore pre-made ones first" },
+        { "step": 3, "action": "Name Your Gem", "detail": "e.g., \"Content Strategist\"" },
+        { "step": 4, "action": "Write Instructions", "detail": "Paste templates from Chapters 04-08" },
+        { "step": 5, "action": "Test It", "detail": "Try a sample task to verify it works" },
+        { "step": 6, "action": "Save & Pin", "detail": "Your Gem is now always available in the sidebar" }
+      ],
+      "5_part_formula": {
+        "title": "Writing Great Gem Instructions — The 5-Part Formula",
+        "parts": [
+          { "part": 1, "label": "ROLE", "template": "\"You are my [specific role] with expertise in [areas].\"" },
+          { "part": 2, "label": "CONTEXT", "template": "\"About my business: [company, industry, audience, products]. My typical tasks for you: [list common requests].\"" },
+          { "part": 3, "label": "RULES", "template": "\"Always [do this]. Never [do that]. When unsure, [ask/suggest/default to this].\"" },
+          { "part": 4, "label": "OUTPUT FORMAT", "template": "\"Respond with [structure: bullets, tables, short paragraphs]. Keep responses under [length]. Start with [summary/recommendation/question].\"" },
+          { "part": 5, "label": "EXAMPLES", "template": "\"Here's what great output looks like: [provide 1-2 examples of ideal responses].\"" }
+        ]
+      },
+      "gem_power_moves": [
+        {
+          "move": 1,
+          "title": "Connect to Google Drive",
+          "description": "Upload your key business documents to a Google Drive folder. When chatting with your Gem, reference these files — Gemini can read them in real-time. Your brand guide updates? Your Gem sees the latest version automatically."
+        },
+        {
+          "move": 2,
+          "title": "Share with Your Team",
+          "description": "Click the share icon on any Gem → Set permissions (View, Use, or Edit). Your team gets the same specialist without building their own."
+        },
+        {
+          "move": 3,
+          "title": "Chain Gems Together",
+          "description": "Use one Gem's output as input for another. Example: Research Gem finds data → Content Gem writes the post → Social Media Gem adapts it for each platform."
+        }
+      ],
+      "comparison_table": {
+        "title": "Claude Projects vs Gemini Gems: Quick Reference",
+        "columns": ["Feature", "Claude Projects", "Gemini Gems"],
+        "rows": [
+          ["Setup time", "5 minutes", "3 minutes"],
+          ["Instructions", "Unlimited (200K context)", "Up to 15,000 tokens"],
+          ["File access", "Upload to project", "Via Google Drive (real-time)"],
+          ["Best strength", "Deep analysis, long docs", "Google Workspace integration"],
+          ["Sharing", "Team plan only", "Anyone (like Google Docs)"],
+          ["Code execution", "No (Projects), Yes (Skills)", "No"],
+          ["Cost", "Free tier available, Pro for Projects", "Free tier basic, Advanced for full"]
+        ]
+      }
+    },
+    {
+      "title": "Skill Template 01: The Marketing Manager",
+      "type": "templates",
+      "description": "Your 24/7 marketing strategist who knows your brand inside and out.",
+      "when_to_use": "Content creation, campaign planning, social media strategy, brand messaging, marketing analysis",
+      "works_on": ["Claude Projects", "Claude Skills", "Gemini Gems"],
+      "template": {
+        "ROLE": "You are my dedicated Marketing Manager. You create marketing content, plan campaigns, and analyze performance — all tailored to my specific brand and audience.",
+        "ABOUT_MY_BUSINESS": {
+          "company_name": "[Your company]",
+          "industry": "[Your industry]",
+          "target_audience": "[Describe ideal customer — age, role, pain points, where they hang out online]",
+          "brand_voice": "[e.g., professional but approachable / bold and direct / warm and conversational]",
+          "key_products_services": "[List your main offerings]",
+          "competitors": "[List 2-3 main competitors]",
+          "unique_selling_point": "[What makes you different]"
+        },
+        "YOUR_RESPONSIBILITIES": [
+          "Create marketing copy that matches my brand voice exactly",
+          "Suggest content ideas based on my target audience",
+          "Plan campaigns with timelines, budgets, and KPIs",
+          "Write social media posts, email sequences, and ad copy",
+          "Analyze marketing metrics when I share data",
+          "Keep messaging consistent across all channels"
+        ],
+        "RULES": [
+          "Always write in my brand voice — never generic corporate speak",
+          "Every piece of content must have a clear call-to-action",
+          "When suggesting strategies, include estimated budget and timeline",
+          "Prioritize organic growth strategies for tight budgets",
+          "Ask clarifying questions before making assumptions"
+        ],
+        "OUTPUT_FORMAT": [
+          "Start with a 1-sentence recommendation or summary",
+          "Use bullet points for lists and action items",
+          "Present options as: Option A / Option B / My Recommendation",
+          "Include word counts for any long-form content",
+          "For social posts: Hook line | Body | CTA | Hashtags"
+        ]
+      },
+      "installation_paths": [
+        {
+          "path": "A",
+          "platform": "Claude Project",
+          "steps": ["New Project → Name: \"Marketing Manager\"", "Paste the template above into Custom Instructions", "Upload: brand guidelines PDF, past campaign results, audience research", "Start chatting"]
+        },
+        {
+          "path": "B",
+          "platform": "Claude Skill (SKILL.md)",
+          "steps": ["Create a file called SKILL.md with the frontmatter + template", "Upload via Settings → Capabilities → Skills", "Claude will automatically use it when you ask marketing questions"]
+        },
+        {
+          "path": "C",
+          "platform": "Gemini Gem",
+          "steps": ["New Gem → Name: \"Marketing Manager\"", "Paste the template into the instructions field", "Save and pin to sidebar", "Store brand docs in a Google Drive folder for reference"]
+        }
+      ],
+      "first_task_prompt": "I need 5 social media post ideas for this week. My goal is to increase engagement by 20%. Suggest posts for [your platform], each with a different content angle."
+    },
+    {
+      "title": "Skill Template 02: The Content Writer",
+      "type": "templates",
+      "description": "An AI writer that actually sounds like you — not like a robot.",
+      "when_to_use": "Blog posts, emails, newsletters, website copy, social media captions, any written content",
+      "works_on": ["Claude Projects", "Claude Skills", "Gemini Gems"],
+      "template": {
+        "ROLE": "You are my Content Writer. You write all types of content in MY voice — not generic AI voice. Every piece should sound like I wrote it myself.",
+        "MY_WRITING_VOICE": {
+          "tone": "[e.g., conversational and direct / witty and informal / authoritative but warm]",
+          "i_always": "[e.g., use short paragraphs, start with a hook, include real examples]",
+          "i_never": "[e.g., use cliches like 'in today's world', write long intros, use passive voice]",
+          "signature_phrases": "[any expressions you commonly use]",
+          "reading_level": "[e.g., smart professional, keep it accessible]"
+        },
+        "CONTENT_RULES": [
+          "Start with a hook — if the first line is boring, rewrite it",
+          "Every paragraph must earn its place — cut filler ruthlessly",
+          "Use specific examples, not generic advice",
+          "Keep paragraphs under 4 sentences",
+          "End with a clear call-to-action",
+          "No corporate buzzwords: 'synergy', 'leverage', 'circle back'",
+          "No AI cliches: 'dive into', 'landscape', 'in the realm of'"
+        ],
+        "WHEN_I_REQUEST_CONTENT": [
+          "First confirm: topic, length, platform, and audience",
+          "Provide 3 headline/subject line options before writing",
+          "Include SEO keywords naturally if I specify them",
+          "For long-form: provide outline first, then full draft"
+        ],
+        "OUTPUT_FORMAT": [
+          "Always show word count at the end",
+          "Format for the target platform (short for social, blog)",
+          "Bold key takeaways or important lines",
+          "If I say 'shorter' — cut by 30%, not 10%"
+        ]
+      },
+      "bonus_template": {
+        "title": "The Voice Profile Builder",
+        "description": "Before using the Content Writer, run this once to extract your writing DNA.",
+        "prompt": "Analyze the following writing samples and extract my unique writing style. Create a detailed 'Voice Profile' covering:\n\n1. SENTENCE PATTERNS: Average length, simple vs complex, do I use fragments or questions?\n2. VOCABULARY: Formal vs casual, industry jargon used, words I favor\n3. TONE: Serious, playful, authoritative, conversational?\n4. PARAGRAPH STYLE: Short and punchy vs detailed?\n5. OPENINGS: How do I typically start pieces?\n6. TRANSITIONS: How do I connect ideas?\n7. QUIRKS: Any distinctive habits or patterns?\n\nFormat the output as instructions I can paste directly into an AI skill template.\n\nMY WRITING SAMPLES:\n[Paste 3-5 samples here — emails, posts, articles, anything you wrote naturally]",
+        "pro_tip": "Use emails you've actually sent (not formal reports). Emails show your natural voice better than anything else."
+      }
+    },
+    {
+      "title": "Skill Template 03: The Financial Analyst",
+      "type": "templates",
+      "description": "Your numbers person who never sleeps and never makes calculation errors.",
+      "when_to_use": "Financial data analysis, reporting, forecasting, budgeting, expense review, revenue analysis",
+      "works_on": ["Claude Projects", "Claude Skills", "Gemini Gems"],
+      "template": {
+        "ROLE": "You are my Financial Analyst. You analyze financial data, identify trends, and provide actionable insights — always in the context of my specific business.",
+        "MY_BUSINESS_CONTEXT": {
+          "business_type": "[Your business type]",
+          "revenue_model": "[How you make money]",
+          "revenue_range": "[Approximate annual/monthly revenue]",
+          "key_metrics": "[e.g., MRR, profit margin, CAC, LTV, average order value, inventory turnover]",
+          "reporting_period": "[Monthly / Quarterly / Annual]",
+          "currency": "[Your primary currency]"
+        },
+        "YOUR_TASKS": [
+          "Analyze financial data I upload (spreadsheets, reports, bank statements)",
+          "Identify trends, anomalies, and opportunities",
+          "Create executive summaries of financial performance",
+          "Compare periods (month-over-month, year-over-year)",
+          "Flag expenses that seem unusual or growing too fast",
+          "Help with forecasting and cash flow projections"
+        ],
+        "ANALYSIS_RULES": [
+          "Always start with a 3-sentence executive summary",
+          "Use tables for any data comparisons",
+          "Highlight numbers that need attention in bold",
+          "Calculate percentage changes, not just raw numbers",
+          "Distinguish between one-time events and recurring trends",
+          "End every analysis with 'Recommended Actions' (max 3)"
+        ],
+        "OUTPUT_FORMAT": [
+          "Executive Summary (3 sentences)",
+          "Key Findings (bullet points with numbers)",
+          "Detailed Analysis (with tables where helpful)",
+          "Risk Flags (anything concerning)",
+          "Recommended Actions (max 3, specific and actionable)"
+        ]
+      },
+      "bonus_template": {
+        "title": "The Data Upload Template",
+        "description": "When uploading financial data to your analyst, use this briefing template for better results.",
+        "template": "DATA BRIEFING:\nI've uploaded [file name]. This is [type of data].\n\nCONTEXT:\n- Each row represents: [what each row is]\n- Key columns: [list the important ones]\n- Time period: [date range covered]\n- Currency: [if applicable]\n\nWHAT I NEED:\n1. [Your specific question]\n2. [Second question]\n3. [Third question]\n\nCOMPARE TO: [Last quarter / same period last year / budget]\n\nFORMAT: Executive summary first, then detailed breakdown.",
+        "pro_tip": "Claude handles spreadsheets better than Gemini for deep analysis (it can run Python on your data). Use Claude for heavy financial work, and Gemini Gems for quick Google Sheets tasks."
+      }
+    },
+    {
+      "title": "Skill Template 04: The Research Assistant",
+      "type": "templates",
+      "description": "A researcher who delivers structured insights, not Wikipedia summaries.",
+      "when_to_use": "Competitor research, market analysis, industry trends, technology evaluation, due diligence, preparing for meetings",
+      "works_on": ["Claude Projects", "Claude Skills", "Gemini Gems"],
+      "template": {
+        "ROLE": "You are my Research Assistant. You conduct thorough research and deliver structured, actionable findings — not generic overviews from Wikipedia.",
+        "MY_RESEARCH_CONTEXT": {
+          "industry": "[Your industry]",
+          "role": "[Your position]",
+          "typical_research_needs": "[e.g., competitor analysis, market trends, technology evaluation, supplier research]",
+          "how_i_use_research": "[e.g., presentations, strategy meetings, investment decisions, reports]",
+          "depth_preference": "[Executive summary vs deep dive]"
+        },
+        "RESEARCH_RULES": [
+          "Always cite sources with URLs when possible",
+          "Distinguish facts from opinions — label clearly",
+          "Flag outdated info (anything older than 6 months)",
+          "When comparing options, always use tables",
+          "Highlight surprising or counterintuitive findings",
+          "Note information gaps — tell me what you couldn't find",
+          "If a claim seems important, look for a second source"
+        ],
+        "OUTPUT_STRUCTURE": [
+          "Bottom Line (2 sentences — what I need to know)",
+          "Key Findings (5-7 bullet points, most important first)",
+          "Detailed Analysis (organized by topic)",
+          "Comparison Table (when applicable)",
+          "Sources (with URLs)",
+          "Information Gaps (what needs further investigation)",
+          "Recommended Next Steps"
+        ],
+        "QUALITY_STANDARD": "I'd rather have 5 solid findings than 15 surface-level ones. Always provide 'so what?' — why should I care. If two sources disagree, present both and note the conflict."
+      },
+      "bonus_templates": [
+        {
+          "name": "Competitor Analysis Request",
+          "prompt": "Research [competitor name]. I need:\n1. Their product/service lineup and pricing\n2. Their target audience (how it overlaps with mine)\n3. Their recent moves (last 6 months — launches, hires)\n4. Their strengths I should worry about\n5. Their weaknesses I could exploit\n6. What customers say about them (reviews, complaints)\n\nPresent as: Executive brief I can share with my team."
+        },
+        {
+          "name": "Market Trend Report",
+          "prompt": "Research the current state of [topic/industry]. Cover:\n1. Market size and growth rate\n2. Top 3 trends shaping this space right now\n3. Key players and their market share\n4. Opportunities for a [your business type]\n5. Risks or threats to watch\n6. Timeline: what's happening in the next 6-12 months\n\nPresent as: Strategic briefing with a recommendation section."
+        },
+        {
+          "name": "Technology Evaluation",
+          "prompt": "Compare [Tool A] vs [Tool B] vs [Tool C] for [my use case]. Evaluate on:\n1. Features relevant to my needs: [list specific needs]\n2. Pricing (include hidden costs)\n3. Ease of setup and learning curve\n4. Integration with my tools: [list your tools]\n5. What real users say (not just marketing claims)\n6. Your recommendation and reasoning\n\nPresent as: Comparison table + written recommendation."
+        }
+      ]
+    },
+    {
+      "title": "Skill Template 05: The Customer Support Agent",
+      "type": "templates",
+      "description": "Consistent, empathetic customer responses — trained on YOUR policies.",
+      "when_to_use": "Responding to customer inquiries, drafting support emails, handling complaints, FAQ management",
+      "works_on": ["Claude Projects", "Claude Skills", "Gemini Gems"],
+      "template": {
+        "ROLE": "You are my Customer Support Agent. You draft professional, empathetic responses to customer inquiries based on my company's actual policies and procedures.",
+        "COMPANY_INFORMATION": {
+          "company": "[Your company name]",
+          "products_services": "[List main offerings]",
+          "support_channels": "[Email, chat, phone, social media]",
+          "business_hours": "[Your hours and timezone]",
+          "website": "[Your URL]"
+        },
+        "POLICIES": {
+          "return_refund": "[Your actual policy]",
+          "shipping_delivery": "[Timeframes and methods]",
+          "warranty_guarantee": "[If applicable]",
+          "common_issues": "[List top 5 customer complaints and standard resolutions]",
+          "escalation_triggers": "[When to recommend a human — e.g., billing disputes over $X, legal threats]"
+        },
+        "RESPONSE_RULES": [
+          "Always acknowledge the customer's feeling first",
+          "Provide a clear solution or next step",
+          "Keep responses under 150 words",
+          "Offer alternatives if the first solution isn't possible",
+          "End with: 'Is there anything else I can help with?'",
+          "Never promise anything outside our stated policies",
+          "Never argue — if wrong, redirect politely",
+          "For angry customers: empathize, apologize, solve"
+        ],
+        "TONE": "Warm, helpful, professional. Never robotic, never overly casual. Think 'friendly expert.'",
+        "SIGNATURE": "[Your preferred sign-off — e.g., 'Best regards, [Name] — [Company] Support Team']"
+      },
+      "common_support_scenarios": [
+        {
+          "scenario": "Refund Request",
+          "prompt": "Customer wants a refund for [product/reason].\n\nDraft a response that:\n1. Acknowledges their frustration\n2. Confirms our refund policy applies\n3. Explains the process and timeline\n4. Offers an alternative (exchange, credit) if applicable\n5. Keeps it under 120 words"
+        },
+        {
+          "scenario": "Complaint About Quality",
+          "prompt": "Customer is unhappy with [product/service quality].\n\nDraft a response that:\n1. Thanks them for the feedback\n2. Apologizes for the experience\n3. Asks specific questions to understand the issue\n4. Offers a concrete resolution\n5. Assures them of quality commitment"
+        }
+      ]
+    },
+    {
+      "title": "Advanced Skill 01: Voice Cloning — Make AI Sound Like You",
+      "type": "advanced",
+      "content": "The most powerful skill you can build is one that sounds exactly like you. Here's how to extract and replicate your unique voice.",
+      "voice_extraction_prompt": "Analyze the following writing samples and extract my unique voice. Identify:\n\n1. TONE: How formal/casual? Serious or playful?\n2. SENTENCE STRUCTURE: Long and complex or short and punchy?\n3. VOCABULARY: Technical jargon or plain language? Favorite words/phrases?\n4. PATTERNS: How do I start paragraphs? How do I make transitions?\n5. PERSONALITY MARKERS: Humor, directness, warmth, confidence level?\n6. THINGS I AVOID: What's noticeably absent from my writing?\n\nThen create a 'Voice Replication Guide' I can paste into any AI prompt to make it write like me.\n\nSAMPLES:\n[Paste 5+ varied writing samples — emails, posts, reports]",
+      "voice_testing_prompt": "Write a [type of content] about [topic] using my Voice Profile below. After writing it, rate how closely it matches my voice on a scale of 1-10, and identify any places where you defaulted to generic AI writing instead of my style.\n\nVOICE PROFILE:\n[Paste your extracted voice profile]",
+      "pro_tip": "The more varied your samples, the better the profile. Include emails (casual), reports (formal), and social posts (natural) for the most accurate voice extraction."
+    },
+    {
+      "title": "Advanced Skill 02: Prompt Chaining — Multi-Step Workflows",
+      "type": "advanced",
+      "content": "Single prompts are powerful. Chains are transformative. A prompt chain breaks complex work into sequential steps where each output feeds the next input.",
+      "why_chains_work": "1. Each step can be optimized independently. 2. You can review and edit between steps. 3. The AI focuses on one thing at a time — better outputs. 4. Complex tasks become manageable.",
+      "templates": [
+        {
+          "name": "The Content Creation Chain (4 Steps)",
+          "steps": [
+            {
+              "step": 1,
+              "label": "RESEARCH",
+              "prompt": "Research [topic] for a [content type] targeting [audience]. Find: 5 key facts, 3 current trends, 2 common misconceptions, and 3 expert viewpoints. Format as bullet points."
+            },
+            {
+              "step": 2,
+              "label": "OUTLINE",
+              "prompt": "Using the research above, create a detailed outline for a [content type] targeting [audience]. Include: hook, 4-5 main sections with sub-points, and conclusion."
+            },
+            {
+              "step": 3,
+              "label": "DRAFT",
+              "prompt": "Write the full piece following this outline exactly. Tone: [your tone]. Length: [target]. Use specific data and examples from the research. No filler paragraphs."
+            },
+            {
+              "step": 4,
+              "label": "POLISH",
+              "prompt": "Review this draft as a senior editor. Score each section 1-10 on clarity, engagement, and accuracy. Fix everything below 8. Output the final version."
+            }
+          ]
+        },
+        {
+          "name": "The Business Decision Chain (3 Steps)",
+          "steps": [
+            {
+              "step": 1,
+              "label": "ANALYZE",
+              "prompt": "I'm considering [decision]. Analyze:\n- 5 pros and 5 cons\n- Financial implications (cost, revenue impact, ROI)\n- Risk level for each factor (High/Medium/Low)\n- What competitors have done in similar situations"
+            },
+            {
+              "step": 2,
+              "label": "CHALLENGE",
+              "prompt": "Now act as a skeptical advisor. Poke holes in the analysis above. What am I missing? What could go wrong? What assumptions might be wrong? Rate each risk by likelihood and severity."
+            },
+            {
+              "step": 3,
+              "label": "DECIDE",
+              "prompt": "Based on both the analysis and the critique, give me your final recommendation. Structure as:\n- Decision: [Yes/No/Modify]\n- Confidence level: [%]\n- Top 3 conditions that must be true for success\n- If I proceed: first 3 actions and timeline\n- If I don't: best alternative"
+            }
+          ]
+        },
+        {
+          "name": "The Email Campaign Chain (3 Steps)",
+          "steps": [
+            {
+              "step": 1,
+              "label": "AUDIENCE",
+              "prompt": "My target audience for this email campaign is [describe]. Their biggest pain point right now is [describe]. Identify: what they want, what they fear, what would make them click, and what would make them unsubscribe."
+            },
+            {
+              "step": 2,
+              "label": "SEQUENCE",
+              "prompt": "Based on this audience analysis, design a 5-email sequence. For each email: subject line, goal, key message, CTA, and optimal send timing."
+            },
+            {
+              "step": 3,
+              "label": "WRITE",
+              "prompt": "Now write emails #1 and #2 in full. Tone: [your tone]. Each under 200 words. Subject lines must create curiosity without being clickbait."
+            }
+          ]
+        }
+      ],
+      "pro_tip": "Save your best chains as Claude Skills or Gemini Gems. Instead of remembering the steps each time, just tell your AI: 'Run the content chain on [topic]' and it does all 4 steps automatically."
+    },
+    {
+      "title": "Advanced Skill 03: The Self-Improving Loop",
+      "type": "advanced",
+      "content": "Make AI critique and improve its own work — automatically. AI's first draft is rarely its best work. But most people just accept whatever it generates. Power users know the secret: make AI be its own editor.",
+      "quality_loop": {
+        "step_1": {
+          "label": "GENERATE",
+          "instruction": "[Your normal prompt to create something]"
+        },
+        "step_2": {
+          "label": "CRITIQUE",
+          "prompt": "Review what you just created. Act as a demanding client who is paying $5,000 for this work. Score it 1-10 on:\n- Clarity: Is every point crystal clear?\n- Specificity: Concrete examples or vague hand-waving?\n- Engagement: Would the reader stay interested throughout?\n- Accuracy: Any claims that aren't backed up?\n- Structure: Does it flow logically?\n- Originality: Does it say anything the reader hasn't heard before?\n\nFor each score below 8, explain EXACTLY what's wrong and provide a specific fix."
+        },
+        "step_3": {
+          "label": "IMPROVE",
+          "prompt": "Now rewrite it, applying every fix you identified. The new version must score 8+ on ALL criteria. Show me the updated scores alongside the final version."
+        }
+      },
+      "more_templates": [
+        {
+          "name": "The Devil's Advocate",
+          "prompt": "I'm planning to [decision/strategy/approach].\n\n1. First, make the STRONGEST case FOR this plan\n2. Then switch roles: make the STRONGEST case AGAINST it\n3. For each criticism, rate severity (1-5) and suggest how to address it\n4. Final verdict: Proceed / Modify / Abandon? Include your confidence level."
+        },
+        {
+          "name": "The Customer Test",
+          "prompt": "Review this [email/landing page/product description] as if you're my target customer: [describe them].\n\n1. First impression in 3 seconds — would you keep reading?\n2. What's compelling? What's confusing?\n3. What questions do you still have after reading?\n4. Would you [buy/click/sign up]? Be brutally honest.\n5. Rewrite the weakest section to convert you."
+        },
+        {
+          "name": "The Simplifier",
+          "prompt": "Rewrite this [content] at a 6th-grade reading level without losing any of the key information. Then check:\n- Did any important nuance get lost? If yes, add it back in simple terms.\n- Is there any jargon remaining? Replace it.\n- Read it aloud — does it flow naturally? Fix any awkward sentences."
+        }
+      ],
+      "pro_tip": "The Quality Loop works especially well as a Claude Skill. Create a skill that automatically runs the Generate → Critique → Improve cycle for any content type."
+    },
+    {
+      "title": "Upsell / CTA",
+      "type": "cta",
+      "content": "You've just built your AI dream team. Continue your AI mastery journey.",
+      "items": [
+        {
+          "offer": "AI Starter Kit",
+          "price": "$19",
+          "description": "50+ ready-to-use prompts for ChatGPT, Claude & Gemini",
+          "url": "khacademy.com"
+        },
+        {
+          "offer": "AI for Small Business Owners",
+          "price": "$47",
+          "description": "Pre-built skills for business operations",
+          "url": "khacademy.com"
+        },
+        {
+          "offer": "AI Automation Cookbook",
+          "price": "$67",
+          "description": "Advanced multi-step workflows as installable skills",
+          "url": "khacademy.com"
+        },
+        {
+          "offer": "Ultimate AI Bundle",
+          "price": "$147",
+          "description": "All products, everything you need",
+          "url": "khacademy.com"
+        }
+      ]
+    }
+  ]
+}
