@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link, useLocation, useSearch } from "wouter";
+import { Link, useLocation, useParams } from "wouter";
 import { apiRequest } from "@/lib/queryClient";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -16,10 +16,12 @@ export default function ResetPassword() {
   const [success, setSuccess] = useState(false);
   const [, navigate] = useLocation();
 
-  // Extract token from hash URL: /#/reset-password?token=abc123
-  const searchString = useSearch();
-  const params = new URLSearchParams(searchString);
-  const token = params.get("token");
+  // Extract token from URL path: /#/reset-password/TOKEN
+  // Also check query string as fallback: /#/reset-password?token=TOKEN
+  const routeParams = useParams<{ token?: string }>();
+  const hashSearch = window.location.hash.split("?")[1] || "";
+  const queryParams = new URLSearchParams(hashSearch);
+  const token = routeParams.token || queryParams.get("token");
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();

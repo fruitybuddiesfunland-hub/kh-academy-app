@@ -20,6 +20,7 @@ function AppRouter() {
       <Route path="/login" component={LoginPage} />
       <Route path="/forgot-password" component={ForgotPassword} />
       <Route path="/reset-password" component={ResetPassword} />
+      <Route path="/reset-password/:token" component={ResetPassword} />
       <Route path="/change-password" component={ChangePassword} />
       <Route path="/dashboard" component={Dashboard} />
       <Route path="/course/:productId" component={CourseViewer} />

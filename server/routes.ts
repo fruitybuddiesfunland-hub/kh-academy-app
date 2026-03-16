@@ -193,7 +193,7 @@ export async function registerRoutes(
       });
       // Send reset email
       if (resend) {
-        const resetUrl = `https://app.kh-academy.com/#/reset-password?token=${resetToken}`;
+        const resetUrl = `https://app.kh-academy.com/#/reset-password/${resetToken}`;
         try {
           await resend.emails.send({
             from: FROM_EMAIL,
