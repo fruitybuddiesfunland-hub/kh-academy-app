@@ -7,7 +7,7 @@ import { Input } from "@/components/ui/input";
 import { PasswordInput } from "@/components/password-input";
 import { Label } from "@/components/ui/label";
 import { Badge } from "@/components/ui/badge";
-import { ArrowRight, CheckCircle2 } from "lucide-react";
+import { ArrowRight, CheckCircle2, ExternalLink } from "lucide-react";
 import { KHLogo } from "@/components/kh-logo";
 
 export function LoginPage() {
@@ -64,7 +64,7 @@ export function LoginPage() {
           <div className="w-full max-w-sm mx-auto">
             <div className="mb-8">
               <div className="mb-6">
-                <KHLogo size="md" />
+                <KHLogo size="md" href="https://www.kh-academy.com" />
               </div>
               <h1 className="text-2xl font-bold" data-testid="auth-title">
                 Access your courses
@@ -182,21 +182,30 @@ export function LoginPage() {
                     <p className="text-xs text-muted-foreground line-clamp-2 mb-2">
                       {product.description}
                     </p>
-                    <div className="flex items-center gap-3">
-                      <span className="text-sm font-bold bg-gradient-to-r from-[hsl(271,91%,65%)] to-[hsl(330,81%,60%)] bg-clip-text text-transparent">
-                        {product.price}
-                      </span>
-                      <div className="flex gap-2">
-                        {product.highlights.slice(0, 2).map((h) => (
-                          <span
-                            key={h}
-                            className="hidden sm:inline-flex items-center gap-1 text-[10px] text-muted-foreground"
-                          >
-                            <CheckCircle2 className="w-3 h-3 text-emerald-500" />
-                            {h}
-                          </span>
-                        ))}
+                    <div className="flex items-center justify-between">
+                      <div className="flex items-center gap-3">
+                        <span className="text-sm font-bold bg-gradient-to-r from-[hsl(271,91%,65%)] to-[hsl(330,81%,60%)] bg-clip-text text-transparent">
+                          {product.price}
+                        </span>
+                        <div className="flex gap-2">
+                          {product.highlights.slice(0, 2).map((h) => (
+                            <span
+                              key={h}
+                              className="hidden sm:inline-flex items-center gap-1 text-[10px] text-muted-foreground"
+                            >
+                              <CheckCircle2 className="w-3 h-3 text-emerald-500" />
+                              {h}
+                            </span>
+                          ))}
+                        </div>
                       </div>
+                      <a
+                        href={`https://www.kh-academy.com/#products`}
+                        className="inline-flex items-center gap-1 text-xs font-medium text-[hsl(var(--primary))] hover:underline shrink-0"
+                      >
+                        Get this
+                        <ArrowRight className="w-3 h-3" />
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -204,7 +213,10 @@ export function LoginPage() {
             </div>
 
             {/* Bundle CTA */}
-            <div className="mt-6 bg-gradient-to-r from-[hsl(271,91%,65%)]/10 to-[hsl(330,81%,60%)]/10 border border-[hsl(271,91%,65%)]/20 rounded-xl p-5">
+            <a
+              href="https://www.kh-academy.com/#products"
+              className="block mt-6 bg-gradient-to-r from-[hsl(271,91%,65%)]/10 to-[hsl(330,81%,60%)]/10 border border-[hsl(271,91%,65%)]/20 rounded-xl p-5 hover:border-[hsl(271,91%,65%)]/40 transition-colors"
+            >
               <div className="flex items-start gap-4">
                 <img
                   src={PRODUCTS["ultimate-bundle"].image}
@@ -222,18 +234,25 @@ export function LoginPage() {
                     Get all 4 products for just $97 — save over $60 and unlock the complete
                     AI mastery path.
                   </p>
-                  <span className="text-lg font-bold bg-gradient-to-r from-[hsl(271,91%,65%)] to-[hsl(330,81%,60%)] bg-clip-text text-transparent">
-                    $97
-                  </span>
-                  <span className="text-xs text-muted-foreground line-through ml-2">$162</span>
+                  <div className="flex items-center gap-3">
+                    <span className="text-lg font-bold bg-gradient-to-r from-[hsl(271,91%,65%)] to-[hsl(330,81%,60%)] bg-clip-text text-transparent">
+                      $97
+                    </span>
+                    <span className="text-xs text-muted-foreground line-through">$162</span>
+                    <span className="inline-flex items-center gap-1 text-xs font-medium text-[hsl(var(--primary))] ml-auto">
+                      Get the bundle
+                      <ArrowRight className="w-3 h-3" />
+                    </span>
+                  </div>
                 </div>
               </div>
-            </div>
+            </a>
 
             <p className="text-xs text-muted-foreground mt-6 text-center">
-              Visit{" "}
-              <span className="text-[hsl(var(--primary))]">khacademy.com</span>{" "}
-              to purchase · Instant access after payment
+              <a href="https://www.kh-academy.com" className="text-[hsl(var(--primary))] hover:underline">
+                Visit kh-academy.com
+              </a>
+              {" "}· Instant access after payment
             </p>
           </div>
         </div>

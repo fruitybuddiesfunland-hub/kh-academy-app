@@ -1,6 +1,6 @@
-export function KHLogo({ size = "sm" }: { size?: "sm" | "md" }) {
+export function KHLogo({ size = "sm", href }: { size?: "sm" | "md"; href?: string }) {
   const dim = size === "md" ? "w-9 h-9" : "w-7 h-7";
-  return (
+  const inner = (
     <div className="inline-flex items-center gap-2">
       <img
         src="/kh-icon.png"
@@ -12,4 +12,14 @@ export function KHLogo({ size = "sm" }: { size?: "sm" | "md" }) {
       </span>
     </div>
   );
+
+  if (href) {
+    return (
+      <a href={href} className="hover:opacity-80 transition-opacity">
+        {inner}
+      </a>
+    );
+  }
+
+  return inner;
 }
