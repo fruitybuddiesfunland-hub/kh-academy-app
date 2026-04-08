@@ -272,14 +272,14 @@ export default function Dashboard() {
                       </Badge>
                     </div>
                     <p className="text-sm text-muted-foreground mb-3">
-                      Get all 4 products for just $97 — save over $60 and unlock the complete
+                      Get all 4 products for just $119 — save over $80 and unlock the complete
                       AI mastery path from beginner prompts to full business automation.
                     </p>
                     <div className="flex items-center justify-center md:justify-start gap-3">
                       <span className="text-2xl font-bold bg-primary bg-clip-text text-transparent">
-                        $97
+                        $119
                       </span>
-                      <span className="text-sm text-muted-foreground line-through">$162</span>
+                      <span className="text-sm text-muted-foreground line-through">$206</span>
                       <Button size="sm" className="ml-4 gap-1.5">
                         Get the Bundle <ArrowRight className="w-3.5 h-3.5" />
                       </Button>
