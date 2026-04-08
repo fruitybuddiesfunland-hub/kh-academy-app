@@ -19,7 +19,13 @@ const PRODUCT_NAMES: Record<string, string> = {
 
 // Stripe price ID → internal product ID mapping
 const STRIPE_PRICE_MAP: Record<string, { productId: string; name: string }> = {
-  // Live mode price IDs
+  // Live mode price IDs — updated April 2026 (new prices: $29/$39/$59/$79/$119)
+  "price_1TJxltArAw5l5wB902CKd7OU": { productId: "starter-kit", name: "AI Starter Kit" },
+  "price_1TJxltArAw5l5wB97sW0uS0f": { productId: "skills-builder", name: "AI Skills Builder" },
+  "price_1TJxltArAw5l5wB9woNwsujd": { productId: "small-business", name: "AI for Small Business" },
+  "price_1TJxltArAw5l5wB9TObqfO5P": { productId: "automation-mastery", name: "AI Automation Mastery" },
+  "price_1TJxltArAw5l5wB9HfRbW9xx": { productId: "ultimate-bundle", name: "Ultimate AI Bundle" },
+  // Legacy price IDs (old prices — kept for webhook compatibility with past purchases)
   "price_1TBdaPArAw5l5wB9bNTlXhP4": { productId: "starter-kit", name: "AI Starter Kit" },
   "price_1TBca6ArAw5l5wB9HMHqQDSw": { productId: "skills-builder", name: "AI Skills Builder" },
   "price_1TBcaWArAw5l5wB9tRtT6zUW": { productId: "small-business", name: "AI for Small Business" },
@@ -27,10 +33,14 @@ const STRIPE_PRICE_MAP: Record<string, { productId: string; name: string }> = {
   "price_1TBcbDArAw5l5wB9emU5K3dG": { productId: "ultimate-bundle", name: "Ultimate AI Bundle" },
 };
 
-// Internal product ID → Stripe price ID (reverse lookup)
-const PRODUCT_TO_PRICE: Record<string, string> = Object.fromEntries(
-  Object.entries(STRIPE_PRICE_MAP).map(([priceId, { productId }]) => [productId, priceId])
-);
+// Internal product ID → Stripe price ID (reverse lookup — new prices take priority for checkout)
+const PRODUCT_TO_PRICE: Record<string, string> = {
+  "starter-kit":       "price_1TJxltArAw5l5wB902CKd7OU",
+  "skills-builder":    "price_1TJxltArAw5l5wB97sW0uS0f",
+  "small-business":    "price_1TJxltArAw5l5wB9woNwsujd",
+  "automation-mastery":"price_1TJxltArAw5l5wB9TObqfO5P",
+  "ultimate-bundle":   "price_1TJxltArAw5l5wB9HfRbW9xx",
+};
 
 // For the bundle, grant all individual products
 const BUNDLE_PRODUCTS = ["starter-kit", "skills-builder", "small-business", "automation-mastery"];
