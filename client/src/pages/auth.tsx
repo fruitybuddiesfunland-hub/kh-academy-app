@@ -231,14 +231,14 @@ export function LoginPage() {
                     </Badge>
                   </div>
                   <p className="text-xs text-muted-foreground mb-2">
-                    Get all 4 products for just $97 — save over $60 and unlock the complete
+                    Get all 4 products for just $119 — save over $80 and unlock the complete
                     AI mastery path.
                   </p>
                   <div className="flex items-center gap-3">
                     <span className="text-lg font-bold bg-primary bg-clip-text text-transparent">
-                      $97
+                      $119
                     </span>
-                    <span className="text-xs text-muted-foreground line-through">$162</span>
+                    <span className="text-xs text-muted-foreground line-through">$206</span>
                     <span className="inline-flex items-center gap-1 text-xs font-medium text-[hsl(var(--primary))] ml-auto">
                       Get the bundle
                       <ArrowRight className="w-3 h-3" />
