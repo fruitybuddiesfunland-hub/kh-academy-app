@@ -71,7 +71,7 @@ export default function Landing() {
               50 ready-to-use prompts across 7 categories, plus 4 advanced prompting frameworks.
             </p>
             <div className="flex items-center justify-between">
-              <span className="text-3xl font-black">$19</span>
+              <span className="text-3xl font-black">$29</span>
               <Link href={user ? "/dashboard" : "/signup"}>
                 <Button className="gap-2" data-testid="cta-get-started">
                   Get Started <ArrowRight className="w-4 h-4" />
