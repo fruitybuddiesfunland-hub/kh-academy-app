@@ -20,6 +20,7 @@ import { EducationalSection } from "@/components/course/EducationalSection";
 import { TemplateSection } from "@/components/course/TemplateSection";
 import { WorkflowSection } from "@/components/course/WorkflowSection";
 import { CTASection } from "@/components/course/CTASection";
+import { SkillsSection } from "@/components/course/SkillsSection";
 
 type CourseSection = {
   title: string;
@@ -53,6 +54,8 @@ function renderSection(section: CourseSection) {
       return <WorkflowSection section={section} />;
     case "cta":
       return <CTASection section={section} />;
+    case "skills":
+      return <SkillsSection section={section} />;
     case "system":
       return <WorkflowSection section={section} />;
     case "advanced":
