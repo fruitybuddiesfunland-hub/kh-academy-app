@@ -1,8 +1,9 @@
-import starterKitImg from "@assets/product-starter-kit.jpg";
-import skillsBuilderImg from "@assets/product-skills-builder.jpg";
-import smallBusinessImg from "@assets/product-small-business.jpg";
-import automationMasteryImg from "@assets/product-automation-mastery.jpg";
-import ultimateBundleImg from "@assets/product-ultimate-bundle.jpg";
+import quickStartImg from "@assets/product-quickstart.png";
+import starterKitImg from "@assets/product-starter-kit.png";
+import skillsBuilderImg from "@assets/product-skills-builder.png";
+import smallBusinessImg from "@assets/product-small-business.png";
+import automationMasteryImg from "@assets/product-automation-mastery.png";
+import ultimateBundleImg from "@assets/product-ultimate-bundle.png";
 
 export type ProductInfo = {
   id: string;
@@ -27,7 +28,7 @@ export const PRODUCTS: Record<string, ProductInfo> = {
     price: "Free",
     priceNum: 0,
     label: "FREE",
-    image: starterKitImg,
+    image: quickStartImg,
     coursePath: "/course/quick-start",
     highlights: ["10 hand-picked prompts", "7 categories", "Copy & paste ready"],
     badge: "FREE",
