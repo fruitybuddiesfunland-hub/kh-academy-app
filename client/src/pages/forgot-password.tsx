@@ -48,8 +48,8 @@ export default function ForgotPassword() {
 
           {sent ? (
             <>
-              <div className="w-12 h-12 rounded-full bg-[hsl(271,91%,65%)]/10 flex items-center justify-center mx-auto mb-4">
-                <Mail className="w-6 h-6 text-[hsl(271,91%,65%)]" />
+              <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
+                <Mail className="w-6 h-6 text-primary" />
               </div>
               <h1 className="text-2xl font-bold">Check your email</h1>
               <p className="text-sm text-muted-foreground mt-2 leading-relaxed">

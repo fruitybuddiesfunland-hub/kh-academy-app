@@ -12,7 +12,7 @@ export function InstructionsSection({ section }: { section: any }) {
         <div className="space-y-4">
           {section.items.map((item: any, i: number) => (
             <div key={i} className="flex gap-4 bg-card border border-border rounded-xl p-5">
-              <div className="w-8 h-8 rounded-full bg-gradient-to-br from-[hsl(271,91%,65%)] to-[hsl(330,81%,60%)] flex items-center justify-center shrink-0 text-white font-bold text-sm">
+              <div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0 text-white font-bold text-sm">
                 {i + 1}
               </div>
               <div className="flex-1 min-w-0">

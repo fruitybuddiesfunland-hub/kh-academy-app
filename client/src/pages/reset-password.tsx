@@ -68,7 +68,7 @@ export default function ResetPassword() {
           </p>
           <Link
             href="/forgot-password"
-            className="inline-flex items-center gap-1.5 text-sm text-[hsl(271,91%,65%)] hover:underline"
+            className="inline-flex items-center gap-1.5 text-sm text-primary hover:underline"
           >
             Request a new reset link
           </Link>

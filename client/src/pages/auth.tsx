@@ -144,7 +144,7 @@ export function LoginPage() {
               </p>
               <h2 className="text-2xl lg:text-3xl font-bold mb-3">
                 Master AI with{" "}
-                <span className="bg-gradient-to-r from-[hsl(271,91%,65%)] to-[hsl(330,81%,60%)] bg-clip-text text-transparent">
+                <span className="bg-primary bg-clip-text text-transparent">
                   battle-tested tools
                 </span>
               </h2>
@@ -184,7 +184,7 @@ export function LoginPage() {
                     </p>
                     <div className="flex items-center justify-between">
                       <div className="flex items-center gap-3">
-                        <span className="text-sm font-bold bg-gradient-to-r from-[hsl(271,91%,65%)] to-[hsl(330,81%,60%)] bg-clip-text text-transparent">
+                        <span className="text-sm font-bold bg-primary bg-clip-text text-transparent">
                           {product.price}
                         </span>
                         <div className="flex gap-2">
@@ -215,7 +215,7 @@ export function LoginPage() {
             {/* Bundle CTA */}
             <a
               href="https://www.kh-academy.com/#products"
-              className="block mt-6 bg-gradient-to-r from-[hsl(271,91%,65%)]/10 to-[hsl(330,81%,60%)]/10 border border-[hsl(271,91%,65%)]/20 rounded-xl p-5 hover:border-[hsl(271,91%,65%)]/40 transition-colors"
+              className="block mt-6 bg-primary/8 border border-primary/15 rounded-xl p-5 hover:border-primary/30 transition-colors"
             >
               <div className="flex items-start gap-4">
                 <img
@@ -226,7 +226,7 @@ export function LoginPage() {
                 <div>
                   <div className="flex items-center gap-2 mb-1">
                     <h3 className="font-semibold text-sm">Ultimate AI Bundle</h3>
-                    <Badge className="text-[10px] px-1.5 py-0 bg-gradient-to-r from-[hsl(271,91%,65%)] to-[hsl(330,81%,60%)] text-white border-0">
+                    <Badge className="text-[10px] px-1.5 py-0 bg-primary text-white border-0">
                       SAVE 40%
                     </Badge>
                   </div>
@@ -235,7 +235,7 @@ export function LoginPage() {
                     AI mastery path.
                   </p>
                   <div className="flex items-center gap-3">
-                    <span className="text-lg font-bold bg-gradient-to-r from-[hsl(271,91%,65%)] to-[hsl(330,81%,60%)] bg-clip-text text-transparent">
+                    <span className="text-lg font-bold bg-primary bg-clip-text text-transparent">
                       $97
                     </span>
                     <span className="text-xs text-muted-foreground line-through">$162</span>

@@ -91,11 +91,11 @@ export default function Dashboard() {
                 return (
                   <div
                     key={productId}
-                    className="bg-gradient-to-r from-[hsl(271,91%,65%)]/10 to-[hsl(330,81%,60%)]/10 border border-[hsl(271,91%,65%)]/20 rounded-xl overflow-hidden"
+                    className="bg-primary/8 border border-primary/15 rounded-xl overflow-hidden"
                   >
                     <div className="p-5">
                       <div className="flex items-center gap-2 mb-2">
-                        <Badge className="bg-gradient-to-r from-[hsl(271,91%,65%)] to-[hsl(330,81%,60%)] text-white text-[10px] border-0">
+                        <Badge className="bg-primary text-white text-[10px] border-0">
                           {info.badge || "FREE"}
                         </Badge>
                       </div>
@@ -192,7 +192,7 @@ export default function Dashboard() {
             <div className="mb-6">
               <div className="flex items-center gap-3 mb-1">
                 <h2 className="text-xl font-bold">Level Up Your AI Skills</h2>
-                <Badge className="bg-gradient-to-r from-[hsl(271,91%,65%)] to-[hsl(330,81%,60%)] text-white text-[10px] border-0">
+                <Badge className="bg-primary text-white text-[10px] border-0">
                   NEW
                 </Badge>
               </div>
@@ -242,7 +242,7 @@ export default function Dashboard() {
                         ))}
                       </div>
                       <div className="flex items-center justify-between">
-                        <span className="text-lg font-bold bg-gradient-to-r from-[hsl(271,91%,65%)] to-[hsl(330,81%,60%)] bg-clip-text text-transparent">
+                        <span className="text-lg font-bold bg-primary bg-clip-text text-transparent">
                           {info.price}
                         </span>
                         <Button variant="outline" size="sm" className="gap-1.5 text-xs">
@@ -257,7 +257,7 @@ export default function Dashboard() {
 
             {/* Bundle CTA */}
             {notOwned.length >= 2 && (
-              <div className="bg-gradient-to-r from-[hsl(271,91%,65%)]/10 to-[hsl(330,81%,60%)]/10 border border-[hsl(271,91%,65%)]/20 rounded-xl p-6">
+              <div className="bg-primary/8 border border-primary/15 rounded-xl p-6">
                 <div className="flex flex-col md:flex-row items-center gap-6">
                   <img
                     src={PRODUCTS["ultimate-bundle"].image}
@@ -267,7 +267,7 @@ export default function Dashboard() {
                   <div className="flex-1 text-center md:text-left">
                     <div className="flex items-center justify-center md:justify-start gap-2 mb-2">
                       <h3 className="text-lg font-bold">Ultimate AI Bundle</h3>
-                      <Badge className="bg-gradient-to-r from-[hsl(271,91%,65%)] to-[hsl(330,81%,60%)] text-white text-[10px] border-0">
+                      <Badge className="bg-primary text-white text-[10px] border-0">
                         SAVE 40%
                       </Badge>
                     </div>
@@ -276,7 +276,7 @@ export default function Dashboard() {
                       AI mastery path from beginner prompts to full business automation.
                     </p>
                     <div className="flex items-center justify-center md:justify-start gap-3">
-                      <span className="text-2xl font-bold bg-gradient-to-r from-[hsl(271,91%,65%)] to-[hsl(330,81%,60%)] bg-clip-text text-transparent">
+                      <span className="text-2xl font-bold bg-primary bg-clip-text text-transparent">
                         $97
                       </span>
                       <span className="text-sm text-muted-foreground line-through">$162</span>

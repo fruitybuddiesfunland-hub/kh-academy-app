@@ -12,7 +12,7 @@ export default function Landing() {
       <header className="border-b border-border/50 backdrop-blur-sm sticky top-0 z-50 bg-background/80">
         <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
           <Link href="/" className="flex items-center gap-2" data-testid="logo">
-            <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-[hsl(271,91%,65%)] to-[hsl(330,81%,60%)] flex items-center justify-center">
+            <div className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center">
               <Sparkles className="w-4 h-4 text-white" />
             </div>
             <span className="font-bold text-lg">KH Academy</span>
@@ -44,7 +44,7 @@ export default function Landing() {
         </div>
         <h1 className="text-5xl md:text-6xl font-black tracking-tight mb-6">
           Master AI tools{" "}
-          <span className="bg-gradient-to-r from-[hsl(271,91%,65%)] to-[hsl(330,81%,60%)] bg-clip-text text-transparent">
+          <span className="bg-primary bg-clip-text text-transparent">
             that matter
           </span>
         </h1>
@@ -57,7 +57,7 @@ export default function Landing() {
       {/* Product Card */}
       <section className="max-w-6xl mx-auto px-6 pb-24">
         <div className="max-w-md mx-auto bg-card border border-border rounded-2xl overflow-hidden" data-testid="product-card">
-          <div className="h-48 bg-gradient-to-br from-[hsl(271,91%,65%)]/20 to-[hsl(330,81%,60%)]/20 flex items-center justify-center">
+          <div className="h-48 bg-primary/10 flex items-center justify-center">
             <BookOpen className="w-16 h-16 text-[hsl(var(--primary))]" />
           </div>
           <div className="p-6">

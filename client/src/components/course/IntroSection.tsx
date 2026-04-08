@@ -24,7 +24,7 @@ export function IntroSection({ section }: { section: any }) {
               ))}
             </ul>
           </div>
-          <div className="bg-card border border-[hsl(271,91%,65%)]/20 rounded-xl p-5">
+          <div className="bg-card border border-primary/15 rounded-xl p-5">
             <h3 className="font-semibold text-sm text-emerald-400 mb-3">What this gives you</h3>
             <ul className="space-y-2">
               {section.comparison.what_this_playbook_gives_you?.map((item: string, i: number) => (
