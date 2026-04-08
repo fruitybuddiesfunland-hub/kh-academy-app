@@ -19,18 +19,12 @@ const PRODUCT_NAMES: Record<string, string> = {
 
 // Stripe price ID → internal product ID mapping
 const STRIPE_PRICE_MAP: Record<string, { productId: string; name: string }> = {
-  // Live mode price IDs — updated April 2026 (new prices: $29/$39/$59/$79/$119)
+  // Live mode price IDs — April 2026 ($29/$39/$59/$79/$119)
   "price_1TJxltArAw5l5wB902CKd7OU": { productId: "starter-kit", name: "AI Starter Kit" },
   "price_1TJxltArAw5l5wB97sW0uS0f": { productId: "skills-builder", name: "AI Skills Builder" },
   "price_1TJxltArAw5l5wB9woNwsujd": { productId: "small-business", name: "AI for Small Business" },
   "price_1TJxltArAw5l5wB9TObqfO5P": { productId: "automation-mastery", name: "AI Automation Mastery" },
   "price_1TJxltArAw5l5wB9HfRbW9xx": { productId: "ultimate-bundle", name: "Ultimate AI Bundle" },
-  // Legacy price IDs (old prices — kept for webhook compatibility with past purchases)
-  "price_1TBdaPArAw5l5wB9bNTlXhP4": { productId: "starter-kit", name: "AI Starter Kit" },
-  "price_1TBca6ArAw5l5wB9HMHqQDSw": { productId: "skills-builder", name: "AI Skills Builder" },
-  "price_1TBcaWArAw5l5wB9tRtT6zUW": { productId: "small-business", name: "AI for Small Business" },
-  "price_1TBcatArAw5l5wB9246xvAab": { productId: "automation-mastery", name: "AI Automation Mastery" },
-  "price_1TBcbDArAw5l5wB9emU5K3dG": { productId: "ultimate-bundle", name: "Ultimate AI Bundle" },
 };
 
 // Internal product ID → Stripe price ID (reverse lookup — new prices take priority for checkout)
