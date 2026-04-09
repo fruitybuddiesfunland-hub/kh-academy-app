@@ -21,6 +21,8 @@ export function LoginPage() {
   if (user) {
     if (user.mustChangePassword) {
       navigate("/change-password");
+    } else if (user.isAdmin) {
+      navigate("/admin");
     } else {
       navigate("/dashboard");
     }
