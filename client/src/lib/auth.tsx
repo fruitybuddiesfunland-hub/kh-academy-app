@@ -5,6 +5,7 @@ import { setAuthToken } from "./token";
 type User = {
   id: string;
   email: string;
+  isAdmin: boolean;
   mustChangePassword: boolean;
   createdAt: string;
 };
