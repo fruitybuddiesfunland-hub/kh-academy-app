@@ -12,6 +12,7 @@ import {
   CheckCircle2,
   ShoppingBag,
   Gift,
+  Shield,
 } from "lucide-react";
 import { KHLogo } from "@/components/kh-logo";
 
@@ -54,6 +55,16 @@ export default function Dashboard() {
           <KHLogo size="md" />
           <div className="flex items-center gap-4">
             <span className="text-sm text-muted-foreground hidden sm:inline">{user.email}</span>
+            {user.isAdmin && (
+              <Button
+                variant="outline"
+                size="sm"
+                onClick={() => navigate("/admin")}
+              >
+                <Shield className="w-4 h-4 mr-2" />
+                <span className="hidden sm:inline">Admin</span>
+              </Button>
+            )}
             <Button
               variant="ghost"
               size="sm"
