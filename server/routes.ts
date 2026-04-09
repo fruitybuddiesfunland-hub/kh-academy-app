@@ -86,6 +86,19 @@ async function requireAuth(req: Request, res: Response, next: NextFunction) {
   next();
 }
 
+async function requireAdmin(req: Request, res: Response, next: NextFunction) {
+  const userId = getUserIdFromToken(req);
+  if (!userId) {
+    return res.status(401).json({ message: "Not authenticated" });
+  }
+  const user = await storage.getUser(userId);
+  if (!user || !user.isAdmin) {
+    return res.status(403).json({ message: "Admin access required" });
+  }
+  (req as any).authUser = user;
+  next();
+}
+
 export async function registerRoutes(
   httpServer: Server,
   app: Express
@@ -528,6 +541,116 @@ export async function registerRoutes(
     }
   });
 
+  // =============================================
+  // ADMIN ROUTES
+  // =============================================
+
+  // GET /api/admin/stats — dashboard overview
+  app.get("/api/admin/stats", requireAdmin, async (_req: Request, res: Response) => {
+    const users = await storage.getAllUsers();
+    const purchases = await storage.getAllPurchases();
+    const nonAdminUsers = users.filter(u => !u.isAdmin);
+    const productCounts: Record<string, number> = {};
+    for (const p of purchases) {
+      productCounts[p.productId] = (productCounts[p.productId] || 0) + 1;
+    }
+    res.json({
+      totalUsers: nonAdminUsers.length,
+      totalPurchases: purchases.length,
+      productCounts,
+    });
+  });
+
+  // GET /api/admin/users — list all users
+  app.get("/api/admin/users", requireAdmin, async (_req: Request, res: Response) => {
+    const users = await storage.getAllUsers();
+    const purchases = await storage.getAllPurchases();
+    const safeUsers = users.map(({ password, ...u }) => ({
+      ...u,
+      purchases: purchases.filter(p => p.userId === u.id).map(p => p.productId),
+    }));
+    res.json(safeUsers);
+  });
+
+  // POST /api/admin/users — provision a new user
+  app.post("/api/admin/users", requireAdmin, async (req: Request, res: Response) => {
+    try {
+      const { email, password, name, products } = req.body;
+      if (!email || !password) {
+        return res.status(400).json({ message: "email and password are required" });
+      }
+      const existing = await storage.getUserByEmail(email);
+      if (existing) {
+        return res.status(409).json({ message: "Email already registered" });
+      }
+      const hashedPassword = await hashPassword(password);
+      const user = await storage.createUser({ email, password: hashedPassword, name: name || null }, true);
+      if (Array.isArray(products)) {
+        for (const productId of products) {
+          await storage.createPurchase({ userId: user.id, productId });
+        }
+      }
+      const { password: _, ...safeUser } = user;
+      return res.status(201).json(safeUser);
+    } catch (err: any) {
+      return res.status(400).json({ message: err.message || "Provisioning failed" });
+    }
+  });
+
+  // DELETE /api/admin/users/:id — delete a user
+  app.delete("/api/admin/users/:id", requireAdmin, async (req: Request, res: Response) => {
+    const admin = (req as any).authUser;
+    if (req.params.id === admin.id) {
+      return res.status(400).json({ message: "Cannot delete yourself" });
+    }
+    await storage.deleteUser(req.params.id);
+    res.json({ ok: true });
+  });
+
+  // POST /api/admin/users/:id/purchases — grant product access
+  app.post("/api/admin/users/:id/purchases", requireAdmin, async (req: Request, res: Response) => {
+    const { productId } = req.body;
+    if (!productId) {
+      return res.status(400).json({ message: "productId is required" });
+    }
+    const user = await storage.getUser(req.params.id);
+    if (!user) {
+      return res.status(404).json({ message: "User not found" });
+    }
+    // For bundle, grant all individual products too
+    const productsToGrant = productId === "ultimate-bundle"
+      ? ["ultimate-bundle", ...BUNDLE_PRODUCTS]
+      : [productId];
+    const existing = await storage.getPurchasesByUserId(user.id);
+    const existingIds = new Set(existing.map(p => p.productId));
+    for (const pid of productsToGrant) {
+      if (!existingIds.has(pid)) {
+        await storage.createPurchase({ userId: user.id, productId: pid });
+      }
+    }
+    res.json({ ok: true });
+  });
+
+  // DELETE /api/admin/purchases/:id — revoke a purchase
+  app.delete("/api/admin/purchases/:id", requireAdmin, async (req: Request, res: Response) => {
+    await storage.deletePurchase(req.params.id);
+    res.json({ ok: true });
+  });
+
+  // GET /api/admin/purchases — all purchases with user info
+  app.get("/api/admin/purchases", requireAdmin, async (_req: Request, res: Response) => {
+    const purchases = await storage.getAllPurchases();
+    const users = await storage.getAllUsers();
+    const userMap = new Map(users.map(u => [u.id, u]));
+    const enriched = purchases.map(p => ({
+      ...p,
+      userEmail: userMap.get(p.userId)?.email || "unknown",
+      userName: userMap.get(p.userId)?.name || null,
+    }));
+    res.json(enriched);
+  });
+
+  // Legacy provision endpoint (kept for backward compat)
   // POST /api/admin/provision
   app.post("/api/admin/provision", async (req: Request, res: Response) => {
     try {
