@@ -12,6 +12,7 @@ import ForgotPassword from "@/pages/forgot-password";
 import ResetPassword from "@/pages/reset-password";
 import Dashboard from "@/pages/dashboard";
 import CourseViewer from "@/pages/course-viewer";
+import AdminPanel from "@/pages/admin";
 
 function AppRouter() {
   return (
@@ -24,6 +25,7 @@ function AppRouter() {
       <Route path="/change-password" component={ChangePassword} />
       <Route path="/dashboard" component={Dashboard} />
       <Route path="/course/:productId" component={CourseViewer} />
+      <Route path="/admin" component={AdminPanel} />
       <Route component={NotFound} />
     </Switch>
   );
