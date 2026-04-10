@@ -1,4 +1,4 @@
-import { Lightbulb, ArrowRight, Copy, Check } from "lucide-react";
+import { Lightbulb, ArrowRight, Copy, Check, Download } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { CopyButton } from "./CopyButton";
 
@@ -333,7 +333,7 @@ export function WorkflowSection({ section }: { section: any }) {
   const skipKeys = new Set([
     "title", "type", "tagline", "metrics", "flow",
     "ai_prompt", "zapier_setup", "n8n_setup", "setup_steps", "customization",
-    "pro_tip", "content",
+    "pro_tip", "content", "n8n_workflow_json", "prerequisites", "testing_checklist",
     // Known prompt-like keys
     "classifier_prompt", "response_prompt", "request_email_prompt",
     "testimonial_formatter_prompt", "lead_follow_up_prompt", "win_back_prompt",
@@ -341,6 +341,23 @@ export function WorkflowSection({ section }: { section: any }) {
     // System section keys that we render explicitly
     "problem", "solution", "time_saved", "whats_inside",
   ]);
+
+  /** Download n8n workflow JSON as a file */
+  function downloadN8nWorkflow() {
+    if (!section.n8n_workflow_json) return;
+    const json = typeof section.n8n_workflow_json === "string"
+      ? section.n8n_workflow_json
+      : JSON.stringify(section.n8n_workflow_json, null, 2);
+    const blob = new Blob([json], { type: "application/json" });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    const name = (section.n8n_workflow_json?.name || section.title || "workflow")
+      .toLowerCase().replace(/[^a-z0-9]+/g, "-");
+    a.download = `${name}.json`;
+    a.click();
+    URL.revokeObjectURL(url);
+  }
 
   // Gather all extra data fields
   const extraFields = Object.entries(section).filter(
@@ -476,6 +493,56 @@ export function WorkflowSection({ section }: { section: any }) {
       {/* Customization */}
       {section.customization && (
         <SmartObject data={section.customization} title="Customization" />
+      )}
+
+      {/* Prerequisites */}
+      {section.prerequisites && Array.isArray(section.prerequisites) && (
+        <div>
+          <h3 className="font-semibold text-sm mb-2">Before You Start</h3>
+          <ul className="space-y-1.5">
+            {section.prerequisites.map((item: string, i: number) => (
+              <li key={i} className="text-sm text-muted-foreground flex items-start gap-2">
+                <span className="text-[hsl(var(--primary))]">✓</span> {item}
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+
+      {/* n8n Workflow Download */}
+      {section.n8n_workflow_json && (
+        <div className="bg-card border border-border rounded-xl p-4">
+          <div className="flex items-center justify-between">
+            <div>
+              <h3 className="font-semibold text-sm">n8n Workflow File</h3>
+              <p className="text-xs text-muted-foreground mt-0.5">
+                Import directly into n8n — go to Workflows → Import from File
+              </p>
+            </div>
+            <button
+              onClick={downloadN8nWorkflow}
+              className="inline-flex items-center gap-2 bg-[hsl(var(--primary))] hover:bg-[hsl(var(--primary))]/90 text-white rounded-lg px-4 py-2 text-sm font-medium transition-colors"
+            >
+              <Download className="w-4 h-4" />
+              Download .json
+            </button>
+          </div>
+        </div>
+      )}
+
+      {/* Testing Checklist */}
+      {section.testing_checklist && Array.isArray(section.testing_checklist) && (
+        <div>
+          <h3 className="font-semibold text-sm mb-2">Testing Checklist</h3>
+          <ul className="space-y-1.5">
+            {section.testing_checklist.map((item: string, i: number) => (
+              <li key={i} className="text-sm text-muted-foreground flex items-start gap-2">
+                <span className="text-xs font-mono text-[hsl(var(--primary))] shrink-0 mt-0.5">{i + 1}</span>
+                {item}
+              </li>
+            ))}
+          </ul>
+        </div>
       )}
 
       {/* Pro tip */}
