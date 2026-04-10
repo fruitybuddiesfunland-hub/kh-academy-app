@@ -2,6 +2,23 @@ import { Lightbulb, ArrowRight, Copy, Check, Download } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { CopyButton } from "./CopyButton";
 
+// Workflow diagram images
+import diagram03 from "@assets/workflow-diagram-03.png";
+import diagram04 from "@assets/workflow-diagram-04.png";
+import diagram05 from "@assets/workflow-diagram-05.png";
+import diagram06 from "@assets/workflow-diagram-06.png";
+import diagram07 from "@assets/workflow-diagram-07.png";
+import diagram08 from "@assets/workflow-diagram-08.png";
+import diagram09 from "@assets/workflow-diagram-09.png";
+import diagram10 from "@assets/workflow-diagram-10.png";
+import diagram11 from "@assets/workflow-diagram-11.png";
+
+const WORKFLOW_DIAGRAMS: Record<string, string> = {
+  "03": diagram03, "04": diagram04, "05": diagram05,
+  "06": diagram06, "07": diagram07, "08": diagram08,
+  "09": diagram09, "10": diagram10, "11": diagram11,
+};
+
 /* ──────────────────── Helpers ──────────────────── */
 
 function SetupSteps({ title, setup }: { title: string; setup: any }) {
@@ -441,8 +458,24 @@ export function WorkflowSection({ section }: { section: any }) {
         </div>
       )}
 
-      {/* Flow visualization */}
-      {section.flow && Array.isArray(section.flow) && (
+      {/* Flow diagram image */}
+      {(() => {
+        const wfMatch = section.title?.match(/Workflow\s+(\d+)/);
+        const wfNum = wfMatch ? wfMatch[1].padStart(2, "0") : null;
+        const diagramSrc = wfNum ? WORKFLOW_DIAGRAMS[wfNum] : null;
+        return diagramSrc ? (
+          <div className="rounded-xl overflow-hidden border border-border">
+            <img src={diagramSrc} alt={`${section.title} flow diagram`} className="w-full" />
+          </div>
+        ) : null;
+      })()}
+
+      {/* Flow visualization (text fallback if no diagram) */}
+      {!(() => {
+        const wfMatch = section.title?.match(/Workflow\s+(\d+)/);
+        const wfNum = wfMatch ? wfMatch[1].padStart(2, "0") : null;
+        return wfNum && WORKFLOW_DIAGRAMS[wfNum];
+      })() && section.flow && Array.isArray(section.flow) && (
         <div>
           <h3 className="font-semibold text-sm mb-3">Workflow Flow</h3>
           <div className="flex flex-wrap items-center gap-2">
