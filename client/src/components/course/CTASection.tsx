@@ -1,4 +1,4 @@
-import { ArrowRight, Sparkles } from "lucide-react";
+import { ArrowRight, ExternalLink, Sparkles } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 
 export function CTASection({ section }: { section: any }) {
@@ -25,6 +25,18 @@ export function CTASection({ section }: { section: any }) {
               </div>
             ))}
           </div>
+        )}
+
+        {section.purchase_url && (
+          <a
+            href={section.purchase_url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-5 inline-flex items-center gap-2 bg-primary hover:bg-primary/90 text-white font-semibold rounded-lg px-6 py-3 text-sm transition-colors"
+          >
+            View Products & Pricing
+            <ExternalLink className="w-4 h-4" />
+          </a>
         )}
 
         {section.upcoming_product && (
